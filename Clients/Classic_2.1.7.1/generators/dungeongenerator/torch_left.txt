@@ -1,0 +1,6 @@
+if (created) {
+  showcharacter;
+  dir = 3;
+  setcharani walltorch,;
+}
+join walltorches_left;

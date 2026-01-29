@@ -1,0 +1,447 @@
+1. General
+
+Choosing the dungeon type:
+
+The dungeongenerator can be used to generate
+small or big dungeons. That can be done
+by choosing a layout style and leting it generate
+a dungeon randomly, or by defining the
+layout in a file Dungeon.txt, with X marking
+walls and . for paths. You can change the
+options by editing dungeonoptions.txt.
+In the LEVELSTART line you define how the
+level names should start, in the GMAP line
+you give the name of the gmap that should
+be generated.
+After setting the options, run 'dungeongen.exe'
+on Windows, or './dungeongen' on Linux 
+(do 'chmod +x dungeongen' before starting it).
+
+Online server configuration:
+ 
+On the server you need to
+put the files so that the server can see them
+and people can download the gmap (one
+'level' line and one 'file' line in the 
+folder configuration for the gmap). 
+Then append the gmap name to the 'gmap=' 
+line and do  '/updatelevel gmapname.gmap'. 
+To make sure the tiles are correctly set, 
+add following lines to some System-npc:
+
+addtiledef tiles_inside.png,LEVELSTART,1;
+addtiledef2 WALLTILES,LEVELSTART,1024,224;
+addtiledef2 GROUNDTILES,LEVELSTART,1216,0;
+
+(replace WALLTILES,GROUNDTILES,LEVELSTART with
+the good values).
+
+
+To generate a random dungeon:
+
+Set the options LAYOUTWIDTH, LAYOUTHEIGHT,
+and LAYOUTSTYLE, see the chapter about
+layout options and watch the 
+default dungeonoptions.txt for an example. 
+If you generate the dungeon
+for the first time it will display a 
+random seed value which has been used to
+generate the thing. If you later want to
+generate exactly the same dungeon, then
+add a line 'RANDOMSEED number'.
+
+To generate a Dungeon.txt-dungeon:
+
+Add a line 'LAYOUTFILE Dungeon.txt' to
+let the dungeon generator make a dungeon
+based on the X and . characters you placed
+there. The Dungeon.txt file must consist
+of lines of equal length. Do not add too 
+many characters there, since the dungeon
+will be much bigger (each character will
+be 8x11 tiles, see the size-options for more
+information). In the 'example2' folder 
+there is an example for using a Dungeon.txt,
+copy the files from there to the current
+folder to make a dungeon based on that.
+
+
+2. Options for the level generation
+
+Size:
+
+In the option file (dungeonoptions.txt) you can
+define the width and height of the dungeon, but
+it's not identical to the map size. The dungeon
+contains 8x11 tiles wide blocks, which are
+plain ground, massive wall, or transition between
+paths and walls. With the options LAYOUTWIDTH
+and LAYOUTHEIGHT you define how many rows and 
+columns of such blocks are generated. To generate
+a dungeon that is exactly mapw by maph levels wide 
+then set the LAYOUTWIDTH and LAYOUTHEIGHT options 
+to mapw*64/8 and maph*64/11.
+
+Tiles:
+
+With the options WALLTILES and GROUNDTILES you
+define what tiles are used for the dungeon. 
+Default tiles are tiles_wallscave.png and
+tiles_groundcave.png. Use the layout of those
+images for making new wall tiles. The tiles
+layout is currently quite complicated but might
+be made configurable in the future.
+Other existing tiles that already work with the
+dungeon generator are the dungeon tiles 
+tiles_wallsdungeon1.png, tiles_grounddungeon1.png,
+etc. for dungeon1 to dungeon4. 
+
+Testing:
+
+By adding the line ADDTESTNPCS you can let the
+dungeon generator add a npc to each level which
+sets the tiles, but if you make levels that 
+should come online then don't use that option. 
+It will be better to only set the tiles one 
+time, e.g. in the System-NPC.
+This option is probably only good for testing 
+different configurations until you found the
+good one.
+
+NPCs:
+
+The generator can automatically add npcs for you.
+That can be lights, objects on the ground, torches 
+on the walls. 
+For adding npcs add a line that starts with NPC,
+then give options of the form 'optionname=value',
+seperated by commas.
+
+Possible options are:
+image: the image of the npc
+script: the script of the npc
+blocking: the npc is blocking the way of the player
+underplayer: the npc is drawn under player (ground object)
+dominant: set to 'true' if you don't want that other
+  npcs are placed on the same block 
+chance: says what the chance is that the npc is placed
+  (1%-100%)
+place: defines on which places this npc is put at,
+  possible values are wall (massive wall), path,
+  walln,walle,walls,wallw,wallne,wallnw,wallse,wallsw
+  (north/east/south/west and 90 degrees open corners),
+  wallne2,wallnw2,wallse2,wallsw2 
+  (270 degrees open corners)
+x: position on the 8x11 tiles block
+y: position on the 8x11 tiles block
+
+Example:
+NPC script=torch_face.txt,blocking=false,underplayer=false,chance=30%,place=walln,x=3.5,y=5
+Places non-blocking npcs with the script of file 
+'torch_face.txt' in the middle of 30% of all walls 
+in the northern direction.
+
+
+3. Layout Parameters:
+
+LAYOUTSTYLE:	Parameter:			Effect:
+			
+maze		layoutoptions1 0 (default)	Sparse maze:  a maze with
+						"rooms" will be made
+maze		layoutoptions1 1		Full maze:  a maze with
+						no "open" spaces will be made.
+
+onion		layoutoptions1 0 (default)	Pick random options
+		See "Onion Rooms" below for
+		the rest of the options.
+
+onion		layoutoptions2 0 (default)	Pick a random number of
+						"onion layers"
+
+
+LAYOUTOPTION 	depends on the style (see descriptions of the styles)
+
+LAYOUTSYMMETRY <sym>		symmetry of the layout:  You can cause the generator
+			to generate a symmetrical layout by using this flag.
+			symmetry 0   random symmetry
+			symmetry 1  no symmetry
+			symmetry 2  symmetry about the vertical centerline
+			symmetry 3  symmetry about the horizontal centerline
+			symmetry 4  both 2 and 3 symmetry
+
+DOUBLE 1  	change to zero if you want an accurate maze, but it's not
+		preferred except for the style 'maze' 
+
+
+Onion Maps
+******************************************************************************
+
+
+Onion rooms are like this:
+
+regular			      random
+centered, linear onion        bottom/right centered, nonlinear
+
+#########################     #########################
+#                       #     #                       #
+# ########  ##########  #     #   #####################
+# #                  #  #     #   #                   #
+# # ######  ######## #  #     #   #                   #
+# # #              # #  #     #   #   ######## ########
+# # # ####  ###### # #  #     #   #   #               #
+# # # #          # # #  #     #   #   #               #
+# # # ############ # #  #     #   #   #  ########### ##
+# # #              # #  #     #   #   #  #            #
+# # ################ #  #     #   #   #  #    #########
+# #                  #  #     #       #  #    #       #
+# ####################  #     #   #   #  #            #
+#                       #     #   #   #  #    #       #
+#########################     #########################
+
+
+options:
+0	Pick random options below
+1	"centered"
+2	linear doors (default is nonlinear)
+4	bottom "centered"
+8  	bottom-right centered
+16	outer wall off:  i.e., no outer wall.
+32	irregularly/randomly spaced layers (default: regular)
+
+
+Maze Maps
+******************************************************************************
+
+A "sparse" maze
+########################################
+#   # # # #  #  #  #  #  #  #   #   #  #
+#         #  #  #     #  #  # # # # #  #
+####   ## ## #  # ### #  ##   #   # # ##
+#  #####   # ## # # # ##  ### ##  ###  #
+##              ### #  #       #       #
+#           ###     #  #    ####   ### #
+#           # ##    ## ##   #      # ###
+# ######    #  ###      #   # ##   #   #
+#      #   ##    ####   ##  #  #   # # #
+#  #  ##  ##  ##    ###  ## #  #   # # #
+#### ##  ##    ##     ##  ###  # ### ###
+#    #  ##      #####  #       ###     #
+##  ##  #   ###     # ##              ##
+#  ##  ##  ## #    ## #           ###  #
+## #   #   #  #    #  #           # ## #
+#  ### ### ## #   ## ##  ####    ##  # #
+##   #   #  # #   #  #   #  #### #   ###
+#  ###  ## ## #   ## ##  ##    # ###   #
+## #   ##  #  #    #  #   # # ##   #  ##
+#  #####  ## ## #### ##   # # #    ##  #
+##        #  #  #    #   ## # ###      #
+#  # # #  #     # #  # #    #   #  # # #
+########################################
+
+A "full" maze
+########################################
+#   #    # # #                 #       #
+#   # #  #   # # #  # # # # #    #  #  #
+###   ## ##    ######## ### ### ### #  #
+#   # #     ##     #  ### ### #   ### ##
+# ##### ###  ##### ##         ## ## #  #
+#  #    # ## #   #  ##  ####   #  # # ##
+# #### ##  ### ####  # ##  ## ### # #  #
+#   #  #    #     #  ###    #   # #    #
+# ### ## ## ### ####      #### ## #  ###
+#  #  #  #    #  # ####  ##  # #  ## # #
+#  # ##  #### ##      # ##   # ##  #   #
+# ####  ## #   ### #### #  ### #  #### #
+#  #    #  # #   # #    # ##   #### #  #
+# #####   ####  ## ###    #  #      ## #
+#     ## ## #  ##    ##  ## ##### #  # #
+#  #   #  # ## #   #  # ##  # # ###  # #
+## ### # ##  # # #### ###   # #   # ## #
+#  # # #    ## # #  #      ## ###   #  #
+## # ####  ##  # #    ######  # # #### #
+#     # ####   # ######      ## ###  # #
+### #      ## ##   #    # # ##         #
+#   #  # #    #  #    # # #    # #  #  #
+########################################
+
+
+Spiral Maps
+***************************************************************************
+
+###########################
+###########################
+########### D    ##########
+#########   ####   ########
+########  ########  #######
+#######  ##########  ######
+######  ############  #####
+###### ####     #####D#####
+#####  ###  ###  ####  ####
+##### #### #####  #### ####
+#####D#### ###### ####D####
+#####  ###  #C### #### ####
+###### ####  >###D#### ####
+######D########## ####D####
+######  ########  ###  ####
+#######  ######  #### #####
+######## D D  D ####  #####
+#################### ######
+###################  ######
+#################   #######
+################# <########
+###########################
+###########################
+
+layoutoptions1:
+0  pick random options
+1  Regular spiral:  distance increases constantly with angle
+2  Fine spiral:  most coils possible are fit in
+4  Fit Spiral:  scale spiral to fit rectanglar region
+   (i.e., the spiral will look elliptical)
+
+
+Roguelike Maps
+***************************************************************************
+
+###############################
+#############       ###########
+#          ##       ###########
+#          DD       ###########
+#          ##       ###########
+#          ##       ####     ##
+#          #####D#######     ##
+#          D           D     ##
+###D######D##### #######     ##
+### ##       ###      ##     ##
+###D D       ###       ###D####
+### ##       D  D  <   ### ####
+### ######D#####       ### ####
+###D###### #####      #### ####
+##    #### ##### #   ##### ####
+##    #### ##### ######### ####
+##    ####D##### ######### ####
+##    ##     ### #     ### ####
+##    ##     ### #     ###D####
+##    ##     ### #     ###   ##
+########     ### #     ###    #
+########     D D D     ### >  #
+########     #####     ###    #
+########     #####     ###   ##
+########     #####     ########
+##################     ########
+###############################
+
+layoutoptions1:
+0  pick random room shapes (i.e., mix it up)
+1  Always use rectangular rooms
+2  Always use "circular" rooms
+
+
+Snake layouts
+***************************************************************************
+No options are available for snake layouts.
+A player must touch every room to descend deeper in a snake.
+This is a basic snake layout:
+
+
+############################
+#>                         #
+#                          #
+#                          #
+##########################D#
+#                          #
+#                          #
+#                          #
+#D##########################
+#                          #
+#                          #
+#                          #
+##########################D#
+#                          #
+#                          #
+#                          #
+#D##########################
+#                          #
+#                          #
+#                          #
+#                          #
+#                         <#
+############################
+
+This is a roomified, xy-symmetric snake layout:
+
+###################################
+#>       #     #   #     #       >#
+#        #     #   #     #        #
+##D#######     D   D     #######D##
+#        #     #   #     #        #
+#        #     #   #     #        #
+#        D     # < #     D        #
+#        #     #   #     #        #
+#        #     #   #     #        #
+##D#######     D   D     #######D##
+#        #     #   #     #        #
+#>       #     #   #     #       >#
+###################################
+
+
+Square spirals
+***************************************************************************
+No options are available for square spirals
+A player must touch every room to descend in a square spiral.
+This is a basic square spiral layout:
+###############################
+#   #                         #
+#   D                         #
+#   #####################D#####
+#   #   #               #     #
+#   #   #               #     #
+#   #   D               #     #
+#   #   #############D###     #
+#   #   #   #       #   #     #
+#   #   #   #       #   #     #
+#   #   #   D       #   #     #
+#   #   #   #####D###   #     #
+#   #   #   # > #   #   #     #
+#   #   #   D   #   #   #     #
+#   #   #########   #   #     #
+#   #   #       D   #   #     #
+#   #   #       #   #   #     #
+#   #   D       #   #   #     #
+#   #################   #     #
+#   #               D   #     #
+#   #               #   #     #
+#   D               #   #     #
+#########################     #
+#                       D     #
+#                       #     #
+#                       #     #
+#<                      #     #
+###############################
+
+
+
+This is an xy-symmetric  square spiral layout:
+#####################################
+#             #   <   #             #
+##D##########D#       #D##########D##
+#  #    #     ####D####     #    #  #
+#  ###DD###   #       #   ###DD###  #
+#  #   #> #   ##D###D##   # >#   #  #
+#  #   ####D###       ###D####   #  #
+#  #   D      #       #      D   #  #
+#  ############D#####D############  #
+#  D                             D  #
+#  #                             #  #
+#  D                             D  #
+#  ############D#####D############  #
+#  #   D      #       #      D   #  #
+#  #   ####D###       ###D####   #  #
+#  #   #> #   ##D###D##   # >#   #  #
+#  ###DD###   #       #   ###DD###  #
+#  #    #     ####D####     #    #  #
+##D##########D#       #D##########D##
+#             #   <   #             #
+#####################################
+
+

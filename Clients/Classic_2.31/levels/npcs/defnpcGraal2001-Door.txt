@@ -1,0 +1,15 @@
+// NPC made by Stefan Knorr
+//#COMMENTS A door for use in Graal2001-Playerhouses
+//#EDIT housenumber 1
+//#EDIT keynumber 1
+//#EDIT warptox 30
+//#EDIT warptoy 30
+if (created) {
+  setimg block.png;
+  this.key = keynumber;
+  this.house = housenumber;
+  setstring this.control,House-Control#v(this.house);
+  this.warpx = warptox;
+  this.warpy = warptoy;
+}
+join housedoors;

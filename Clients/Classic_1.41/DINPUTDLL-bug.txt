@@ -1,0 +1,7 @@
+There are some compability problems between DirectX5 and
+DirectX7 joystick drivers. If you get DINPUT.DLL errors then 
+disable the use if DirectInput by adding a line 
+
+nodirectinput=true
+
+to graalconfig.txt (create the file if it doesn't exist yet).

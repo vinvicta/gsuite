@@ -1,0 +1,505 @@
+# GUI translation
+# Copyright (C) 2007 Linux Cyberjoueurs
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+
+msgid "Up"
+msgstr ""
+
+msgid "Down"
+msgstr ""
+
+msgid "Left"
+msgstr ""
+
+msgid "Right"
+msgstr ""
+
+msgid "Grab"
+msgstr ""
+
+msgid "Use sword"
+msgstr ""
+
+msgid "Use sword (2)"
+msgstr ""
+
+msgid "Use weapon"
+msgstr ""
+
+msgid "Item menu"
+msgstr ""
+
+msgid "Pause"
+msgstr ""
+
+msgid "Map"
+msgstr ""
+
+msgid "Activate Micro"
+msgstr ""
+
+msgid "Load-Level Dialog"
+msgstr ""
+
+msgid "Serverlist"
+msgstr ""
+
+msgid "Forward"
+msgstr ""
+
+msgid "Backward"
+msgstr ""
+
+msgid "Strafe Left"
+msgstr ""
+
+msgid "Strafe Right"
+msgstr ""
+
+msgid "Jump"
+msgstr ""
+
+msgid "Fire Weapon"
+msgstr ""
+
+msgid "First Person"
+msgstr ""
+
+msgid "Options"
+msgstr ""
+
+msgid "OK"
+msgstr ""
+
+msgid "Graphics"
+msgstr ""
+
+msgid "Graphical options"
+msgstr ""
+
+msgid "Sound"
+msgstr ""
+
+msgid "Audio and Microphone options"
+msgstr ""
+
+msgid "Keys 2D"
+msgstr ""
+
+msgid "Keyboard configuration"
+msgstr ""
+
+msgid "Keys 3D"
+msgstr ""
+
+msgid "Graal3D Keys and Mouse options"
+msgstr ""
+
+msgid "Capture"
+msgstr ""
+
+msgid "Video capture options"
+msgstr ""
+
+msgid "General"
+msgstr ""
+
+msgid "General options"
+msgstr ""
+
+msgid "Control Name"
+msgstr ""
+
+msgid "Control Binding"
+msgstr ""
+
+msgid "Mouse Sensitivity:"
+msgstr ""
+
+msgid "Mp3"
+msgstr ""
+
+msgid "Midi"
+msgstr ""
+
+msgid "Radio"
+msgstr ""
+
+msgid "Enable Microphone"
+msgstr ""
+
+msgid "Reverse stereo channels"
+msgstr ""
+
+msgid "Sound FX"
+msgstr ""
+
+msgid "Voice"
+msgstr ""
+
+msgid "Microphone activated by:"
+msgstr ""
+
+msgid "Key"
+msgstr ""
+
+msgid "Codec:"
+msgstr ""
+
+msgid "Fullscreen Resolution:"
+msgstr ""
+
+msgid "Fullscreen bit depth:"
+msgstr ""
+
+msgid "Screenshot Format:"
+msgstr ""
+
+msgid "Visible Distance (3D):"
+msgstr ""
+
+msgid "Detail Factor (3D):"
+msgstr ""
+
+msgid "Enable True Type Fonts"
+msgstr ""
+
+msgid "Language:"
+msgstr ""
+
+msgid "Automatic mapping (M)"
+msgstr ""
+
+msgid "Allow Mass PMs"
+msgstr ""
+
+msgid "Save PMs / Profiles"
+msgstr ""
+
+msgid "Load buddy list from server"
+msgstr ""
+
+msgid "Allow global PMs"
+msgstr ""
+
+msgid "Show yourself on other buddy lists"
+msgstr ""
+
+msgid "Allow toall-messages"
+msgstr ""
+
+msgid "Don't load head icons"
+msgstr ""
+
+msgid "Use fixed port for UDP:"
+msgstr ""
+
+msgid "Disable UDP"
+msgstr ""
+
+msgid "Only show one level"
+msgstr ""
+
+msgid "Limit the length of nicknames to"
+msgstr ""
+
+msgid "Default font height:"
+msgstr ""
+
+msgid "Re-bind control..."
+msgstr ""
+
+msgid "Auto-Select"
+msgstr ""
+
+msgid "GSM (13kbit)"
+msgstr ""
+
+msgid "LPC (4.8kbit)"
+msgstr ""
+
+msgid "LPC-10 (2.4kbit)"
+msgstr ""
+
+msgid "Nickname:"
+msgstr ""
+
+msgid "Start"
+msgstr ""
+
+msgid "Play as:"
+msgstr ""
+
+msgid "Guest"
+msgstr ""
+
+msgid "Member"
+msgstr ""
+
+msgid "Save password"
+msgstr ""
+
+msgid "Account name:"
+msgstr ""
+
+msgid "Password:"
+msgstr ""
+
+msgid "Become a Member"
+msgstr ""
+
+msgid "Offline Test"
+msgstr ""
+
+msgid "Connecting..."
+msgstr ""
+
+msgid "Connecting to the login server..."
+msgstr ""
+
+#, c-format
+msgid "Connecting to %s..."
+msgstr ""
+
+msgid "Profile"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Send"
+msgstr ""
+
+msgid "Player info"
+msgstr ""
+
+msgid "In-game stats"
+msgstr ""
+
+msgid "Real name:"
+msgstr ""
+
+msgid "Age:"
+msgstr ""
+
+msgid "Sex:"
+msgstr ""
+
+msgid "Country:"
+msgstr ""
+
+msgid "Instant Messenger:"
+msgstr ""
+
+msgid "E-mail:"
+msgstr ""
+
+msgid "Homepage:"
+msgstr ""
+
+msgid "Favourite Hangout:"
+msgstr ""
+
+msgid "Favourite Quote:"
+msgstr ""
+
+msgid "Level:"
+msgstr ""
+
+msgid "Online-time:"
+msgstr ""
+
+msgid "Muted"
+msgstr ""
+
+msgid "unknown"
+msgstr ""
+
+msgid "Male"
+msgstr ""
+
+msgid "Female"
+msgstr ""
+
+msgid "Install %s"
+msgstr ""
+
+msgid "Destination:"
+msgstr ""
+
+msgid "Browse"
+msgstr ""
+
+msgid "Add Desktop Icon"
+msgstr ""
+
+msgid "Add Link to the Start Menu"
+msgstr ""
+
+msgid "Install"
+msgstr ""
+
+msgid "Select File"
+msgstr ""
+
+msgid "Save As"
+msgstr ""
+
+msgid "Show hidden files"
+msgstr ""
+
+msgid "Select"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Search in:"
+msgstr ""
+
+msgid "Filename:"
+msgstr ""
+
+msgid "Warning"
+msgstr ""
+
+msgid "Do you really want to quit Graal?"
+msgstr ""
+
+msgid "YES"
+msgstr ""
+
+msgid "NO"
+msgstr ""
+
+msgid "Load Level"
+msgstr ""
+
+msgid "X:"
+msgstr ""
+
+msgid "Y:"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Administrator Message"
+msgstr ""
+
+msgid "Could not start ExeReplace.exe which is supposed to replace %s with %s. The update failed."
+msgstr ""
+
+msgid "Was not able to start %s!"
+msgstr ""
+
+msgid "Couldn't connect to the server"
+msgstr ""
+
+msgid "The connection could not be established! Check that the "
+"internet cable is connected and the firewall is not blocking %s."
+msgstr ""
+
+msgid "You have been disconnected from the game server."
+msgstr ""
+
+msgid "It seems that the UDP protocol is not working, "
+"it might be better to disable UDP in the options"
+msgstr ""
+
+msgid "Others:"
+msgstr ""
+
+msgid "Rendering Problem"
+msgstr ""
+
+msgid "No hardware graphics support detected.\n"
+"Please install a driver for your graphics card."
+msgstr ""
+
+msgid "The execution file is corrupted. Please\n"
+"check for viruses or other programs that manipulate\n"
+"*.exe files (virus checker, drivespace,...) !"
+msgstr ""
+
+msgid "Scanning folder structure for fast access..."
+msgstr ""
+
+msgid "Starting 3D mode..."
+msgstr ""
+
+msgid "You can record a video by pressing Alt + 6 to start and stop recording. "
+"It is saved into the Graal folder under videos/."
+msgstr ""
+
+msgid "Video size:"
+msgstr ""
+
+msgid "Full size"
+msgstr ""
+
+msgid "Capture area:"
+msgstr ""
+
+msgid "Full window"
+msgstr ""
+
+msgid "Focus on player"
+msgstr ""
+
+msgid "Focus on mouse"
+msgstr ""
+
+msgid "Frames per second:"
+msgstr ""
+
+msgid "Disable day-night effects"
+msgstr ""
+
+msgid "Hide the interface"
+msgstr ""
+
+msgid "Show the mouse cursor"
+msgstr ""
+
+msgid "Allow capture by script"
+msgstr ""
+
+msgid "Capture audio"
+msgstr ""
+
+msgid "Default GUI style (PMs etc.):"
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "Minimize"
+msgstr ""
+
+msgid "Maximize"
+msgstr ""
+
+msgid "Downloading"
+msgstr ""
+
+msgid "File not found"
+msgstr ""
+
+msgid "Requires ActiveX Control"
+msgstr ""
+
+msgid "Requires Plugin"
+msgstr ""
+
+msgid "Can't show Flash:"
+msgstr ""
+
+

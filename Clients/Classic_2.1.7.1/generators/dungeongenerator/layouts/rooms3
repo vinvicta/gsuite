@@ -1,0 +1,39 @@
+Dungeon dimensions - dimX = 100; dimY = 100.
+numRooms < 8; numOpen < 1; numClosed < 1; numColumns < 1; numCrawlers < 6.
+div: 12; Xdiv: 1; Ydiv: 5; width: 5; lTC: 0; tC: 2; rTC: 0; rC: 1; rBC: 0;
+bC: 2; lBC: 0; lC: 1; style: 129; delay: 0 
+div: 12; Xdiv: 5; Ydiv: 1; width:
+5; lTC: 0; tC: 1; rTC: 0; rC: 2; rBC: 0; bC: 1; lBC: 0; lC: 2; style: 129;
+delay: 0 
+div: 12; Xdiv: 1; Ydiv: 5; width: 6; lTC: 0; tC: 2; rTC: 0; rC: 1; rBC: 0;
+bC: 2; lBC: 0; lC: 1; style: 1; delay: 0 
+div: 12; Xdiv: 5; Ydiv: 1; width:
+6; lTC: 0; tC: 1; rTC: 0; rC: 2; rBC: 0; bC: 1; lBC: 0; lC: 2; style: 1;
+delay: 0 
+div: 12; Xdiv: 9; Ydiv: 9; width: 8; lTC: 1; tC: 0; rTC: 22; rC: 0; rBC: 1;
+bC: 0; lBC: 32; lC: 0; style: 37; delay: 0 
+div: 12; Xdiv: 9; Ydiv: 9; width:7; lTC: 1; tC: 0; rTC: 0; rC: 0; rBC: 1;
+bC: 0; lBC: 0; lC: 0; style: 35; delay: 0 
+div: 12; Xdiv: 9; Ydiv: 9; width: 6; lTC: 1; tC: 0; rTC: 0; rC: 0; rBC: 1;
+bC: 0; lBC: 0; lC: 0; style: 8225; delay: 0 
+div: 0; Xdiv: 0; Ydiv: 0; width: 0; lTC: 0; tC: 0; rTC: 0; rC: 0;
+rBC: 0; bC: 0; lBC: 0; lC: 0; style: 0; delay: 0 div = 0 is not a room but
+indicates the end of room input Open square at ( 0 , 0 ) (the value (0 , 0) is
+not an open square but terminates the series) 
+Wall tile at ( 0 , 0 )
+(the value (0 , 0) is not a wall tile but terminates the series)
+Column at ( 0 , 0 )
+(the value (0 , 0) is not a column but terminates the series)
+A Crawler starts at (x , y) = (0 , 80)
+and this crawler will head in direction 2 with delay 5 and termination 1.
+A Crawler starts at (x , y) = (99 , 93)
+and this crawler will head in direction 34 with delay 5 and termination 1.
+A Crawler starts at (x , y) = (6 , 0)
+and this crawler will head in direction 11 with delay 10 and termination 1.
+A Crawler starts at (x , y) = (0 , 6)
+and this crawler will head in direction 32 with delay 10 and termination 1.
+A Crawler starts at (x , y) = (80 , 0)
+and this crawler will head in direction 1 with delay 5 and termination 1.
+A Crawler starts at (x , y) = (0 , 0)
+(the value (0 , 0) is not a crawler but terminates the series)
+Outside walls sports 0 protuberances.

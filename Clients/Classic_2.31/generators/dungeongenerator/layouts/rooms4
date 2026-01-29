@@ -1,0 +1,61 @@
+Dungeon dimensions - dimX = 100; dimY = 100.
+numRooms < 5; numOpen < 1; numClosed < 40; numColumns < 1; numCrawlers < 3.
+div: 12; Xdiv: 6; Ydiv: 6; width: 6; lTC: 23; tC: 0; rTC: 0; rC: 1; rBC: 0;
+bC: 1; lBC: 0; lC: 0; style: 1; delay: 5 
+div: 12; Xdiv: 6; Ydiv: 6; width: 5; lTC: 0; tC: 0; rTC: 0; rC: 1; rBC: 0;
+bC: 1; lBC: 0; lC: 0; style: 8193; delay: 5 
+div: 12; Xdiv: 6; Ydiv: 8; width: 4; lTC: 0; tC: 1; rTC: 12; rC: 0; rBC: 23;
+bC: 0; lBC: 0; lC: 1; style: 1; delay: 1  
+div: 12; Xdiv: 8; Ydiv: 6; width: 3; lTC: 0; tC: 1; rTC: 0; rC: 1; rBC: 0;
+bC: 0; lBC: 12; lC: 0; style: 1; delay: 0 
+div: 0; Xdiv: 0; Ydiv: 0; width: 0;
+lTC: 0; tC: 0; rTC: 0; rC: 0; rBC: 0; bC: 0; lBC: 0; lC: 0; style: 0; delay: 0
+div = 0 is not a room but indicates the end of room input Open square at ( 0 ,
+0 ) (the value (0 , 0) is not an open square but terminates the series)
+Wall tile at ( 47 , 58 )
+Wall tile at ( 47 , 59 )
+Wall tile at ( 47 , 60 )
+Wall tile at ( 53 , 58 )
+Wall tile at ( 53 , 59 )
+Wall tile at ( 53 , 60 )
+
+Wall tile at ( 58 , 53 )
+Wall tile at ( 59 , 53 )
+Wall tile at ( 60 , 53 )
+Wall tile at ( 61 , 53 )
+
+Wall tile at ( 58 , 47 )
+Wall tile at ( 59 , 47 )
+Wall tile at ( 60 , 47 )
+Wall tile at ( 61 , 47 )
+
+Wall tile at ( 54 , 60 )
+Wall tile at ( 55 , 60 )
+Wall tile at ( 46 , 60 )
+Wall tile at ( 45 , 60 )
+
+Wall tile at ( 58 , 48 )
+Wall tile at ( 59 , 48 )
+Wall tile at ( 60 , 48 )
+Wall tile at ( 58 , 52 )
+Wall tile at ( 59 , 52 )
+Wall tile at ( 60 , 52 )
+Wall tile at ( 61 , 52 )
+Wall tile at ( 61 , 48 )
+Wall tile at ( 48 , 58 )
+Wall tile at ( 48 , 59 )
+Wall tile at ( 48 , 60 )
+Wall tile at ( 52 , 58 )
+Wall tile at ( 52 , 59 )
+Wall tile at ( 52 , 60 )
+Wall tile at ( 0 , 0 )
+(the value (0 , 0) is not a wall tile but terminates the series)
+Column at ( 0 , 0 )
+(the value (0 , 0) is not a column but terminates the series)
+A Crawler starts at (x , y) = (3 , 20)
+and this crawler will head in direction 2 with delay 0 and termination 1.
+A Crawler starts at (x , y) = (96 , 80)
+and this crawler will head in direction 4 with delay 0 and termination 1.
+A Crawler starts at (x , y) = (0 , 0)
+(the value (0 , 0) is not a crawler but terminates the series)
+Outside walls sports 4 protuberances.

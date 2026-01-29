@@ -1,0 +1,6 @@
+"mantara§kubol_00.graal","mantara§kubol_01.graal","mantara§kubol_02.graal","mantara§kubol_03.graal","mantara§kubol_04.graal"
+"mantara§kubol_10.graal","mantara§kubol_11.graal","mantara§kubol_12.graal","mantara§kubol_13.graal","mantara§kubol_14.graal"
+"mantara§kubol_20.graal","mantara§kubol_21.graal","mantara§kubol_22.graal","mantara§kubol_23.graal","mantara§kubol_24.graal"
+"mantara§kubol_u00.graal","mantara§kubol_u01.graal","mantara§kubol_u02.graal","mantara§kubol_u03.graal","mantara§kubol_u04.graal"
+"mantara§kubol_u10.graal","mantara§kubol_u11.graal","mantara§kubol_u12.graal","mantara§kubol_u13.graal","mantara§kubol_u14.graal"
+"mantara§kubol_u20.graal","mantara§kubol_u21.graal","mantara§kubol_u22.graal","mantara§kubol_u23.graal","mantara§kubol_u24.graal"

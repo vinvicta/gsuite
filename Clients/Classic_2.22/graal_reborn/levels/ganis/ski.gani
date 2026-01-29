@@ -1,0 +1,73 @@
+SPRITE    0         SPRITES    0    0   24   12 shadow
+SPRITE    1          PARAM1    0    0   11   67 ski up
+SPRITE    2          PARAM1   11    0   11   67 ski down
+SPRITE    3          PARAM1   22    0   63   14 ski right
+SPRITE    4          PARAM1   22   14   63   14 ski left
+SPRITE   40           ATTR1    0    0   48   48 hat up
+SPRITE   41           ATTR1   48    0   48   48 hat left
+SPRITE   42           ATTR1   96    0   48   48 hat down
+SPRITE   43           ATTR1  144    0   48   48 hat right
+SPRITE   44           ATTR1    0   48   48   48 hat pull up
+SPRITE   45           ATTR1   48   48   48   48 hat pull left
+SPRITE   46           ATTR1   96   48   48   48 hat pull down
+SPRITE   47           ATTR1  144   48   48   48 hat pull right
+SPRITE   48           ATTR1    0   96   48   48 hat dead
+SPRITE  100            HEAD    0    0   32   32 head up
+SPRITE  101            HEAD    0   32   32   32 head left
+SPRITE  102            HEAD    0   64   32   32 head down
+SPRITE  103            HEAD    0   96   32   32 head right
+SPRITE  204            BODY    0   32   32   32 body walking1 up
+SPRITE  205            BODY   32   32   32   32 body walking1 left
+SPRITE  206            BODY   64   32   32   32 body walking1 down
+SPRITE  207            BODY   96   32   32   32 body walking1 right
+SPRITE  208            BODY    0   64   32   32 body walking2 up
+SPRITE  209            BODY   32   64   32   32 body walking2 left
+SPRITE  210            BODY   64   64   32   32 body walking2 down
+SPRITE  211            BODY   96   64   32   32 body walking2 right
+SPRITE  212            BODY    0   96   32   32 body walking3 up
+SPRITE  213            BODY   32   96   32   32 body walking3 left
+SPRITE  214            BODY   64   96   32   32 body walking3 down
+SPRITE  215            BODY   96   96   32   32 body walking3 right
+SPRITE  216            BODY    0  128   32   32 body walking4 up
+SPRITE  217            BODY   32  128   32   32 body walking4 left
+SPRITE  218            BODY   64  128   32   32 body walking4 down
+SPRITE  219            BODY   96  128   32   32 body walking4 right
+SPRITE  220            BODY    0  160   32   32 body walking5 up
+SPRITE  221            BODY   32  160   32   32 body walking5 left
+SPRITE  222            BODY   64  160   32   32 body walking5 down
+
+LOOP
+CONTINUOUS
+DEFAULTPARAM1 ski.png
+DEFAULTATTR1 hat0.png
+DEFAULTHEAD head19.png
+DEFAULTBODY body.png
+
+ANI
+   0  12  34,    1  12   3,    1  25  -3,  220   8  21,  100   8   3,   40   0 -15
+   0  12  36,    4  -4  28,    4  -6  34,  209  14  16,  101  12   2,   41   0 -16
+   0  12  34,    2  11   4,    2  25  -2,  222   8  22,  102   8   2,   42   0 -16
+   0  12  36,    3 -14  28,    3  -4  34,  207   5  18,  103   4   2,   43   0 -16
+PLAYSOUND steps2.wav 1.5 2
+WAIT 5
+
+   0  12  34,    1  12   0,    1  25   0,  216   8  15,  100   8   1,   40   0 -17
+   0  12  36,    4  -2  28,    4  -8  34,  213  13  15,  101  12   1,   41   0 -17
+   0  12  34,    2  11   1,    2  25   1,  218   8  15,  102   8   1,   42   0 -17
+   0  12  36,    3 -12  28,    3  -6  34,  215   3  15,  103   4   1,   43   0 -17
+WAIT 2
+
+   0  12  34,    1  12  -3,    1  25   3,  204   8  19,  100   8   3,   40   0 -15
+   0  12  36,    4   0  28,    4 -10  34,  205  11  18,  101  12   2,   41   0 -16
+   0  12  34,    2  11  -2,    2  25   4,  206   8  16,  102   8   2,   42   0 -16
+   0  12  36,    3 -10  28,    3  -8  34,  211   2  16,  103   4   2,   43   0 -16
+PLAYSOUND steps2.wav 1.5 2
+WAIT 5
+
+   0  12  34,    1  12   0,    1  25   0,  208   8  16,  100   8   1,   40   0 -17
+   0  12  36,    4  -2  28,    4  -8  34,  213  13  15,  101  12   1,   41   0 -17
+   0  12  34,    2  11   1,    2  25   1,  210   8  15,  102   8   1,   42   0 -17
+   0  12  36,    3 -12  28,    3  -6  34,  215   3  15,  103   4   1,   43   0 -17
+WAIT 2
+
+ANIEND

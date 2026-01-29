@@ -1,0 +1,13 @@
+GRPKG001
+NAME Fonts
+VERSION 4.19
+PLATFORM any
+DESCRIPTION
+Fonts required for OpenGL mode in v5
+DESCRIPTIONEND
+MODE required
+USECHECKSUM true
+
+FILE arial.ttf
+FILE tempsitcbd.ttf
+FILE open sans.ttf

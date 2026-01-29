@@ -1,0 +1,412 @@
+# GUI translation
+# Copyright (C) 2007 Linux Cyberjoueurs
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+
+msgid "Change these options if you've got problems with the game or if you want to speed up the game."
+msgstr "Changer ces options pour régler votre écran, le son, les contrôles ou si vous rencontrez des problèmes dans le jeu"
+
+msgid "&Close"
+msgstr "&Fermer"
+
+msgid "&Video"
+msgstr "&Video"
+
+msgid "&3D"
+msgstr "&3D"
+
+msgid "Ca&pture"
+msgstr ""
+
+msgid "&Audio"
+msgstr ""
+
+msgid "&Micro"
+msgstr ""
+
+msgid "C&ontrols"
+msgstr "C&ontroles"
+
+msgid "&General"
+msgstr ""
+
+msgid "Wait for vertical blank (slower but smoother)"
+msgstr "Attendre rafraichissement vertical (+ lent mais + fluide)"
+
+msgid "Automapping"
+msgstr "Générer automatiquement les cartes"
+
+msgid "Start in fullscreen mode"
+msgstr "Lancer en mode plein écran"
+
+msgid "Fullscreen mode:"
+msgstr "Mode plein écran"
+
+msgid "Font:"
+msgstr "Police"
+
+msgid "Size:"
+msgstr "Taille"
+
+msgid "Use Bitmap Fonts (faster and smoother)"
+msgstr "Utiliser les fontes Bitmap (plus rapide et plus beau)"
+
+msgid "Use a minimum of video resources"
+msgstr "Utiliser un minimum de resources vidéos"
+
+msgid "Enable scripted effects (unchecking these might speed up the game on some servers):"
+msgstr "Valide les effets par scripts (dévalider ces options peut accéler le jeu)"
+
+msgid "Lights"
+msgstr "Lumières"
+
+msgid "Weather"
+msgstr "Météo"
+
+msgid "Particles"
+msgstr "Particules"
+
+msgid "Visible distance:"
+msgstr "Distance visible"
+
+msgid "Detail factor:"
+msgstr "Facteur de détail"
+
+msgid "Volume:"
+msgstr ""
+
+msgid "midi"
+msgstr ""
+
+msgid "mod, mp3"
+msgstr ""
+
+msgid "radio"
+msgstr ""
+
+msgid "voice"
+msgstr "Voie"
+
+msgid "sfx"
+msgstr ""
+
+msgid "Current track:"
+msgstr "Voie courante"
+
+msgid "Play"
+msgstr "Jouer"
+
+msgid "Stop"
+msgstr "Stop"
+
+msgid "Microphone enabled"
+msgstr "Microphone actif"
+
+msgid "Micro activation by:"
+msgstr "Microphone activé par:"
+
+msgid "Volume"
+msgstr ""
+
+msgid "loud"
+msgstr "fort"
+
+msgid "quiet"
+msgstr "faible"
+
+msgid "Amplify:"
+msgstr "Amplifie"
+
+msgid "Source:"
+msgstr ""
+
+msgid "Automatique"
+msgstr ""
+
+msgid "Input:"
+msgstr "Entrée"
+
+msgid "Codec:"
+msgstr ""
+
+msgid "Joystick support"
+msgstr "Support du Joystick"
+
+msgid "Don't use DirectInput"
+msgstr "Ne pas utiliser DirectInput"
+
+msgid "Change &keys"
+msgstr "&Touches"
+
+msgid "Ignore toalls"
+msgstr "Ignorer à tous"
+
+msgid "Use filename cache (don't scan folders each startup)"
+msgstr "Utiliser le cache répertoire (Ne pas scanner les répertoires)"
+
+msgid "Use fixed port for data packages:"
+msgstr "Utiliser un port fixe pour les paquets de donnés"
+
+msgid "Don't use UDP for data packages"
+msgstr "Ne pas utiliser UDP pour les paquets de donnés"
+
+msgid "Don't load head icons for the playerlist / map"
+msgstr "Ne pas charger les icônes de têtes pour la liste des joueurs"
+
+msgid "Don't connect levels"
+msgstr "Ne pas connecter les niveaux de jeu"
+
+msgid "Speak!"
+msgstr "Parler!"
+
+msgid "-Silence-"
+msgstr ""
+
+msgid "Thanks!"
+msgstr "Merci!"
+
+msgid "Log"
+msgstr ""
+
+msgid "Open URL"
+msgstr "Charger URL"
+
+msgid "&Open"
+msgstr "&Ouvrir"
+
+msgid "&Cancel"
+msgstr "Abandon"
+
+msgid "Player List"
+msgstr "Liste des joueurs"
+
+msgid "Status:"
+msgstr ""
+
+msgid "&Profile"
+msgstr ""
+
+msgid "&Options"
+msgstr ""
+
+msgid "&Refresh"
+msgstr "&Rafraichir"
+
+msgid "&Save"
+msgstr "&Sauver"
+
+msgid "&Close"
+msgstr "&Fermer"
+
+msgid "Staff"
+msgstr "Administration"
+
+msgid "Copains"
+msgstr ""
+
+msgid "Guild"
+msgstr "Guild"
+
+msgid "Normal"
+msgstr ""
+
+msgid "Ignore"
+msgstr ""
+
+msgid "Offline"
+msgstr ""
+
+msgid "Players on this server"
+msgstr "Joueurs sur ce serveur"
+
+msgid "Global Guilds"
+msgstr "Glildes Globales"
+
+msgid "Servers"
+msgstr "Serveurs"
+
+msgid "(none)"
+msgstr "(aucun)"
+
+msgid "Joystick1"
+msgstr ""
+
+msgid "Joystick2"
+msgstr ""
+
+msgid "Profile"
+msgstr ""
+
+msgid "Information about the player"
+msgstr "Informations sur le joueur"
+
+msgid "In-game stats"
+msgstr "Stats jeu"
+
+msgid "Voice Options"
+msgstr "Options voie"
+
+msgid "&Send"
+msgstr "Envoyer"
+
+msgid "Real name:"
+msgstr "Prénom et Nom"
+
+msgid "Age:"
+msgstr ""
+
+msgid "Sex:"
+msgstr ""
+
+msgid "Country:"
+msgstr "Pays"
+
+msgid "Instant Messenger:"
+msgstr "Messagerie instantanée"
+
+msgid "E-mail:"
+msgstr ""
+
+msgid "Homepage:"
+msgstr "Page Web"
+
+msgid "Lieu Favori dans le jeu:"
+msgstr ""
+
+msgid "Favourite quote:"
+msgstr "Citation favorite"
+
+msgid "Level:"
+msgstr "Niveau"
+
+msgid "Online time:"
+msgstr "Temps en ligne"
+
+msgid "Mute"
+msgstr "Muet"
+
+msgid "Open"
+msgstr "Ouvrir"
+
+msgid "unknown"
+msgstr "Inconnu"
+
+msgid "Male"
+msgstr "Homme"
+
+msgid "Female"
+msgstr "Femme"
+
+msgid "Options"
+msgstr ""
+
+msgid "PlayerList Options"
+msgstr "Options de la liste joueur"
+
+msgid "Player list options"
+msgstr "Options de la liste joueur"
+
+msgid "Allow Mass Messages"
+msgstr "Permettre messages à tous"
+
+msgid "Allow HTML in PMs"
+msgstr "Permette le HTML en PMs"
+
+msgid "Allow Images in PMs"
+msgstr "Permettre les images en PMs"
+
+msgid "Playerlist: sort by nickname"
+msgstr "ListeJoueur: trier par pseudo"
+
+msgid "Display Account instead of Nick"
+msgstr "Afficher le compte à la place du pseudo"
+
+msgid "Save PMs/Profiles"
+msgstr "Sauver PMs/Profiles"
+
+msgid "Allow Global PMs"
+msgstr "Permettre messages à tous"
+
+msgid "Show buddies from other servers"
+msgstr "Montrer les amis des autres serveurs"
+
+msgid "Change Controls"
+msgstr "Changer les contrôles"
+
+msgid "Controls"
+msgstr "Contrôles"
+
+msgid "Select the controls for the player."
+msgstr "Choisir les contrôles pour le joueur"
+
+msgid "&Apply"
+msgstr "Valider"
+
+msgid "(not logged in)"
+msgstr "(pas identifié)"
+
+msgid "Players:"
+msgstr "Joueurs:";
+
+msgid "online"
+msgstr "en ligne"
+
+msgid "Nick:"
+msgstr "Pseudo:"
+
+msgid "Account:"
+msgstr "Compte:"
+
+msgid "NPC-Server"
+msgstr ""
+
+msgid "Do you want to load the URL %s with the default browser?"
+msgstr "Voulez-vous charger l'URL %s avec votre navigateur?"
+
+msgid "DirectX couldn't be initialized - please download it from www.microsoft.com"
+msgstr "DirectX ne peut pas être initialisé - le télécharger depuis www.microsoft.com/directx"
+
+msgid "Should the game stay in the tray menu?"
+msgstr ""
+
+msgid "Question"
+msgstr ""
+
+msgid "Show Game"
+msgstr ""
+
+msgid "Show Player List"
+msgstr ""
+
+msgid "Quit"
+msgstr ""
+
+msgid "Bitdepth:"
+msgstr ""
+
+msgid "Format:"
+msgstr ""
+
+msgid "Video Bit Rate:"
+msgstr ""
+
+msgid "Audio Bit Rate:"
+msgstr ""
+
+msgid "Audio:"
+msgstr ""
+
+msgid "avi (Uncompressed)"
+msgstr ""
+
+msgid "avi (MPEG4)"
+msgstr ""
+
+msgid "wmv (Windows Media)"
+msgstr ""
+
+msgid "flv (Flash Video)"
+msgstr ""

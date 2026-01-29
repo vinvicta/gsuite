@@ -1,0 +1,33 @@
+Generation: 0; StepLength: 3; CorridorWidth: 5; ChangeDirProb: 60;
+StraightSpawnProb: 100; DoubleSpawnProb: 100; JumperProb: 100; OpenStartProb:
+0; MaxAge: 50; SkipGenerations: 10; LateSpawn: 5; LateSpawnProb: 80;
+NoDirectionProb: 0. Generation: 1; StepLength: 6; CorridorWidth: 5;
+ChangeDirProb: 30; StraightSpawnProb: 100; DoubleSpawnProb: 100; JumperProb:
+100; OpenStartProb: 30; MaxAge: 12; SkipGenerations: 5; LateSpawn: 4;
+LateSpawnProb: 20; NoDirectionProb: 50. Generation: 2; StepLength: 6;
+CorridorWidth: 3; ChangeDirProb: 20; StraightSpawnProb: 50; DoubleSpawnProb:
+80; JumperProb: 10; OpenStartProb: 30; MaxAge: 10; SkipGenerations: 4;
+LateSpawn: 3; LateSpawnProb: 20; NoDirectionProb: 60. Generation: 3;
+StepLength: 6; CorridorWidth: 5; ChangeDirProb: 50; StraightSpawnProb: 60;
+DoubleSpawnProb: 100; JumperProb: 50; OpenStartProb: 40; MaxAge: 8;
+SkipGenerations: 3; LateSpawn: 2; LateSpawnProb: 20; NoDirectionProb: 80.
+Generation: 4; StepLength: 3; CorridorWidth: 4; ChangeDirProb: 20;
+StraightSpawnProb: 10; DoubleSpawnProb: 80; JumperProb: 0; OpenStartProb: 50;
+MaxAge: 20; SkipGenerations: 2; LateSpawn: 1; LateSpawnProb: 10;
+NoDirectionProb: 100. Generation: 5; StepLength: 3; CorridorWidth: 4;
+ChangeDirProb: 10; StraightSpawnProb: 30; DoubleSpawnProb: 100; JumperProb:
+20; OpenStartProb: 50; MaxAge: 15; SkipGenerations: 3; LateSpawn: 0;
+LateSpawnProb: 0; NoDirectionProb: 80. Generation: 6; StepLength: 3;
+CorridorWidth: 4; ChangeDirProb: 40; StraightSpawnProb: 50; DoubleSpawnProb:
+100; JumperProb: 50; OpenStartProb: 50; MaxAge: 15; SkipGenerations: 2;
+LateSpawn: 2; LateSpawnProb: 50; NoDirectionProb: 100. Generation: 7;
+StepLength: 3; CorridorWidth: 4; ChangeDirProb: 30; StraightSpawnProb: 20;
+DoubleSpawnProb: 0; JumperProb: 50; OpenStartProb: 50; MaxAge: 15;
+SkipGenerations: 1; LateSpawn: 0; LateSpawnProb: 0; NoDirectionProb: 100.
+Generation: 8; StepLength: 3; CorridorWidth: 4; ChangeDirProb: 20;
+StraightSpawnProb: 20; DoubleSpawnProb: 0; JumperProb: 50; OpenStartProb: 50;
+MaxAge: 15; SkipGenerations: 1; LateSpawn: 0; LateSpawnProb: 0;
+NoDirectionProb: 100. Generation: 9; StepLength: 3; CorridorWidth: 4;
+ChangeDirProb: 0; StraightSpawnProb: 20; DoubleSpawnProb: 0; JumperProb: 50;
+OpenStartProb: 50; MaxAge: 15; SkipGenerations: 1; LateSpawn: 0;
+LateSpawnProb: 0; NoDirectionProb: 100.

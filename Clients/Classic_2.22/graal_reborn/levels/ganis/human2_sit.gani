@@ -1,0 +1,55 @@
+GANI0001
+SPRITE    0         SPRITES    0    0   24   12 shadow
+SPRITE  100            HEAD    0    0   30   30 head up
+SPRITE  101            HEAD   30    0   30   30 head left
+SPRITE  102            HEAD   60    0   30   30 head down
+SPRITE  103            HEAD   90    0   30   30 head right
+SPRITE  150           ATTR1    0    0   40   40 hairs up
+SPRITE  151           ATTR1   40    0   40   40 hairs left
+SPRITE  152           ATTR1   80    0   40   40 hairs down
+SPRITE  153           ATTR1  120    0   40   40 hairs right
+SPRITE  268            BODY    0    0   40   25 body sitting up
+SPRITE  269            BODY   40    0   40   25 body sitting left
+SPRITE  270            BODY   80    0   40   25 body sitting down
+SPRITE  271            BODY  120    0   40   25 body sitting right
+SPRITE  450            BODY    0  125   40   15 shoulder up
+SPRITE  451            BODY   40  125   40   15 shoulder left
+SPRITE  452            BODY   80  125   40   15 shoulder down
+SPRITE  453            BODY  120  125   40   15 shoulder right
+SPRITE  556           ATTR5    0  280   30   20 legs (0, 14)
+SPRITE  557           ATTR5   30  280   30   20 legs (1, 14)
+SPRITE  558           ATTR5   60  280   30   20 legs (2, 14)
+SPRITE  559           ATTR5   90  280   30   20 legs (3, 14)
+SPRITE  656           ATTR6    0  350   40   25 arms (0, 14)
+SPRITE  657           ATTR6   40  350   40   25 arms (1, 14)
+SPRITE  658           ATTR6   80  350   40   25 arms (2, 14)
+SPRITE  659           ATTR6  120  350   40   25 arms (3, 14)
+ATTACHSPRITE  100  150   -4   -8
+ATTACHSPRITE  101  151   -6   -8
+ATTACHSPRITE  102  152   -5   -8
+ATTACHSPRITE  103  153   -4   -8
+ATTACHSPRITE  268  556    5   11
+ATTACHSPRITE  268  656    0    1
+ATTACHSPRITE  268  450    0    0
+ATTACHSPRITE  269  557    1    9
+ATTACHSPRITE  269  657   -4    0
+ATTACHSPRITE  269  451    0    0
+ATTACHSPRITE  270  558    5   14
+ATTACHSPRITE  270  658    0    1
+ATTACHSPRITE  270  452    0    0
+ATTACHSPRITE  271  559    9    9
+ATTACHSPRITE  271  659    4    0
+ATTACHSPRITE  271  453    0    0
+
+DEFAULTATTR1 khairs0.png
+DEFAULTATTR5 klegs0.png
+DEFAULTATTR6 kmarms100.png
+DEFAULTHEAD khead0.png
+DEFAULTBODY kmbody100.png
+
+ANI
+ 268   4  13,  100   9  -6
+ 269   7  12,  101  10  -6
+ 270   4  11,  102   9  -7
+ 271   0  12,  103   7  -6
+ANIEND

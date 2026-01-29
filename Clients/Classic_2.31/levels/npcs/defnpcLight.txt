@@ -1,0 +1,15 @@
+// NPC made by Stefan Knorr
+//#COMMENTS The standard light, all values between 0 and 1
+//#EDIT Red 1
+//#EDIT Green 1
+//#EDIT Blue 1
+//#EDIT Alpha 0.99
+if (created) {
+  setimg light2.png;
+  dontblock;
+}
+//#CLIENTSIDE
+if (playerenters) {
+  setcoloreffect Red,Green,Blue,Alpha;
+  drawaslight;
+}

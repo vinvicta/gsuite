@@ -1,0 +1,28 @@
+NPC001
+IMAGE block.png
+SERVERCODE
+// NPC made by Stefan Knorr
+//#COMMENTS A door for use in Graal2001-Playerhouses
+if (created) {
+  setimg block.png;
+  this.key = param2;
+  this.house = param1;
+  setstring this.control,House-Control#v(this.house);
+  this.warpx = param3;
+  this.warpy = param4;
+}
+join housedoors;
+SERVERCODEEND
+SCRIPTINGLANGUAGE gs1script
+PARAM EXPRESSION housenumber
+DEFAULT 1
+PARAMEND
+PARAM EXPRESSION keynumber
+DEFAULT 1
+PARAMEND
+PARAM EXPRESSION warptox
+DEFAULT 30
+PARAMEND
+PARAM EXPRESSION warptoy
+DEFAULT 30
+PARAMEND

@@ -1,0 +1,63 @@
+SPRITE    0         SPRITES    0    0   24   12 shadow
+SPRITE  200            HEAD    0    0   48   48 Up W0 W - Walk
+SPRITE  201            HEAD   48    0   48   48 Left W0
+SPRITE  202            HEAD   96    0   48   48 Down W0
+SPRITE  203            HEAD  144    0   48   48 Right W0
+SPRITE  204            HEAD    0   48   48   48 Up W1
+SPRITE  205            HEAD   48   48   48   48 Left W1
+SPRITE  206            HEAD   96   48   48   48 Down W1
+SPRITE  207            HEAD  144   48   48   48 Right W1
+SPRITE  208            HEAD    0   96   48   48 Up W2
+SPRITE  209            HEAD   48   96   48   48 Left W2
+SPRITE  210            HEAD   96   96   48   48 Down W2
+SPRITE  211            HEAD  144   96   48   48 Right W2
+SPRITE  212            HEAD    0  144   48   48 Up D D - Duck
+SPRITE  213            HEAD   48  144   48   48 Left D
+SPRITE  214            HEAD   96  144   48   48 Down D
+SPRITE  215            HEAD  144  144   48   48 Right D
+SPRITE  216            HEAD    0  192   48   48 Up SH SH - Shell
+SPRITE  217            HEAD   48  192   48   48 Left SH
+SPRITE  218            HEAD   96  192   48   48 Down SH
+SPRITE  219            HEAD  144  192   48   48 Right SH
+SPRITE  220            HEAD    0  240   48   48 Up A A - Attack
+SPRITE  221            HEAD   48  240   48   48 Left A
+SPRITE  222            HEAD   96  240   48   48 Down A
+SPRITE  223            HEAD  144  240   48   48 Right A
+SPRITE  224            HEAD    0  288   48   48 Up S S - Sit
+SPRITE  225            HEAD   48  288   48   48 Left S
+SPRITE  226            HEAD   96  288   48   48 Down S
+SPRITE  227            HEAD  144  288   48   48 Right S
+
+LOOP
+CONTINUOUS
+DEFAULTHEAD bomy_birce0.png
+DEFAULTBODY 
+
+ANI
+   0  12  34,  204   0  -2
+   0  12  34,  205   0  -2
+   0  12  34,  206   0  -2
+   0  12  34,  207   0  -2
+PLAYSOUND bomywalk0.wav 1.5 2
+WAIT 1
+
+   0  12  34,  200   0  -2
+   0  12  34,  201   0  -2
+   0  12  34,  202   0  -2
+   0  12  34,  203   0  -2
+WAIT 1
+
+   0  12  34,  208   0  -2
+   0  12  34,  209   0  -2
+   0  12  34,  210   0  -2
+   0  12  34,  211   0  -2
+PLAYSOUND bomywalk1.wav 1.5 2
+WAIT 1
+
+   0  12  34,  200   0  -2
+   0  12  34,  201   0  -2
+   0  12  34,  202   0  -2
+   0  12  34,  203   0  -2
+WAIT 1
+
+ANIEND
