@@ -1,0 +1,28 @@
+GRPKG001
+NAME Images
+VERSION 1.99
+DESCRIPTION
+asd123
+DESCRIPTIONEND
+USECHECKSUM false
+PROTECTOVERWRITE false
+FLAG popupforoptionalpackages=true
+MODE required
+
+FILE levels/images/graalscreen.jpg
+FILE levels/images/graalscreen2.jpg
+FILE levels/images/graalscreen_back.png
+FILE levels/images/guiblue_button.png
+FILE levels/images/guiblue_check.png
+FILE levels/images/guiblue_radio.png
+FILE levels/images/guiblue_scroll.png
+FILE levels/images/guiblue_scroll_noback.png
+FILE levels/images/guiblue_tab.png
+FILE levels/images/guiblue_textedit.png
+FILE levels/images/guiblue_window.png
+FILE levels/images/guiblue_window_noback.png
+FILE levels/images/login_gradient_blue.png
+FILE levels/images/pics1.png
+FILE levels/images/state.png
+FILE login/styles/trueclassic.wba
+FILE tmp.txt

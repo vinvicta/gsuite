@@ -1,0 +1,70 @@
+SPRITE    0         SPRITES    0    0   24   12 shadow
+SPRITE    1          PARAM1    0    0   22   22 hammer (0, 0)
+SPRITE    2          PARAM1   22    0   22   22 hammer (1, 0)
+SPRITE    3          PARAM1   44    0   22   22 hammer (2, 0)
+SPRITE    4          PARAM1   66    0   22   22 hammer (3, 0)
+SPRITE    5          PARAM1    0   22   22   22 hammer (0, 1)
+SPRITE    6          PARAM1   22   22   22   22 hammer (1, 1)
+SPRITE    7          PARAM1   44   22   22   22 hammer (2, 1)
+SPRITE    8          PARAM1   66   22   22   22 hammer (3, 1)
+SPRITE    9          PARAM1    0   44   22   22 hammer (0, 2)
+SPRITE   10          PARAM1   22   44   22   22 hammer (1, 2)
+SPRITE   11          PARAM1   44   44   22   22 hammer (2, 2)
+SPRITE   12          PARAM1   66   44   22   22 hammer (3, 2)
+SPRITE   40           ATTR1    0    0   48   48 hat up
+SPRITE   41           ATTR1   48    0   48   48 hat left
+SPRITE   42           ATTR1   96    0   48   48 hat down
+SPRITE   43           ATTR1  144    0   48   48 hat right
+SPRITE   44           ATTR1    0   48   48   48 hat pull up
+SPRITE   45           ATTR1   48   48   48   48 hat pull left
+SPRITE   46           ATTR1   96   48   48   48 hat pull down
+SPRITE   47           ATTR1  144   48   48   48 hat pull right
+SPRITE   48           ATTR1    0   96   48   48 hat dead
+SPRITE  100            HEAD    0    0   32   32 head up
+SPRITE  101            HEAD    0   32   32   32 head left
+SPRITE  102            HEAD    0   64   32   32 head down
+SPRITE  103            HEAD    0   96   32   32 head right
+SPRITE  225            BODY   32  192   32   32 body sword1 left
+SPRITE  226            BODY   64  192   32   32 body sword1 down
+SPRITE  227            BODY   96  192   32   32 body sword1 right
+SPRITE  228            BODY    0  224   32   32 body sword2 up
+SPRITE  229            BODY   32  224   32   32 body sword2 left
+SPRITE  230            BODY   64  224   32   32 body sword2 down
+SPRITE  231            BODY   96  224   32   32 body sword2 right
+SPRITE  232            BODY    0  256   32   32 body sword3 up
+SPRITE  244            BODY    0  352   32   32 body pushing2 up
+SPRITE  246            BODY   64  352   32   32 body pushing2 down
+SPRITE  248            BODY    0  384   32   32 body pushing3 up
+SPRITE  249            BODY   32  384   32   32 body pushing3 left
+SPRITE  250            BODY   64  384   32   32 body pushing3 down
+SPRITE  251            BODY   96  384   32   32 body pushing3 right
+SPRITE  257            BODY   32  448   32   32 body lifting left
+SPRITE  259            BODY   96  448   32   32 body lifting right
+
+SETBACKTO idle
+DEFAULTPARAM1 hammergold.png
+DEFAULTATTR1 hat0.png
+DEFAULTHEAD head19.png
+DEFAULTBODY body.png
+
+ANI
+   0  12  34,  228   8  16,  100   8   3,   40   0 -15,   10  24   7
+   0   8  36,  225   6  15,  101   7   1,   41  -5 -17,    4  -2   5
+   0  12  34,  226   8  16,  102   8   3,   42   0 -15,    1  -2   3
+   0   8  36,  227   2  15,  103   2   1,   43  -2 -17,    3  20   5
+WAIT 2
+
+   0  12  34,  244   8  16,    5  25  -6,  100   8   6,   40   0 -12
+   0   6  36,    8 -15  12,  249   1  12,  101   2   0,   41 -10 -18
+   0  12  34,  246   8  16,   10   6  32,  102   8   6,   42   0 -12
+   0  10  36,    7  31  12,  251   7  12,  103   8   0,   43   3 -18
+WAIT 1
+
+   0  12  34,  248   8  16,    1  25   2,  100   8   7,   40   0 -11
+   0   4  36,   12 -18  25,  257   1  15,  101   1   4,   41 -11 -14
+   0  12  34,  250   8  16,  102   8  10,   42   0  -8,    6   6  40
+   0  12  36,   11  36  26,  259   9  15,  103   9   4,   43   5 -14
+PLAYSOUND bomyload.wav 1.5 2
+WAIT 6
+
+ANIEND

@@ -1,0 +1,624 @@
+# GUI translation
+# Copyright (C) 2007 Linux Cyberjoueurs
+#
+#, fuzzy
+
+msgid ""
+msgstr "Plural-Forms: nplurals=2; plural=n>1;\n"
+
+#: options.txt:5
+msgid "Up"
+msgstr "Haut"
+
+#: options.txt:6
+msgid "Down"
+msgstr "Bas"
+
+#: options.txt:7
+msgid "Left"
+msgstr "Gauche"
+
+#: options.txt:8
+msgid "Right"
+msgstr "Droit"
+
+#: options.txt:9
+msgid "Grab"
+msgstr "Attraper"
+
+#: options.txt:10
+msgid "Use sword"
+msgstr "Utiliser épée"
+
+#: options.txt:11
+msgid "Use sword (2)"
+msgstr "Utiliser épée (2)"
+
+#: options.txt:12
+msgid "Use weapon"
+msgstr "Utiliser arme"
+
+#: options.txt:13
+msgid "Item menu"
+msgstr "Menu objets"
+
+#: options.txt:14
+msgid "Pause"
+msgstr "Pause"
+
+#: options.txt:15
+msgid "Map"
+msgstr "Carte"
+
+#: options.txt:16
+msgid "Activate Micro"
+msgstr "Activer le micro"
+
+#: options.txt:17
+msgid "Load-Level Dialog"
+msgstr "Chargement d'un Level"
+
+#: options.txt:18
+msgid "Serverlist"
+msgstr "Liste des serveurs"
+
+#: options.txt:29
+msgid "Forward"
+msgstr "Avancer"
+
+#: options.txt:30
+msgid "Backward"
+msgstr "Reculer"
+
+#: options.txt:31
+msgid "Strafe Left"
+msgstr "Pas de coté à gauche"
+
+#: options.txt:32
+msgid "Strafe Right"
+msgstr "Pas de coté à droite"
+
+#: options.txt:37
+msgid "Jump"
+msgstr "Sauter"
+
+#: options.txt:38
+msgid "Fire Weapon"
+msgstr "Tirer avec l'arme"
+
+#: options.txt:39
+msgid "First Person"
+msgstr "Première personne"
+
+#: options.txt:71 mainmenu.txt:174
+msgid "Options"
+msgstr "Options"
+
+#: options.txt:88 messagebox.txt:48
+msgid "OK"
+msgstr "OK"
+
+#: options.txt:102
+msgid "Graphics"
+msgstr "Graphiques"
+
+#: options.txt:103
+msgid "Graphical options"
+msgstr "Options graphiques"
+
+#: options.txt:105
+msgid "Sound"
+msgstr "Son"
+
+#: options.txt:106
+msgid "Audio and Microphone options"
+msgstr "Options de Son et Micro"
+
+#: options.txt:108
+msgid "Keys 2D"
+msgstr "Touches 2D"
+
+#: options.txt:109
+msgid "Keyboard configuration"
+msgstr "Configuration du clavier"
+
+#: options.txt:111
+msgid "Keys 3D"
+msgstr "Touches 3D"
+
+#: options.txt:112
+msgid "Graal3D Keys and Mouse options"
+msgstr "Options clavier/souris pour Graal3D"
+
+msgid "Capture"
+msgstr ""
+
+msgid "Video capture options"
+msgstr ""
+
+#: options.txt:114
+msgid "General"
+msgstr "General"
+
+#: options.txt:115
+msgid "General options"
+msgstr "Options Generale"
+
+#: options.txt:161 options.txt:229
+msgid "Control Name"
+msgstr "Nom des contrôles"
+
+#: options.txt:169 options.txt:237
+msgid "Control Binding"
+msgstr "Contrôles"
+
+#: options.txt:185
+msgid "Mouse Sensitivity:"
+msgstr "Sensabilité de la souris"
+
+#: options.txt:263
+msgid "Mp3"
+msgstr "Mp3"
+
+#: options.txt:271
+msgid "Midi"
+msgstr "Midi"
+
+#: options.txt:279
+msgid "Radio"
+msgstr "Radio"
+
+#: options.txt:305
+msgid "Enable Microphone"
+msgstr "Valider le Microphone"
+
+#: options.txt:313
+msgid "Reverse stereo channels"
+msgstr "Inverser les canaux stéréos"
+
+#: options.txt:339
+msgid "Sound FX"
+msgstr "Son FX"
+
+#: options.txt:347 options.txt:365
+msgid "Voice"
+msgstr "Voix"
+
+#: options.txt:356
+msgid "Microphone activated by:"
+msgstr "Microphone activé par:"
+
+#: options.txt:373
+msgid "Key"
+msgstr "Touche"
+
+#: options.txt:397
+msgid "Codec:"
+msgstr "Codec:"
+
+#: options.txt:423
+msgid "Fullscreen Resolution:"
+msgstr "Mode Plein écran:"
+
+#: options.txt:441
+msgid "Fullscreen bit depth:"
+msgstr "Nombre de bit mode plein écran:"
+
+#: options.txt:460
+msgid "Screenshot Format:"
+msgstr "Format de Screenshot:"
+
+#: options.txt:478
+msgid "Visible Distance (3D):"
+msgstr "Distance visible (3D):"
+
+#: options.txt:496
+msgid "Detail Factor (3D):"
+msgstr "Qualité d'affichage (3D):"
+
+#: options.txt:513
+msgid "Enable True Type Fonts"
+msgstr "Utiliser les fontes TrueType"
+
+#: options.txt:530
+msgid "Language:"
+msgstr "Langue:"
+
+#: options.txt:549
+msgid "Automatic mapping (M)"
+msgstr "Tracé des cartes automatique (M)"
+
+#: options.txt:557
+msgid "Allow Mass PMs"
+msgstr "Permettre les PMs à tous"
+
+#: options.txt:565
+msgid "Save PMs / Profiles"
+msgstr "Sauver PMS/Profiles"
+
+#: options.txt:573
+msgid "Load buddy list from server"
+msgstr "Charger la liste des amis depuis le serveur"
+
+#: options.txt:581
+msgid "Allow global PMs"
+msgstr "Permettre les PMS globaux"
+
+#: options.txt:589
+msgid "Show yourself on other buddy lists"
+msgstr "être visisable dans les listes d'amis"
+
+#: options.txt:597
+msgid "Allow toall-messages"
+msgstr "Permettre les messages à tous"
+
+#: options.txt:605
+msgid "Don't load head icons"
+msgstr "Ne pas charger les icons de tête"
+
+#: options.txt:613
+msgid "Use fixed port for UDP:"
+msgstr "Utiliser un port fixe pour UDP:"
+
+#: options.txt:621
+msgid "Disable UDP"
+msgstr "Désactiver UDP"
+
+#: options.txt:629
+msgid "Only show one level"
+msgstr "Montrer seulement un niveau de jeu"
+
+#: options.txt:637
+msgid "Limit the length of nicknames to"
+msgstr "Limiter pseudos à"
+
+#: options.txt:675
+msgid "Default font height:"
+msgstr "Taille de fonte par défaut:"
+
+#: options.txt:704
+msgid "Re-bind control..."
+msgstr "Réattache les contrôles..."
+
+#: options.txt:756
+msgid "Auto-Select"
+msgstr "Selection automatique"
+
+#: options.txt:757
+msgid "GSM (13kbit)"
+msgstr "GSM (13kbit)"
+
+#: options.txt:758
+msgid "LPC (4.8kbit)"
+msgstr "LPC (4.8kbit)"
+
+#: options.txt:759
+msgid "LPC-10 (2.4kbit)"
+msgstr "LPC-10 (2.4kbit)"
+
+#: mainmenu.txt:54
+msgid "Nickname:"
+msgstr "Pseudo:"
+
+#: mainmenu.txt:71
+msgid "Start"
+msgstr "Go!"
+
+#: mainmenu.txt:87
+msgid "Play as:"
+msgstr "S'identifier:"
+
+#: mainmenu.txt:96
+msgid "Guest"
+msgstr "Invité"
+
+#: mainmenu.txt:106
+msgid "Member"
+msgstr "Membre"
+
+#: mainmenu.txt:116
+msgid "Save password"
+msgstr "Sauver le mot de passe"
+
+#: mainmenu.txt:126
+msgid "Account name:"
+msgstr "Nom de compte:"
+
+#: mainmenu.txt:145
+msgid "Password:"
+msgstr "Mot de passe:"
+
+#: mainmenu.txt:166
+msgid "Become a Member"
+msgstr "Devenir membre"
+
+#: mainmenu.txt:182
+msgid "Offline Test"
+msgstr "Test du moteur"
+
+#: mainmenu.txt:277
+msgid "Connecting..."
+msgstr "Connection..."
+
+#: mainmenu.txt:285
+msgid "Connecting to the login server..."
+msgstr "Connection au serveur de jeu"
+
+#: mainmenu.txt:286
+#, c-format
+msgid "Connecting to %s..."
+msgstr "Connection à %s..."
+
+#: playerprofile.txt:32
+msgid "Profile"
+msgstr "Profile"
+
+#: playerprofile.txt:53
+msgid "Close"
+msgstr "Fermer"
+
+#: playerprofile.txt:66
+msgid "Send"
+msgstr "Envoyer"
+
+#: playerprofile.txt:79
+msgid "Player info"
+msgstr "Information sur le joueur"
+
+#: playerprofile.txt:91
+msgid "In-game stats"
+msgstr "Statistiques jeux"
+
+#: playerprofile.txt:103
+msgid "Real name:"
+msgstr "Nom:"
+
+#: playerprofile.txt:115
+msgid "Age:"
+msgstr "Age:"
+
+#: playerprofile.txt:127
+msgid "Sex:"
+msgstr "Sex:"
+
+#: playerprofile.txt:139
+msgid "Country:"
+msgstr "Pays:"
+
+#: playerprofile.txt:151
+msgid "Instant Messenger:"
+msgstr "Messagerie instantanée:"
+
+#: playerprofile.txt:163
+msgid "E-mail:"
+msgstr "Couriel:"
+
+#: playerprofile.txt:175
+msgid "Homepage:"
+msgstr "Page web:"
+
+#: playerprofile.txt:187
+msgid "Favourite Hangout:"
+msgstr "Lieu de visites de favori:"
+
+#: playerprofile.txt:199
+msgid "Favourite Quote:"
+msgstr "Expression favorite:"
+
+#: playerprofile.txt:211
+msgid "Level:"
+msgstr "Niveau:"
+
+#: playerprofile.txt:223
+msgid "Online-time:"
+msgstr "Temps en ligne:"
+
+#: playerprofile.txt:235
+msgid "Muted"
+msgstr "Désactivé"
+
+#: playerprofile.txt:455
+msgid "unknown"
+msgstr "Inconnu"
+
+#: playerprofile.txt:456
+msgid "Male"
+msgstr "Homme"
+
+#: playerprofile.txt:457
+msgid "Female"
+msgstr "Femme"
+
+#: setup.txt:53
+msgid "Install %s"
+msgstr "Installation de %s"
+
+#: setup.txt:60
+msgid "Destination:"
+msgstr "Destination:"
+
+#: setup.txt:73
+msgid "Browse"
+msgstr "Explorer"
+
+#: setup.txt:81
+msgid "Add Desktop Icon"
+msgstr "Ajouter un Icon sur le bureau"
+
+#: setup.txt:88
+msgid "Add Link to the Start Menu"
+msgstr "Ajouter un lieu dans le menu démarrer"
+
+#: setup.txt:96
+msgid "Install"
+msgstr "Installer"
+
+#: selectfile.txt:21
+msgid "Select File"
+msgstr "Choisir un fichier"
+
+#: selectfile.txt:22
+msgid "Save As"
+msgstr "Sauver comme"
+
+#: selectfile.txt:55
+msgid "Show hidden files"
+msgstr "Montrer les fichiers cachés"
+
+#: selectfile.txt:65
+msgid "Select"
+msgstr "Choisir"
+
+#: selectfile.txt:66
+msgid "Save"
+msgstr "Sauver"
+
+#: selectfile.txt:74 loadlevelgui.txt:59
+msgid "Cancel"
+msgstr "Annuler"
+
+#: selectfile.txt:82
+msgid "Search in:"
+msgstr "Rechercher dans:"
+
+#: selectfile.txt:110 loadlevelgui.txt:47
+msgid "Filename:"
+msgstr "Nom de fichier:"
+
+#: quitdialog.txt:35
+msgid "Warning"
+msgstr "Avertissement"
+
+#: quitdialog.txt:49
+msgid "Do you really want to quit Graal?"
+msgstr "Voulez vous vraiment quitter Graal?"
+
+#: quitdialog.txt:61
+msgid "YES"
+msgstr "OUI"
+
+#: quitdialog.txt:74
+msgid "NO"
+msgstr "NON"
+
+#: loadlevelgui.txt:26
+msgid "Load Level"
+msgstr "Charger un niveau de jeu"
+
+#: loadlevelgui.txt:72
+msgid "X:"
+msgstr "X:"
+
+#: loadlevelgui.txt:84
+msgid "Y:"
+msgstr "Y:"
+
+msgid "Error"
+msgstr ""
+
+msgid "Administrator Message"
+msgstr ""
+
+msgid "Could not start ExeReplace.exe which is supposed to replace %s with %s. The update failed."
+msgstr ""
+
+msgid "Was not able to start %s!"
+msgstr ""
+
+msgid "Couldn't connect to the server"
+msgstr ""
+
+msgid "The connection could not be established! Check that the "
+"internet cable is connected and the firewall is not blocking %s."
+msgstr ""
+
+msgid "You have been disconnected from the game server."
+msgstr ""
+
+msgid "It seems that the UDP protocol is not working, "
+"it might be better to disable UDP in the options"
+msgstr ""
+
+msgid "Others:"
+msgstr ""
+
+msgid "Rendering Problem"
+msgstr ""
+
+msgid "No hardware graphics support detected.\n"
+"Please install a driver for your graphics card."
+msgstr ""
+
+msgid "The execution file is corrupted. Please\n"
+"check for viruses or other programs that manipulate\n"
+"*.exe files (virus checker, drivespace,...) !"
+msgstr ""
+
+msgid "Scanning folder structure for fast access..."
+msgstr ""
+
+msgid "Starting 3D mode..."
+msgstr ""
+
+msgid "You can record a video by pressing Alt + 6 to start and stop recording. "
+"It is saved into the Graal folder under videos/."
+msgstr ""
+
+msgid "Video size:"
+msgstr ""
+
+msgid "Full size"
+msgstr ""
+
+msgid "Capture area:"
+msgstr ""
+
+msgid "Full window"
+msgstr ""
+
+msgid "Focus on player"
+msgstr ""
+
+msgid "Focus on mouse"
+msgstr ""
+
+msgid "Frames per second:"
+msgstr ""
+
+msgid "Disable day-night effects"
+msgstr ""
+
+msgid "Hide the interface"
+msgstr ""
+
+msgid "Show the mouse cursor"
+msgstr ""
+
+msgid "Allow capture by script"
+msgstr ""
+
+msgid "Capture audio"
+msgstr ""
+
+msgid "Default GUI style (PMs etc.):"
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "Downloading"
+msgstr ""
+
+msgid "File not found"
+msgstr ""
+
+msgid "Requires ActiveX Control"
+msgstr ""
+
+msgid "Requires Plugin"
+msgstr ""
+
+msgid "Can't show Flash:"
+msgstr ""
+
+

@@ -1,0 +1,28 @@
+Dungeon dimensions - dimX = 80; dimY = 140.
+numRooms < 5; numOpen < 1; numClosed < 10; numColumns < 1; numCrawlers < 10.
+div: 15; Xdiv: 12; Ydiv: 3; width: 5; lTC: 0; tC: 2; rTC: 0; rC: 1; rBC: 0;
+bC: 2; lBC: 0; lC: 1; style: 265; delay: 0 
+div: 15; Xdiv: 3; Ydiv: 12; width: 5; lTC: 0; tC: 2; rTC: 0; rC: 1; rBC: 0;
+bC: 2; lBC: 0; lC: 1; style: 265; delay: 0 
+div: 0; Xdiv: 0; Ydiv: 0; width: 0; lTC: 0; tC: 0; rTC: 0; rC: 0;
+rBC: 0; bC: 0; lBC: 0; lC: 0; style: 0; delay: 0 
+div = 0 is not a room but indicates the end of room input 
+Open square at ( 0 , 0 ) (the value (0 , 0) is not an open square but
+terminates the series) 
+Wall tile at ( 67 , 46 ) 
+Wall tile at ( 12 , 92 )
+Wall tile at ( 0 , 0 )
+(the value (0 , 0) is not a wall tile but terminates the series)
+Column at ( 0 , 0 )
+(the value (0 , 0) is not a column but terminates the series)
+A Crawler starts at (x , y) = (67 , 46)
+and this crawler will head in direction 1 with delay 10 and termination 3.
+A Crawler starts at (x , y) = (67 , 46)
+and this crawler will head in direction 4 with delay 10 and termination 4.
+A Crawler starts at (x , y) = (12 , 92)
+and this crawler will head in direction 3 with delay 10 and termination 3.
+A Crawler starts at (x , y) = (12 , 92)
+and this crawler will head in direction 2 with delay 10 and termination 4.
+A Crawler starts at (x , y) = (0 , 0)
+(the value (0 , 0) is not a crawler but terminates the series)
+Outside walls sports 2 protuberances.

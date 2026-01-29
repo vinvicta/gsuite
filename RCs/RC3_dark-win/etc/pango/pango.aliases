@@ -1,0 +1,7 @@
+courier   = "courier new"
+ubuntu    = "ubuntu,segoe ui,lucida sans unicode,arial unicode ms,browallia new,mingliu,simhei,gulimche,ms gothic,kartika,latha,mangal"
+tahoma    = "tahoma,lucida sans unicode,arial unicode ms,browallia new,mingliu,simhei,gulimche,ms gothic,kartika,latha,mangal"
+sans      = "arial,lucida sans unicode,arial unicode ms,browallia new,mingliu,simhei,gulimche,ms gothic,kartika,latha,mangal"
+serif     = "times new roman,angsana new,mingliu,simsun,gulimche,ms gothic,kartika,latha,mangal"
+mono      = "courier new,lucida console,courier monothai,mingliu,simsun,gulimche,ms gothic,kartika,latha,mangal"
+monospace = "courier new,lucida console,courier monothai,mingliu,simsun,gulimche,ms gothic,kartika,latha,mangal"

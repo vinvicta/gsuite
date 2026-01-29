@@ -1,0 +1,15 @@
+:),smilieSmile.mng
+:(,smilieFrown.png
+:o,smilieRedface.png
+:D,smilieBiggrin.png
+;),smilieWink.png
+:p,smilieTongue.png
+:cool:,smilieCool.png
+:rolleyes:,smilieRolleyes.png
+:mad:,smilieMad.png
+:eek:,smilieEek.png
+:confused:,smilieConfused.png
+:megaeek:,smilieMegaeek.mng
+:grr:,smiliePissed.mng
+:asleep:,smilieAsleep.png
+:spam:,smilieSpam.mng

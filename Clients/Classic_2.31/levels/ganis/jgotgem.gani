@@ -1,0 +1,74 @@
+SPRITE    0         SPRITES    0    0   24   12 shadow
+SPRITE    1       jgems.png    0    0   15   17 gem 1
+SPRITE    2       jgems.png    0   17   18   16 gem 2
+SPRITE    3       jgems.png   15    0   19   17 gem 3
+SPRITE    4       jgems.png   53    0   15   17 gem 4
+SPRITE    5       jgems.png   19   17   14   17 gem 1 uncrafted
+SPRITE    6       jgems.png   33   17   17   16 gem 2 uncrafted
+SPRITE    7       jgems.png   34    0   19   17 gem 3 uncrafted
+SPRITE    8       jgems.png   50   17   15   17 gem 4 uncrafted
+SPRITE   40           ATTR1    0    0   48   48 hat up
+SPRITE   41           ATTR1   48    0   48   48 hat left
+SPRITE   42           ATTR1   96    0   48   48 hat down
+SPRITE   43           ATTR1  144    0   48   48 hat right
+SPRITE   44           ATTR1    0   48   48   48 hat pull up
+SPRITE   45           ATTR1   48   48   48   48 hat pull left
+SPRITE   46           ATTR1   96   48   48   48 hat pull down
+SPRITE   47           ATTR1  144   48   48   48 hat pull right
+SPRITE   48           ATTR1    0   96   48   48 hat dead
+SPRITE  102            HEAD    0   64   32   32 head down
+SPRITE  226            BODY   64  192   32   32 body sword1 down
+SPRITE  234            BODY   64  256   32   32 body sword3 down
+SPRITE  254            BODY   64  416   32   32 body pulling down
+SPRITE  262            BODY   64  480   32   32 body hands down
+SPRITE  266            BODY   64  512   32   32 body carrying1 down
+
+SINGLEDIRECTION
+DEFAULTPARAM1 8
+DEFAULTATTR1 hat0.png
+DEFAULTHEAD head19.png
+DEFAULTBODY body.png
+
+ANI
+   0  12  34,  254   8  16,  102   8   7,   42   0 -11, PARAM1  16  28
+PLAYSOUND chest.wav 1.5 2
+WAIT 5
+
+   0  12  34,  266   8  16,  102   8   0,   42   0 -18,  262   8   0, PARAM1  16   3
+
+   0  12  34,  266   8  16,  102   8   0,   42   0 -18,  262   8   0, PARAM1  16  -3
+
+   0  12  34,  266   8  16,  102   8   0,   42   0 -18,  262   8   0, PARAM1  16  -9
+
+   0  12  34,  266   8  16,  102   8   0,   42   0 -18,  262   8   0, PARAM1  16 -14
+
+   0  12  34,  266   8  16,  102   8   0,   42   0 -18,  262   8   0, PARAM1  16 -18
+
+   0  12  34,  266   8  16,  102   8   0,   42   0 -18,  262   8   0, PARAM1  16 -21
+
+   0  12  34,  266   8  16,  102   8   0,   42   0 -18,  262   8   0, PARAM1  16 -23
+
+   0  12  34,  266   8  16,  102   8   0,   42   0 -18,  262   8   0, PARAM1  16 -24
+
+   0  12  34,  266   8  16,  102   8   0,   42   0 -18,  262   8   0, PARAM1  16 -24
+
+   0  12  34,  266   8  16,  102   8   0,   42   0 -18,  262   8   0, PARAM1  16 -23
+
+   0  12  34,  266   8  16,  102   8   0,   42   0 -18,  262   8   0, PARAM1  16 -21
+
+   0  12  34,  226   8  14,  102   8   0,   42   0 -18, PARAM1  16 -18
+
+   0  12  34,  226   8  14,  102   8   0,   42   0 -18, PARAM1  16 -14
+
+   0  12  34,  226   8  14,  102   8   0,   42   0 -18, PARAM1  16  -9
+
+   0  12  34,  226   8  14,  102   8   0,   42   0 -18, PARAM1  16  -3
+
+   0  12  34,  226   8  14,  102   8   0,   42   0 -18, PARAM1  16   3
+
+   0  12  34,  226   8  14,  102   8   0,   42   0 -18, PARAM1  16  17
+WAIT 5
+
+   0  12  34,  234   8  14,  102   8   0,   42   0 -18, PARAM1  30  13
+
+ANIEND

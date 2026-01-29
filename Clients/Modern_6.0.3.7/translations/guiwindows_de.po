@@ -1,0 +1,396 @@
+# GUI translation
+# Copyright (C) 2007 Linux Cyberjoueurs
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+
+Español
+Français
+Português
+Ändere
+
+msgid "Change these options if you've got problems with the game or if you want to speed up the game."
+msgstr "Ändere diese Optionen wenn es Probleme mit dem Spiel gibt oder wenn du es tunen willst. "
+
+msgid "&Close"
+msgstr "&Schließen"
+
+msgid "&Video"
+msgstr "&Grafik"
+
+msgid "&3D"
+msgstr ""
+
+msgid "Ca&pture"
+msgstr "Auf&nahme"
+
+msgid "&Audio"
+msgstr "S&ound"
+
+msgid "&Micro"
+msgstr "&Mikro"
+
+msgid "C&ontrols"
+msgstr "S&teuerung"
+
+msgid "&General"
+msgstr "&Allgemein"
+
+msgid "Wait for vertical blank (slower but smoother)"
+msgstr "Auf Austastzeile warten (vertical blank, langsamer)"
+
+msgid "Automapping"
+msgstr "Automatische Kartografierung"
+
+msgid "Start in fullscreen mode"
+msgstr "Im Vollbildmodus starten"
+
+msgid "Fullscreen mode:"
+msgstr "Vollbildmodus:"
+
+msgid "Font:"
+msgstr "Schriftart:"
+
+msgid "Size:"
+msgstr "Schriftgröße:"
+
+msgid "Use Bitmap Fonts (faster and smoother)"
+msgstr "Benutze Bitmap Schriftarten (schneller und schöner)"
+
+msgid "Use a minimum of video resources"
+msgstr "Benutze so wenig Video RAM wie möglich"
+
+msgid "Enable scripted effects (unchecking these might speed up the game on some servers):"
+msgstr "Schalte Effekte ein (das Ausschalten kann das Spiel auf einigen Servern verschnellern):"
+
+msgid "Lights"
+msgstr "Lichteffekte"
+
+msgid "Weather"
+msgstr "Wetter"
+
+msgid "Particles"
+msgstr "Partikel"
+
+msgid "Visible distance:"
+msgstr "Sichtbare Entfernung:"
+
+msgid "Detail factor:"
+msgstr "Detailfaktor:"
+
+msgid "Volume:"
+msgstr "Lautstärke:"
+
+msgid "midi"
+msgstr ""
+
+msgid "mod, mp3"
+msgstr ""
+
+msgid "radio"
+msgstr ""
+
+msgid "voice"
+msgstr "Sprache"
+
+msgid "sfx"
+msgstr ""
+
+msgid "Current track:"
+msgstr "Aktueller Titel:"
+
+msgid "Play"
+msgstr "Abspielen"
+
+msgid "Stop"
+msgstr "Stop"
+
+msgid "Micro activation by:"
+msgstr "Mikrofon aktivieren mit:"
+
+msgid "Volume"
+msgstr "Lautstärke"
+
+msgid "loud"
+msgstr "laut"
+
+msgid "quiet"
+msgstr "leise"
+
+msgid "Amplify:"
+msgstr "Verstärkung:"
+
+msgid "Source:"
+msgstr "Quelle:"
+
+msgid "Automatic"
+msgstr "Automatisch"
+
+msgid "Joystick support"
+msgstr "Joystickunterstützung"
+
+msgid "Don't use DirectInput"
+msgstr "Nicht DirectInput benutzen"
+
+msgid "Change &keys"
+msgstr "Ändere &Tasten"
+
+msgid "Ignore toalls"
+msgstr "Ignoriere Toall-Mitteilungen"
+
+msgid "Use filename cache (don't scan folders each startup)"
+msgstr "Speichere die Verzeichnisstruktur (schnellerer Start)"
+
+msgid "Speak!"
+msgstr "Sprich!"
+
+msgid "-Silence-"
+msgstr "-Stumm-"
+
+msgid "Thanks!"
+msgstr "Danke!"
+
+msgid "Log"
+msgstr ""
+
+msgid "Open URL"
+msgstr "URL Öffnen"
+
+msgid "&Open"
+msgstr "&Öffnen"
+
+msgid "&Cancel"
+msgstr "&Abbrechen"
+
+msgid "Player List"
+msgstr "Spielerliste"
+
+msgid "Status:"
+msgstr ""
+
+msgid "&Profile"
+msgstr "&Profil"
+
+msgid "&Options"
+msgstr "&Optionen"
+
+msgid "&Refresh"
+msgstr "Neu &Laden"
+
+msgid "&Save"
+msgstr "&Speichern"
+
+msgid "&Close"
+msgstr "S&chließen"
+
+msgid "Staff"
+msgstr "Admins"
+
+msgid "Buddies"
+msgstr "Freunde"
+
+msgid "Guild"
+msgstr "Gilde"
+
+msgid "Normal"
+msgstr ""
+
+msgid "Ignore"
+msgstr "Ignorieren"
+
+msgid "Offline"
+msgstr ""
+
+msgid "Players on this server"
+msgstr "Spieler auf diesem Server"
+
+msgid "Global Guilds"
+msgstr "Globale Gilden"
+
+msgid "Servers"
+msgstr "Server"
+
+msgid "(none)"
+msgstr "(keiner)"
+
+msgid "Joystick1"
+msgstr ""
+
+msgid "Joystick2"
+msgstr ""
+
+msgid "Profile"
+msgstr "Profil"
+
+msgid "Information about the player"
+msgstr "Informationen über den Spieler"
+
+msgid "In-game stats"
+msgstr "Spielstatistiken"
+
+msgid "Voice Options"
+msgstr "Sprachoptionen"
+
+msgid "&Send"
+msgstr "&Senden"
+
+msgid "Real name:"
+msgstr "Wahrer Name:"
+
+msgid "Age:"
+msgstr "Alter:"
+
+msgid "Sex:"
+msgstr "Geschlecht:"
+
+msgid "Country:"
+msgstr "Land:"
+
+msgid "Instant Messenger:"
+msgstr ""
+
+msgid "E-mail:"
+msgstr ""
+
+msgid "Homepage:"
+msgstr ""
+
+msgid "Favourite Graal hangout:"
+msgstr "Lieblingsort:"
+
+msgid "Favourite quote:"
+msgstr "Lieblingsspruch:"
+
+msgid "Level:"
+msgstr ""
+
+msgid "Online time:"
+msgstr "Online-Zeit:"
+
+msgid "Mute"
+msgstr "Verstummen"
+
+msgid "Open"
+msgstr "Öffnen"
+
+msgid "unknown"
+msgstr "unbekannt"
+
+msgid "Male"
+msgstr "Männlich"
+
+msgid "Female"
+msgstr "Weiblich"
+
+msgid "Options"
+msgstr "Optionen"
+
+msgid "PlayerList Options"
+msgstr "Spielerliste-Optionen"
+
+msgid "Player list options"
+msgstr "Spielerliste-Optionen"
+
+msgid "Allow Mass Messages"
+msgstr "Erlaube Massennachrichten"
+
+msgid "Allow HTML in PMs"
+msgstr "Erlaube HTML in Nachrichten"
+
+msgid "Allow Images in PMs"
+msgstr "Erlaube Bilder in Nachrichten"
+
+msgid "Playerlist: sort by nickname"
+msgstr "Spielerliste: Sortiere nach Spitzname"
+
+msgid "Display Account instead of Nick"
+msgstr "Zeige Account anstatt des Spitznamens"
+
+msgid "Save PMs/Profiles"
+msgstr "Speichere Nachrichten und Profile"
+
+msgid "Allow Global PMs"
+msgstr "Erlaube globale Nachrichten"
+
+msgid "Show buddies from other servers"
+msgstr "Zeige Freunde auf anderen Servern"
+
+msgid "Change Controls"
+msgstr "Ändere die Steuerung"
+
+msgid "Controls"
+msgstr "Steuerung"
+
+msgid "Select the controls for the player."
+msgstr "Wähle die Steuerung für den Spieler."
+
+msgid "&Apply"
+msgstr "&Benutzen"
+
+msgid "(not logged in)"
+msgstr "(nicht online)"
+
+msgid "Players:"
+msgstr "Spieler:"
+
+msgid "online"
+msgstr ""
+
+msgid "Nick:"
+msgstr "Spitzname:"
+
+msgid "Account:"
+msgstr ""
+
+msgid "NPC-Server"
+msgstr ""
+
+msgid "Do you want to load the URL %s with the default browser?"
+msgstr "Möchtest du die URL %s mit dem Standardbrowser öffnen?"
+
+msgid "DirectX couldn't be initialized - please download it from www.microsoft.com"
+msgstr "DirectX wurde nicht gefunden - bitte installiere es von www.microsoft.com"
+
+msgid "Should the game stay in the tray menu?"
+msgstr "Soll das Spiel als Taskleistensymbol verfügbar bleiben?"
+
+msgid "Question"
+msgstr "Frage"
+
+msgid "Show Game"
+msgstr "Zeige Spielfenster"
+
+msgid "Show Player List"
+msgstr "Zeige Spielerliste"
+
+msgid "Quit"
+msgstr "Beenden"
+
+msgid "Bitdepth:"
+msgstr ""
+
+msgid "Format:"
+msgstr ""
+
+msgid "Video Bit Rate:"
+msgstr "Videobitrate:"
+
+msgid "Audio Bit Rate:"
+msgstr "Audiobitrate"
+
+msgid "Audio:"
+msgstr ""
+
+msgid "avi (Uncompressed)"
+msgstr "avi (Unkomprimiert)"
+
+msgid "avi (MPEG4)"
+msgstr ""
+
+msgid "wmv (Windows Media)"
+msgstr ""
+
+msgid "flv (Flash Video)"
+msgstr "flv (Flashvideo)"

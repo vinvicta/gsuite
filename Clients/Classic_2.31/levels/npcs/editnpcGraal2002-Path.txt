@@ -1,0 +1,102 @@
+if (playerenters) {
+  this.lastpx = -1000;
+}
+if (playerenters || timeout) {
+  if (mousebuttons%2>=1) {
+    if (this.lastpx>-1000) {
+      dx = (mousex-this.lastpx);
+      dy = (mousey-this.lastpy);
+      dist = (abs(dx)>abs(dy)? abs(dx) : abs(dy));
+      for (di=0; di<dist; di++) {
+        px = this.lastpx + (dx*di/dist);
+        py = this.lastpy + (dy*di/dist);
+        laypath();
+      }
+    }
+    px = mousex;
+    py = mousey;
+    laypath();
+    this.lastpx = px;
+    this.lastpy = py;
+  } else
+    this.lastpx = -1000;
+  timeout = 0.05;
+}
+function laypath() {
+  basetile = 0x480;
+  setarray cornertiles,8*2;
+  for (i=0; i<8; i++) { 
+    cornertiles[i*2] = basetile+i*16;
+    cornertiles[1+i*2] = basetile+1+i*16;
+  }
+  sandtiles = {cornertiles[7*2],cornertiles[1+7*2]};
+  grasstile = 0;
+
+  // Check if can lay a sand path here
+  if (tiles[px,py] in sandtiles) return;
+  for (tx=px-1; tx<=px+1; tx++) for (ty=py-1; ty<=py+1; ty++) {
+    if (tiles[tx,ty] in sandtiles) continue;
+    checkgrassorborder();
+    if (isok==false) return;
+  }
+
+  // Put sand on the mouse position
+  tiles[px,py] = sandtiles[int(random(0,2))];
+
+  // Calculate the tiles around the mouse position
+  for (tx=px-1; tx<=px+1; tx++) for (ty=py-1; ty<=py+1; ty++) {
+    if ((tx==px && ty==py) || tiles[tx,ty] in sandtiles) continue;
+
+    // Check which tiles around this tile are sand tiles
+    sandn  = (tiles[tx  ,ty-1] in sandtiles);
+    sandnw = (tiles[tx-1,ty-1] in sandtiles);
+    sandw  = (tiles[tx-1,ty  ] in sandtiles);
+    sandsw = (tiles[tx-1,ty+1] in sandtiles);
+    sands  = (tiles[tx  ,ty+1] in sandtiles);
+    sandse = (tiles[tx+1,ty+1] in sandtiles);
+    sande  = (tiles[tx+1,ty  ] in sandtiles);
+    sandne = (tiles[tx+1,ty-1] in sandtiles);
+    if (sandnw+sandne==2) sandn = true;
+    if (sandnw+sandsw==2) sandw = true;
+    if (sandsw+sandse==2) sands = true;
+    if (sandse+sandne==2) sande = true;
+
+    // Get the right sand corner tile depending on
+    // in which directions sand was found
+    if (sandn+sands==2 || sandw+sande==2 ||
+        sandn+sandw+sandse==3 || sandw+sands+sandne==3 || sands+sande+sandnw==3 || sande+sandn+sandsw==3)
+      newtile = sandtiles[0];
+    else if (sandn+sandw+sands+sande==2) {
+      if (sandn+sandw==2) newtile = cornertiles[2*2];
+      else if (sandw+sands==2) newtile = cornertiles[3*2];
+      else if (sands+sande==2) newtile = cornertiles[1+3*2];
+      else newtile = cornertiles[1+2*2];
+    } else if (sandn+sandw+sands+sande==1) {
+      if (sandn+sandse==2 || sande+sandnw==2) newtile = cornertiles[1+2*2];
+      else if (sandn+sandsw==2 || sandw+sandne==2) newtile = cornertiles[2*2];
+      else if (sands+sandnw==2 || sandw+sandse==2) newtile = cornertiles[3*2];
+      else if (sands+sandne==2 || sande+sandsw==2) newtile = cornertiles[1+3*2];
+      else if (sandn==1) newtile = cornertiles[1+4*2];
+      else if (sandw==1) newtile = cornertiles[1];
+      else if (sands==1) newtile = cornertiles[4*2];
+      else newtile = cornertiles[0];
+    } else if (sandnw+sandne+sandsw+sandse==2) {
+      if (sandnw+sandse==2) newtile = cornertiles[1+1*2];
+      else if (sandne+sandsw==2) newtile = cornertiles[1*2];
+    } else if (sandnw+sandne+sandsw+sandse==1) {
+      if (sandnw==1) newtile = cornertiles[1+6*2];
+      else if (sandsw==1) newtile = cornertiles[1+5*2];
+      else if (sandse==1) newtile = cornertiles[5*2];
+      else newtile = cornertiles[6*2];
+    }
+
+    // Write the tile
+    tiles[tx,ty] = newtile;
+  }
+
+  // Redraw the level on the mouse position
+  updateboard px-1,py-1,3,3;
+}
+function checkgrassorborder() {
+  isok = (tiles[tx,ty]==0 || (tiles[tx,ty] in cornertiles));
+}

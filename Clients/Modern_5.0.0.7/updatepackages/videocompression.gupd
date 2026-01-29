@@ -1,0 +1,13 @@
+GRPKG001
+NAME Video Compression Libraries
+VERSION 1.02
+PLATFORM win
+
+DESCRIPTION
+This contains several libraries of the FFMPEG project, stripped to only provide the video encoders.
+See their <a href=http://ffmpeg.mplayerhq.hu/>Website</a> for more.
+DESCRIPTIONEND
+
+FILE avformat-51.dll
+FILE avcodec-51.dll
+FILE avutil-49.dll

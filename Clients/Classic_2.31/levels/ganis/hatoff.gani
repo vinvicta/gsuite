@@ -1,0 +1,78 @@
+SPRITE    0         SPRITES    0    0   24   12 shadow
+SPRITE   10          SHIELD    0    0    6   18 shield up
+SPRITE   11          SHIELD    6    0    8   20 shield left
+SPRITE   12          SHIELD   14    0   16   20 shield down
+SPRITE   13          SHIELD   30    0    8   20 shield right
+SPRITE   40           ATTR1    0    0   48   48 hat up
+SPRITE   41           ATTR1   48    0   48   48 hat left
+SPRITE   42           ATTR1   96    0   48   48 hat down
+SPRITE   43           ATTR1  144    0   48   48 hat right
+SPRITE   44           ATTR1    0   48   48   48 hat pull up
+SPRITE   45           ATTR1   48   48   48   48 hat pull left
+SPRITE   46           ATTR1   96   48   48   48 hat pull down
+SPRITE   47           ATTR1  144   48   48   48 hat pull right
+SPRITE   48           ATTR1    0   96   48   48 hat dead
+SPRITE  100            HEAD    0    0   32   32 head up
+SPRITE  101            HEAD    0   32   32   32 head left
+SPRITE  102            HEAD    0   64   32   32 head down
+SPRITE  103            HEAD    0   96   32   32 head right
+SPRITE  200            BODY    0    0   32   32 body up
+SPRITE  205            BODY   32   32   32   32 body walking1 left
+SPRITE  207            BODY   96   32   32   32 body walking1 right
+SPRITE  212            BODY    0   96   32   32 body walking3 up
+SPRITE  224            BODY    0  192   32   32 body sword1 up
+SPRITE  225            BODY   32  192   32   32 body sword1 left
+SPRITE  227            BODY   96  192   32   32 body sword1 right
+SPRITE  228            BODY    0  224   32   32 body sword2 up
+SPRITE  229            BODY   32  224   32   32 body sword2 left
+SPRITE  231            BODY   96  224   32   32 body sword2 right
+SPRITE  233            BODY   32  256   32   32 body sword3 left
+SPRITE  234            BODY   64  256   32   32 body sword3 down
+SPRITE  235            BODY   96  256   32   32 body sword3 right
+SPRITE  261            BODY   32  480   32   32 body hands left
+SPRITE  263            BODY   96  480   32   32 body hands right
+SPRITE  266            BODY   64  512   32   32 body carrying1 down
+
+CONTINUOUS
+DEFAULTATTR1 hat2.png
+DEFAULTHEAD head19.gif
+DEFAULTBODY body.png
+
+ANI
+   0  12  34,   10  36  16,  228   8  16,  100   8   2,   40   0 -16
+   0  12  36,   11   6  16,  225  12  16,  101  12   2,   41   0 -16
+   0  12  34,  266   8  16,  102   8   2,   42   0 -16,  261  -1   0,  263  18   0
+   0  12  36,   13  34  16,  227   4  16,  103   4   2,   43   0 -16
+
+   0  12  34,   10  36  16,  228   8  16,  100   8   2,   40  -3 -15
+   0  12  36,   11   6  16,  225  12  16,  101  12   2,   41  -4 -12
+   0  12  34,  266   8  16,  102   8   2,   42   2 -16,  261  -1   0,  263  20   0
+   0  12  36,   13  34  16,  227   4  16,  103   4   2,   43   4 -12
+
+   0  12  34,   10  36  16,  224   8  15,  100   8   2,   40  -8 -12
+   0  12  36,   11   6  16,  229  12  16,  101  12   2,   41  -5  -8
+   0  12  34,  266   8  16,  102   8   2,   42   4 -16,  261  -1   0,  263  22   0
+   0  12  36,   13  34  16,  231   4  16,  103   4   2,   43   5  -8
+
+   0  12  34,   10  36  16,  224   8  15,  100   8   2,   40 -14  -9
+   0  12  36,   11   6  16,  229  12  16,  101  12   2,   41  -9  -3
+   0  12  34,  234   8  14,  102   8   2,   42   9 -11
+   0  12  36,   13  34  16,  231   4  16,  103   4   2,   43   9  -3
+
+   0  12  34,   10  36  16,  212   8  14,  100   8   2,   40 -18  -1
+   0  12  36,   11   6  16,  233  12  16,  101  12   2,   41  -3   4
+   0  12  34,  234   8  14,  102   8   2,   42  18  -9
+   0  12  36,   13  34  16,  235   4  16,  103   4   2,   43   3   4
+
+   0  12  34,   10  36  16,  212   8  14,  100   8   2,   47 -24   5
+   0  12  36,   11   6  16,  233  12  16,  101  12   2,   41   2   5
+   0  12  34,  234   8  14,  102   8   2,   42  23  -6
+   0  12  36,   13  34  16,  235   4  16,  103   4   2,   43  -2   5
+
+   0  12  34,   10  36  16,  200   8  16,  100   8   2,   47 -24   8
+   0  12  36,   11   6  16,  205  11  18,  101  12   2,   41   8   0
+   0  12  34,  234   8  14,  102   8   2,   45  27   9
+   0  12  36,   13  34  16,  207   5  18,  103   4   2,   43  -8   0
+WAIT 5
+
+ANIEND

@@ -1,0 +1,7 @@
+maxCrawlers = 800
+minCorrWidth = 2
+smallestRoomWidth = 3
+chDirOnStraight = 30
+jumperLife = 7
+joinDist = 13
+You should only change these constants if you know what you're doing

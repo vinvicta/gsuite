@@ -1,0 +1,30 @@
+NPC001
+IMAGE 
+SCRIPTINGLANGUAGE SGScript
+
+PARAM STRING Head
+DEFAULT head3.gif
+PARAMEND
+
+PARAM STRING Shield
+DEFAULT shield2.gif
+PARAMEND
+
+PARAM STRING Body
+DEFAULT body.png
+PARAMEND
+
+PARAM INT Dir
+DEFAULT 2
+PARAMEND
+
+SERVERCODE
+function onCreated()
+{
+    showcharacter();
+    this.headimg = param1;
+    this.shieldimg = param2;
+    this.bodyimg = param3;
+    this.dir = param4;
+}
+SERVERCODEEND

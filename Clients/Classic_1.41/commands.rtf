@@ -1,0 +1,465 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\froman\fprq2\fcharset2 Symbol;}}
+{\colortbl ;\red0\green0\blue255;}
+\viewkind4\uc1\pard\cf1\lang1031\b\f0\fs20 Commands\cf0\par
+\cf1\b0\fs18\par
+// for program execution:\cf0\b\par
+set\b0  \i flagname\b\i0 ;\tab       \cf1\b0 sets a flag to true\cf0\b\par
+unset \b0\i flagname\b\i0 ;\tab       \cf1\b0 sets a flag to false\cf0\par
+\b if\b0  \b (\b0  \i flag\b\i0 )\b0  \i operation\b\i0 ;\tab       \cf1\b0 the operation will only be executed wenn flag is true\cf0\par
+\b else \b0\i operation\b\i0 ;\tab       \cf1\b0 executes an operation wenn flag was false\cf0\b\par
+for (\b0\i init-op\b\i0 ; \b0\i flag\b\i0 ; \b0\i incr-op\b\i0 ) \b0\i operation\b\i0 ;\tab\cf1\b0 executes <init-op>, then while flag is true <operation;incr-op>\cf0\fs20\par
+\b\fs18 while\b0  \b (\b0  \i flag\b\i0 )\b0  \i operation\b\i0 ;\tab\tab\cf1\b0 repeats the operation while flag is true\cf0\par
+\b break\tab\tab       \cf1\b0 ends a loop and continues with the script that follows to the loop\cf0\par
+\b continue\tab\tab       \cf1\b0 jumps to the beginning of the loop (next loop round)\cf0\par
+\b function \b0\i funcname\b\i0 () \{\b0  \i operations\b\i0 ; \}\tab\cf1\b0 defines a function, can be called with funcname()\cf0\par
+\b return\tab\tab\tab\cf1\b0 ends the function immediatelly and returns to the function caller\cf0\par
+\b sleep \b0\i seconds\b\i0 ;\tab\tab\cf1\b0 pauses the script execution for the specified time\par
+\cf0\b setarray \b0\i var,size\b\i0 ;\tab\tab\cf1\b0 initializes var as an array of  the specified size\cf0\fs20\par
+\b\fs18 setstring \b0\i varname,value\b\i0 ;\tab\cf1\b0 creates a string variable \lquote varname\rquote  with the given value\par
+\cf0\b timereverywhere;\tab\tab\cf1\b0 allows timeouts on this machine even if the player didn\rquote t entered the level first\par
+\cf0\b\par
+\cf1\b0 // simple npc manipulation:\cf0\b\par
+setgif \b0\i filename\b\i0 ;\tab       \cf1\b0 changes the npc\rquote s image\cf0\b\par
+setimg \b0\i filename\b\i0 ;\tab       \cf1\b0 changes the npc\rquote s image\cf0\b\par
+setgifpart \b0\i filename,x,y,width,height\b\i0 ;\tab       \cf1\b0 changes the npc\rquote s image and only displays the rectangle (x,y,width,height) of it\cf0\b\par
+setimgpart \b0\i filename,x,y,width,height\b\i0 ;\tab       \cf1\b0 changes the npc\rquote s image and only displays the rectangle (x,y,width,height) of it\cf0\b\par
+hide;\tab\tab       \cf1\b0 hides the npc\cf0\b\par
+show;\tab\tab       \cf1\b0 shows an hidden npc\cf0\par
+\b dontblock;\tab       \cf1\b0 lets the npc don\rquote t block the player anymore\cf0\fs20\par
+\b\fs18 drawoverplayer;\tab       \cf1\b0 draws the npc over the player\cf0\fs20\par
+\b\fs18 drawunderplayer;\tab       \cf1\b0 draws the npc under the player\cf0\fs20\par
+\b\fs18 blockagain;\tab       \cf1\b0 turns off the three previous flags\cf0\fs20\par
+\b\fs18 canbecarried;\tab       \cf1\b0 the npc can now be lifted and carried by the player\cf0\fs20\par
+\b\fs18 cannotbecarried;\tab       \cf1\b0 turns off the previous flag\cf0\fs20\par
+\b\fs18 canbepushed;\tab       \cf1\b0 the npc can now be pushed by the player\cf0\fs20\par
+\b\fs18 cannotbepushed;\tab       \cf1\b0 turns off the previous flag\cf0\fs20\par
+\b\fs18 canbepulled;\tab       \cf1\b0 the npc can now be pulled by the player\cf0\fs20\par
+\b\fs18 cannotbepulled;\tab       \cf1\b0 turns off the previous flag\cf0\fs20\par
+\b\fs18\par
+\cf1\b0 // complex npc operations:\cf0\b\par
+say\b0  \i signindex\b\i0 ;\tab       \cf1\b0 displays signs\cf0\i\par
+\b\i0 lay\b0  \i itemname\b\i0 ;\tab       \cf1\b0 lays an item\cf0\b\par
+lay2\b0  \i itemname,x,y\b\i0 ;\tab       \cf1\b0 lays an item to the specified position\cf0\b\par
+take\b0\i  itemname\b\i0 ;\tab       \cf1\b0 takes an item if available\cf0\par
+\b take2\b0\i  index\b\i0 ;\tab       \cf1\b0 takes the item with the specified index\cf0\par
+\b message \b0\i text\b\i0 ;\tab       \cf1\b0 displays a text message over the npc\par
+\cf0\b timershow;\tab       \cf1\b0 lets the npc\rquote s timeout be shown\cf0\fs20\par
+\b\fs18 showcharacter;\tab\tab\cf1\b0 displays a player character instead of the npc image\par
+\cf0\b setcharprop \b0\i messagecode,string\b\i0 ;\tab\cf1\b0 sets string properties of the character\par
+\cf0\b putnpc \b0\i imgname,scriptname,x,y\b\i0 ;\tab\cf1\b0 creates a npc, scriptname is the name of a textfile containing the npc script\par
+\cf0\b callnpc \b0\i index,eventflag\b\i0 ;\tab\tab\cf1\b0 calls the script of another npc (not immediatelly)\par
+\cf0\b destroy;\tab\tab\tab\tab\cf1\b0 deletes the npc\par
+\cf0\b carryobject \b0\i carryobjectname\b\i0 ;\tab\cf1\b0 the character carries an object (only when 23<=sprite<=32) \par
+\cf0\b throwcarry;\tab\tab\cf1\b0 throws the carried object\par
+\cf0\b followplayer;\tab\tab\cf1\b0 lets the npc follow the player; the action script keeps running; set x/y to leave the player\cf0\fs20\par
+\b\fs18 toinventory \b0\i flag\b\i0 ;\tab\tab\cf1\b0 puts the npc into the player\rquote s inventory until the flag is unset\cf0\fs20\par
+\b\fs18 toweapons \b0\i weaponname\b\i0 ;\tab\cf1\b0 adds this npc to the players weapon list\cf0\fs20\par
+\b\fs18 showimg \b0\i index,filename,x,y\b\i0 ;\tab\cf1\b0 shows an image at the given position\cf0\fs20\par
+\b\fs18 hideimg \b0\i index\b\i0 ;\tab\tab\cf1\b0 removes the image with the specified index\cf0\fs20\par
+\b\fs18 changeimgpart \b0\i index,x,y,width,height\b\i0 ;\tab       \cf1\b0 changes the visible part of the showimg\cf0\b\par
+changeimgvis \b0\i index,drawingheight\b\i0 ;\tab       \cf1\b0 changes the drawing height of the showimg (0,1,2,4)\cf0\b\par
+shootarrow \b0\i direction\b\i0 ;\tab\cf1\b0 shoots an arrow\cf0\b\par
+shootfireball \b0\i direction\b\i0 ;\tab\cf1\b0 shoots a firewall\cf0\b\par
+shootfireblast \b0\i direction\b\i0 ;\tab\cf1\b0 shoots a fireblast\cf0\b\par
+shootnuke \b0\i direction\b\i0 ;\tab\cf1\b0 shoots an nukeshot\cf0\b\par
+shootball;\tab\tab\cf1\b0 shoots a ball directly to the player\cf0\fs20\par
+\b\fs18 hitplayer \b0\i index,halfhearts,fromx,fromy\b\i0 ;\tab\cf1\b0 hurts a player\cf0\fs20\par
+\b\fs18 hitnpc \b0\i index,halfhearts,fromx,fromy\b\i0 ;\tab\tab\cf1\b0 hurts an npc (changes hearts, hurtdx, hurtdy)\cf0\fs20\par
+\b\fs18 hidelocal;\tab\tab\cf1\b0 hides the npc (only for the current player)\cf0\b\par
+showlocal;\tab\tab\cf1\b0 shows an hidden npc (only for the current player)\cf0\par
+\b dontblocklocal;\tab\tab\cf1\b0 lets the npc don\rquote t block the player anymore (only for the current player)\cf0\fs20\par
+\b\fs18 blockagainlocal;\tab\tab\cf1\b0 turns off the three block flags (only for the current player)\par
+\cf0\b takehorse \b0\i index\b\i0 ;\tab\tab\cf1\b0 takes the horse with the specified index (only works in combination with \lquote showcharacter\rquote  )\cf0\b\par
+\par
+\cf1\b0 // player manipulation:\cf0\b\par
+setlevel \b0\i filename\b\i0 ;\tab\tab\cf1\b0 warps the player (URLs not supported)\cf0\b\par
+setlevel2 \b0\i filename,x,y\b\i0 ;\tab\cf1\b0 warps the player to the specified level and position\cf0\b\par
+seturllevel \b0\i URL\b\i0 ;\tab\tab\cf1\b0 warps the player to an URL (without the leading http://!)\cf0\b\par
+setbody \b0\i filename\b\i0 ;\tab\tab\cf1\b0 sets the body image for the player\cf0\fs20\par
+\b\fs18 sethead \b0\i filename\b\i0 ;\tab\tab\cf1\b0 sets the head image for the player\cf0\fs20\par
+\b\fs18 setsword \b0\i imgname,power\b\i0 ;\tab\cf1\b0 changes the players sword (-20 \f1\'a3 \f0 power \f1\'a3 \f0 20)\cf0\fs20\par
+\b\fs18 setshield \b0\i imgname,power\b\i0 ;\tab\cf1\b0 changes the players shield (0 \f1\'a3 \f0 power \f1\'a3 1\f0 0)\cf0\fs20\par
+\b\fs18 setbow \b0\i imgname\b\i0 ;\tab\tab\cf1\b0 sets the bow image that is displayed when playersprite==33\cf0\fs20\par
+\b\fs18 setplayerdir \b0\i direction\b\i0 ;\tab\cf1\b0 sets the player looking direction\cf0\b  \par
+setskincolor \b0\i colorname\b\i0 ;\tab\cf1\b0 changes the player skin\cf0\b\par
+setcoatcolor \b0\i colorname\b\i0 ;\tab\cf1\b0 changes the player coat\cf0\b\par
+setsleevecolor \b0\i colorname\b\i0 ;\tab\cf1\b0 changes the player sleeves\cf0\b\par
+setshoecolor \b0\i colorname\b\i0 ;\tab\cf1\b0 changes the player shoes\cf0\b\par
+setbeltcolor \b0\i colorname\b\i0 ;\tab\cf1\b0 changes the player belt\cf0\b\par
+setplayerprop \b0\i messagecode,string\b\i0 ;\tab\cf1\b0 sets string properties of the player (except the nickname&guildcode)\par
+\cf0\b takeplayercarry;\tab\tab\cf1\b0 removes the object carried by the player\cf0\fs20\par
+\b\fs18 takeplayerhorse;\tab\tab\cf1\b0 removes the player\rquote s horse\cf0\fs20\par
+\b\fs18 disableweapons;\tab\tab\cf1\b0 disables the player\rquote s sword+bombs+darts\cf0\fs20\par
+\b\fs18 enableweapons;\tab\tab\cf1\b0 enables the player weapons\cf0\fs20\par
+\b\fs18 freezeplayer \b0\i seconds\b\i0 ;\tab\cf1\b0 the player can\rquote t move for the given time\cf0\fs20\par
+\b\fs18 hideplayer \b0\i seconds\b\i0 ;\tab\cf1\b0 hides the player for the specified time\cf0\fs20\par
+\b\fs18 hidesword \b0\i seconds\b\i0 ;\tab\cf1\b0 hides the player\rquote s sword for the specified time\cf0\fs20\par
+\b\fs18 hurt\b0  \i halfhearts\b\i0 ;\tab\tab\cf1\b0 hurts the player\cf0\par
+\b\par
+\cf1\b0 // level/game manipulation:\cf0\b\par
+updateboard \b0\i x,y,width,height\b\i0 ;\tab\cf1\b0 makes level board modifies visible\cf0\fs20\par
+\b\fs18 putobject \b0\i objectname,x,y\b\i0 ;\tab\cf1\b0 puts an object onto the board\par
+\cf0\b putbomb \b0\i power,x,y\b\i0 ;\tab\cf1\b0 puts a bomb on the board\cf0\fs20\par
+\b\fs18 putexplosion \b0\i radius,x,y\b\i0 ;\tab\cf1\b0 puts an explosion on the board\cf0\fs20\par
+\b\fs18 putexplosion2 \b0\i power,radius,x,y\b\i0 ;\tab\cf1\b0 puts an explosion on the board (power=1 -> normal, 3 -> jolt bomb)\cf0\fs20\par
+\b\fs18 putleaps \b0\i leaptype,x,y\b\i0 ;\tab\cf1\b0 procduces an object \lquote explosion\rquote  (0-bush,1-swamp,2-stone,3-sign,4-ball,5-water)\cf0\b\par
+puthorse \b0\i imgname,x,y\b\i0 ;\tab\cf1\b0 puts a horse (or boat) on the board\cf0\fs20\par
+\b\fs18 setbackpal \b0\i filename\b\i0 ;\tab\cf1\b0 the background gets the color palette of the specified image\par
+\cf0\b setletters \b0\i filename\b\i0 ;\tab\tab\cf1\b0 signs will be displayed using the specified image instead of letters.png\par
+\cf0\b setmap \b0\i imgname,levelnamesfile,x,y\b\i0 ;\tab\cf1\b0 changes the map, the player will be placed on (x,y)\par
+\cf0\b setminimap \b0\i imgname,levelnamesfile,x,y\b\i0 ;\tab\cf1\b0 changes the minimap, the player will be placed on (x,y)\par
+\cf0\b showstats \b0\i bitflag\b\i0 ;\tab\tab\cf1\b0 shows/hides parts of the stats bar (1-ASD,2-icons,4-rupees,8-bombs,16-arrows,32-hearts,64-ap,128-mp,256-minimap,512-inv,1024-player)\par
+\cf0\b noplayerkilling;\tab\tab\cf1\b0 disables hurting with sword/npc weapons\par
+\cf0\b removebomb \b0\i index\b\i0 ;\tab\cf1\b0 removes the bomb with the specified index\par
+\cf0\b removearrow \b0\i index\b\i0 ;\tab\cf1\b0 removes the arrow with the specified index\par
+\cf0\b removeitem \b0\i index\b\i0 ;\tab\tab\cf1\b0 removes the item with the specified index\par
+\cf0\b removeexplo \b0\i index\b\i0 ;\tab\cf1\b0 removes the explosion with the specified index\par
+\cf0\b removehorse \b0\i index\b\i0 ;\tab\cf1\b0 removes the horse with the specified index\par
+\cf0\b explodebomb \b0\i index\b\i0 ;\tab\cf1\b0 explodes the bomb with the specified index\par
+\cf0\b reflectarrow \b0\i index\b\i0 ;\tab\cf1\b0 reflects the arrow with the specified index (like a mirror shield)\par
+\cf0\b\par
+\cf1\b0 // baddy manipulation:\cf0\b\par
+putcomp \b0\i baddyname,x,y\b\i0 ;\tab\cf1\b0 puts a new baddy on the board\cf0\fs20\par
+\b\fs18 putnewcomp \b0\i baddyname,x,y,imgname,power\b\i0 ;\tab\cf1\b0 puts a baddy on the board (with the specified image and power)\cf0\fs20\par
+\b\fs18 hitcompu \b0\i index,decrpower,fromx,fromy\b\i0 ;\tab\cf1\b0 hurts a baddy\cf0\fs20\par
+\b\fs18 removecompus;\tab\tab\cf1\b0 removes all baddies\cf0\b\par
+\b0\fs20\par
+\cf1\fs18 // file operations:\cf0\b\par
+play\b0  \i filename\b\i0 ;\tab\tab\cf1\b0 plays a sound/music file or whatever can be played with \lquote Windows Media Player\rquote\cf0\par
+\b playlooped\b0  \i filename\b\i0 ;\tab\cf1\b0 plays a sound file (*.wav) looped\cf0\par
+\b stopsound\b0  \i filename\b\i0 ;\tab\cf1\b0 stops playing a sound file (*.wav)\cf0\par
+\b stopmidi;\tab\tab\cf1\b0 stops playing the currently running midi file\cf0\fs20\par
+\b\fs18 openurl \b0\i URL\b\i0 ;\tab\tab\cf1\b0 opens the given URL in the default web browser (without the leading http://!)\cf0\fs20\par
+\b\fs18 showfile \b0\i filename\b\i0 ;\tab\tab\cf1\b0 opens the file with the program associated with the file extension\par
+\cf0\fs20\par
+\cf1\b Special Symbols\cf0\par
+\fs18 !\tab\b0 not\par
+\b &&\tab\b0 and\par
+\b ||\b0\tab or\par
+\b ==\b0\tab equals\par
+\b +\b0\tab addition\par
+\b -\b0\tab substraction\par
+\b *\b0\tab multiplication\par
+\b /\b0\tab division\par
+\b %\b0\tab mod; a%b = a - int(a/b)*b;\par
+\b ^\b0\tab power; a^0.5 = squareroot(a)\par
+\b in\tab\b0 tests if an array/range contains a variable (e.g. 2 in \{1,2,3\}; x,y in |0,64|)\par
+\b =\b0\tab assigment\par
+a \b += \b0 b\tab a = a+b\par
+a \b -= \b0 b\tab a = a-b\par
+a \b *= \b0 b\tab a = a*b\par
+a \b ++\b0\tab a = a+1\par
+a \b --\b0\tab a = a-1\par
+\b this.\tab\b0 variables that start with \lquote this.\rquote  are only accessible for the npc itself\par
+\par
+\cf1\b\fs20 Built-in Flags\tab      true when:\cf0\par
+\fs18 playerenters\tab       \cf1\b0\i the layer enters the room\cf0\b\i0\par
+playertouchsme\tab       \cf1\b0\i the layer touchs the npc\cf0\b\i0\par
+playertouchsother\tab       \cf1\b0\i the player touchs another npc\cf0\b\i0\par
+playerlaysitem\tab       \cf1\b0\i somebody layed an item\cf0\b\i0\par
+playerchats\tab       \cf1\b0\i the player says something\cf0\b\i0\par
+isleader\tab\tab       \cf1\b0\i the player entered the level first (of all players in the same room)\cf0\b\i0\par
+isweapon\tab\tab       \cf1\b0\i this npc is a weapon\cf0\b\i0\par
+isonmap\tab\tab       \cf1\b0\i the player is on an outside level\cf0\b\i0\par
+weaponfired\tab       \cf1\b0\i this npc is used as weapon, \lquote D\rquote  (or joybutton1) is pressed\cf0\b\i0\par
+firedonhorse\tab       \cf1\b0\i this npc weapon is fired while riding on horse\cf0\b\i0\par
+compusdied\tab       \cf1\b0\i all baddies died\cf0\b\i0\par
+playerendsreading\tab       \cf1\b0\i the player finished reading\cf0\b\i0\par
+exploded\tab\tab       \cf1\b0\i the npc was exploded by a bomb\cf0\b\i0\par
+timeout\tab\tab       \cf1\b0\i the npc\rquote s timeout counter runs to 0\cf0\b\i0\par
+washit\tab\tab       \cf1\b0\i the npc was slayed with a sword or axe\cf0\b\i0\par
+wasshot\tab\tab       \cf1\b0\i the npc was shot with arrows\cf0\b\i0\par
+shotbyplayer\tab       \cf1\b0\i the npc was shot by the player\cf0\b\i0\par
+shotbybaddy\tab       \cf1\b0\i the npc was shot by a computer opponent\cf0\b\i0\par
+waspelt\tab\tab       \cf1\b0\i the npc was pelt\cf0\b\i0\par
+peltwithbush\tab       \cf1\b0\i the npc was pelt with a bush\cf0\b\i0\par
+peltwithsign\tab       \cf1\b0\i the npc was pelt with a sign\cf0\b\i0\par
+peltwithvase\tab       \cf1\b0\i the npc was pelt with a vase\cf0\b\i0\par
+peltwithstone\tab       \cf1\b0\i the npc was pelt with a stone\cf0\b\i0\par
+peltwithblackstone      \cf1\b0\i the npc was pelt with a blackstone\cf0\b\i0\par
+peltwithnpc\tab       \cf1\b0\i the npc was pelt with another npc\cf0\b\i0\par
+wasthrown\tab       \cf1\b0\i the npc was carried and then thrown\cf0\b\i0\par
+carrying\b0\i\tab       \tab       \cf1 the player carries something\par
+\cf0\b\i0 carriesbush\b0\i\tab       \cf1 the player carries a bush\par
+\cf0\b\i0 carriessign\b0\i\tab       \cf1 the player carries a sign\par
+\cf0\b\i0 carriesvase\b0\i\tab       \cf1 the player carries a vase\par
+\cf0\b\i0 carriesstone\b0\i\tab       \cf1 the player carries a stone\par
+\cf0\b\i0 carriesblackstone\b0\i\tab       \cf1 the player carries a blackstone\par
+\cf0\b\i0 weaponsenabled\b0\i\tab       \cf1 the player weapons are enabled\par
+\cf0\b\i0 visible\tab\b0\i\tab       \cf1 the npc is visible\par
+\cf0\b\i0 followsplayer\tab\b0\i       \cf1 the npc currently follows the player\par
+\cf0\b\i0 onwall( \b0\i x, y \b\i0 )\b0\i\tab       \cf1 the specified field is blocked\par
+\cf0\b\i0 onwater( \b0\i x, y \b\i0 )\b0\i\tab       \cf1 the specified field is water\par
+\cf0\b\i0 compsdead\b0\i\tab       \cf1 there is no living baddy\par
+\cf0\b\i0 playeronhorse\tab       \cf1\b0\i the player rides on a horse (or boat)\par
+\cf0\b\i0 playerswimming\tab       \cf1\b0\i the player is swimming\par
+\cf0\b\i0 playerismale\tab       \cf1\b0\i the player is male (specified in headsconfig.txt)\par
+\cf0\b\i0 playerisfemale\tab       \cf1\b0\i the player is female\par
+\cf0\b\i0 hasweapon( \b0\i name \b\i0 )\tab\cf1\b0\i the player has the weapon specified with \lquote name\rquote\par
+\cf0\b\i0 canspin\tab\tab\tab\cf1\b0\i the player has spin power (for sword)\par
+\cf0\b\i0 strequals( \b0\i str1, str2 \b\i0 )\tab\cf1\b0\i str1=str2 (both strings can contain message codes)\par
+\cf0\b\i0 strcontains( \b0\i str1, str2 \b\i0 )\tab\cf1\b0\i str1 contains str2\par
+\cf0\b\i0 keydown( \b0\i key \b\i0 )\tab\b0\i       \cf1 the specified key is pressed (0..10: up,left,down,right,S,A,D,M,tab,Q,P)\par
+\cf0\b\i0\par
+\cf1\fs20 Built-in Variables / Functions\cf0\par
+\fs18 x\tab\tab       \cf1\b0\i the npc\rquote s horizontal position\cf0\b\i0\par
+y\tab\tab       \cf1\b0\i the npc\rquote s vertical position (top=0)\cf0\b\i0\par
+timeout\tab\tab       \cf1\b0\i the npc\rquote s timeout counter (seconds)\cf0\b\i0\par
+rupees\tab\tab       \cf1\b0\i the npc\rquote s rupees count\cf0\b\i0\par
+bombs\tab\tab       \cf1\b0\i the npc\rquote s bombs count\cf0\b\i0\par
+darts\tab\tab       \cf1\b0\i the npc\rquote s darts count\cf0\b\i0\par
+hearts\tab\tab       \cf1\b0\i the npc\rquote s hearts count\cf0\b\i0\par
+glovepower\tab       \cf1\b0\i the npc\rquote s glove power (1-glove1,2-glove2)\cf0\b\i0\par
+swordpower\tab       \cf1\b0\i the npc\rquote s sword power (1-normal sword,2-axe,3-lizardsword,4-golden sword)\cf0\b\i0\par
+shieldpower      \tab       \cf1\b0\i the npc\rquote s shield power (1-normal sword,2-mirror shield,3-lizard shield)\cf0\b\i0\par
+dir\tab\tab       \cf1\b0\i the direction of the character\cf0\b\i0\par
+sprite\tab\tab       \cf1\b0\i the sprite of the character\cf0\b\i0\par
+ap\tab\tab       \cf1\b0\i the alignment points of the character\cf0\b\i0\par
+hurtdx\tab\tab       \cf1\b0\i will be set when the player uses the sword/npc weapon on the npc\cf0\b\i0\par
+hurtdy\tab\tab       \cf1\b0\i   (x/y difference, >=-1, <=1)\cf0\b\i0\par
+save[\b0\i 0\b\i0 ],..,save[\b0\i 9\b\i0 ]\tab       \cf1\b0\i built-in variables that work in online mode (integer values >=0, <=220)\cf0\b\i0\par
+\par
+npcscount\tab\tab       \cf1\b0\i the npcs count\cf0\b\i0\par
+npcs[\b0\i index\b\i0 ].id\tab\tab       \cf1\b0\i the server id of the npc\cf0\b\i0\par
+npcs[\b0\i index\b\i0 ].x\tab\tab       \cf1\b0\i an horses\rquote s horizontal position\cf0\b\i0\par
+npcs[\b0\i index\b\i0 ].y\tab\tab       \cf1\b0\i an horses\rquote s vertical position\cf0\b\i0\par
+npcs[\b0\i index\b\i0 ].width\tab\tab       \cf1\b0\i the width of the npc (in fields)\cf0\b\i0\par
+npcs[\b0\i index\b\i0 ].height\tab\tab       \cf1\b0\i the height of the npc (in fields)\cf0\b\i0\par
+npcs[\b0\i index\b\i0 ].timeout\tab       \cf1\b0\i the timeout counter of the npc\cf0\b\i0\par
+npcs[\b0\i index\b\i0 ].rupees\tab\tab       \cf1\b0\i the rupees count of the npc\cf0\b\i0\par
+npcs[\b0\i index\b\i0 ].bombs\tab\tab       \cf1\b0\i the bombs count of the npc\cf0\b\i0\par
+npcs[\b0\i index\b\i0 ].darts\tab\tab       \cf1\b0\i the darts count of the npc\cf0\b\i0\par
+npcs[\b0\i index\b\i0 ].hearts\tab\tab       \cf1\b0\i the hearts count of the npc\cf0\b\i0\par
+npcs[\b0\i index\b\i0 ].glovepower\tab       \cf1\b0\i the glove power of the npc\cf0\b\i0\par
+npcs[\b0\i index\b\i0 ].swordpower\tab       \cf1\b0\i the sword power of the npc\cf0\b\i0\par
+npcs[\b0\i index\b\i0 ].shieldpower\tab       \cf1\b0\i the shield power of the npc\cf0\b\i0\par
+npcs[\b0\i index\b\i0 ].dir\tab\tab       \cf1\b0\i the direction of the npc (if it\rquote s a \lquote showcharacter\rquote )\cf0\b\i0\par
+npcs[\b0\i index\b\i0 ].sprite\tab\tab       \cf1\b0\i the sprite of the npc (if it\rquote s a \lquote showcharacter\rquote )\cf0\b\i0\par
+npcs[\b0\i index\b\i0 ].ap\tab\tab       \cf1\b0\i the alignment of the npc (if it\rquote s a \lquote showcharacter\rquote )\cf0\b\i0\par
+npcs[\b0\i index\b\i0 ].hurtdx\tab\tab       \cf1\b0\i will be set when the player hurts the npc (or\cf0\b\i0\par
+npcs[\b0\i index\b\i0 ].hurtdy\tab\tab       \cf1\b0\i   (hitplayer/hitpnc is called) -> push away difference\cf0\b\i0\par
+npcs[\b0\i index\b\i0 ].save[\b0\i 0\b\i0 ],..,save[\b0\i 9\b\i0 ]\tab\cf1\b0\i built-in variables that work in online mode (integer values >=0, <=220)\cf0\b\i0\par
+\par
+playerscount\tab\tab       \cf1\b0\i the player count\cf0\b\i0\par
+players[\b0\i index\b\i0 ].x\tab\tab       \cf1\b0\i a player\rquote s horizontal position\cf0\b\i0\par
+players[\b0\i index\b\i0 ].y\tab\tab       \cf1\b0\i a player\rquote s vertical position\cf0\b\i0\par
+players[\b0\i index\b\i0 ].rupees\tab       \cf1\b0\i a player\rquote s rupees count\cf0\b\i0\par
+players[\b0\i index\b\i0 ].bombs\tab       \cf1\b0\i a player\rquote s bombs count\cf0\b\i0\par
+players[\b0\i index\b\i0 ].darts\tab       \cf1\b0\i a player\rquote s darts count\cf0\b\i0\par
+players[\b0\i index\b\i0 ].mp\tab\tab       \cf1\b0\i a player\rquote s magic points (0..100)\cf0\b\i0\par
+players[\b0\i index\b\i0 ].ap\tab\tab       \cf1\b0\i a player\rquote s alignment points (0..100)\cf0\b\i0\par
+players[\b0\i index\b\i0 ].hearts\tab       \cf1\b0\i a player\rquote s hearts count\cf0\b\i0\par
+players[\b0\i index\b\i0 ].fullhearts\tab       \cf1\b0\i a player\rquote s max hearts count\cf0\b\i0\par
+players[\b0\i index\b\i0 ].dir\tab\tab       \cf1\b0\i a player\rquote s direction (0-up,1-left,2-down,3-right)\cf0\b\i0\par
+players[\b0\i index\b\i0 ].glovepower\tab       \cf1\b0\i a player\rquote s glove power (2-glove1,3-glove2)\cf0\b\i0\par
+players[\b0\i index\b\i0 ].swordpower\tab       \cf1\b0\i a player\rquote s sword power (1-normal sword,2-axe,3-lizardsword,4-golden sword)\cf0\b\i0\par
+players[\b0\i index\b\i0 ].shieldpower\tab       \cf1\b0\i a player\rquote s sield power (1-normal sword,2-mirror shield,3-lizard shield)\cf0\b\i0\par
+players[\b0\i index\b\i0 ].headset\tab       \cf1\b0\i a player\rquote s head sprites set (\rdblquote head\rdblquote +playerheadset+\rdblquote .gif\rdblquote )\cf0\b\i0\par
+players[\b0\i index\b\i0 ].sprite\tab       \cf1\b0\i a player\rquote s sprites set (0..40)\cf0\b\i0\par
+players[\b0\i index\b\i0 ].id\tab\tab       \cf1\b0\i a player\rquote s id (=-1 for npc characters)\cf0\b\i0\par
+players[\b0\i index\b\i0 ].saysnumber\tab       \cf1\b0\i the (index+1)th  player says that number \cf0\b\i0\par
+\i  (playerx,playery,... = players[0].x,players[0].y,... = current players properties)\par
+\i0\par
+compuscount\tab\tab       \cf1\b0\i the baddy count\cf0\b\i0\par
+compus[\b0\i index\b\i0 ].x\tab\tab       \cf1\b0\i a baddy\rquote s horizontal position\cf0\b\i0\par
+compus[\b0\i index\b\i0 ].y\tab\tab       \cf1\b0\i a baddy\rquote s vertical position\cf0\b\i0\par
+compus[\b0\i index\b\i0 ].type\tab       \cf1\b0\i a baddy\rquote s type (0..9, see the baddy names list)\cf0\b\i0\par
+compus[\b0\i index\b\i0 ].dir\tab\tab       \cf1\b0\i a baddy\rquote s body direction (0..3)\cf0\b\i0\par
+compus[\b0\i index\b\i0 ].headdir\tab       \cf1\b0\i a baddy\rquote s head direction (0..3)\cf0\b\i0\par
+compus[\b0\i index\b\i0 ].power\tab       \cf1\b0\i a baddy\rquote s power\cf0\b\i0\par
+compus[\b0\i index\b\i0 ].mode\tab       \cf1\b0\i a baddy\rquote s mode\cf0\b\i0\par
+\par
+bombscount\tab\tab       \cf1\b0\i the bombs count\cf0\b\i0\par
+bombs[\b0\i index\b\i0 ].x\tab\tab       \cf1\b0\i a bomb\rquote s horizontal position\cf0\b\i0\par
+bombs[\b0\i index\b\i0 ].y\tab\tab       \cf1\b0\i a bomb\rquote s vertical position\cf0\b\i0\par
+bombs[\b0\i index\b\i0 ].power\tab       \cf1\b0\i the bomb\rquote s power (1,2,3)\cf0\b\i0\par
+bombs[\b0\i index\b\i0 ].time\tab\tab       \cf1\b0\i the time left till explosion (3 .. 0)\cf0\b\i0\par
+\par
+arrowscount\tab       \cf1\b0\i the arrows count (arrows + balls)\cf0\b\i0\par
+arrows[\b0\i index\b\i0 ].x\tab       \cf1\b0\i an arrow\rquote s horizontal position\par
+\cf0\b\i0 arrows[\b0\i index\b\i0 ].y\tab       \cf1\b0\i an arrow\rquote s vertical position\par
+\cf0\b\i0 arrows[\b0\i index\b\i0 ].dx\tab       \cf1\b0\i the horizontal speed per tick (0.05secs)\par
+\cf0\b\i0 arrows[\b0\i index\b\i0 ].dy\tab       \cf1\b0\i the vertical speed per tick (0.05secs)\par
+\cf0\b\i0 arrows[\b0\i index\b\i0 ].dir\tab       \cf1\b0\i the flying direction (0,1,2,3)\par
+\cf0\b\i0 arrows[\b0\i index\b\i0 ].type      \cf1\b0\i the shottype (-1 -> ball, 0..3 -> arrow with power 1..4)\par
+\cf0\b\i0 arrows[\b0\i index\b\i0 ].from      \cf1\b0\i the shooter (0 -> baddy, 1 -> current player)\par
+\cf0\b\i0\par
+itemscount\tab       \cf1\b0\i the items count\cf0\b\i0\par
+items[\b0\i index\b\i0 ].x\tab       \cf1\b0\i an item\rquote s horizontal position\cf0\b\i0\par
+items[\b0\i index\b\i0 ].y\tab       \cf1\b0\i an item\rquote s vertical position\cf0\b\i0\par
+items[\b0\i index\b\i0 ].type\tab       \cf1\b0\i the item type (0..24)\cf0\b\i0\par
+items[\b0\i index\b\i0 ].time\tab       \cf1\b0\i the time left till the item disappears (8.2 .. 0)\cf0\b\i0\par
+\par
+exploscount\tab\tab       \cf1\b0\i the explosions count (putexplosion produces 9 explosions of size 2x2!)\cf0\b\i0\par
+explos[\b0\i index\b\i0 ].x\tab\tab       \cf1\b0\i an explosion\rquote s horizontal position\cf0\b\i0\par
+explos[\b0\i index\b\i0 ].y\tab\tab       \cf1\b0\i an explosion\rquote s vertical position\cf0\b\i0\par
+explos[\b0\i index\b\i0 ].power\tab       \cf1\b0\i the power of the bomb which produced this explosion\cf0\b\i0\par
+explos[\b0\i index\b\i0 ].time\tab\tab       \cf1\b0\i the time left till the explosion disappears\cf0\b\i0\par
+explos[\b0\i index\b\i0 ].dir\tab\tab       \cf1\b0\i the direction from the bomb which produced the explosion\cf0\b\i0\par
+\par
+horsescount\tab\tab       \cf1\b0\i the horses count\cf0\b\i0\par
+horses[\b0\i index\b\i0 ].x\tab\tab       \cf1\b0\i an horses\rquote s horizontal position\cf0\b\i0\par
+horses[\b0\i index\b\i0 ].y\tab\tab       \cf1\b0\i an horses\rquote s vertical position\cf0\b\i0\par
+horses[\b0\i index\b\i0 ].dir\tab\tab       \cf1\b0\i the direction of the horse\cf0\b\i0\par
+horses[\b0\i index\b\i0 ].bushes\tab       \cf1\b0\i bushes eaten by the horse\cf0\b\i0\par
+horses[\b0\i index\b\i0 ].bombs\tab       \cf1\b0\i bombs count in the horse\rquote s mouth\cf0\b\i0\par
+horses[\b0\i index\b\i0 ].bombpower\tab       \cf1\b0\i the power of the bombs on the horse\rquote s mouth\cf0\b\i0\par
+horses[\b0\i index\b\i0 ].type\tab\tab       \cf1\b0\i the horse type (0 -> riding horse, 1 - boat)\cf0\b\i0\par
+\par
+signscount\tab       \cf1\b0\i the signs count\cf0\b\i0\par
+signs[\b0\i index\b\i0 ].x\tab       \cf1\b0\i a sign\rquote s horizontal position\cf0\b\i0\par
+signs[\b0\i index\b\i0 ].y\tab       \cf1\b0\i a sign\rquote s vertical position\cf0\b\i0\par
+\par
+board[index]\tab       \cf1\b0\i the level board (index = 0..64*64-1)\cf0\b\i0\par
+random( \b0\i a, b \b\i0 )\b0\i\tab       \cf1 a random floating point value, a<= value < b\par
+\cf0\b\i0 sin( \b0\i a \b\i0 )\b0\i\tab\tab       \cf1 the sinus of a; a is an angle in the radiant system (0...3.14)\par
+\cf0\b\i0 cos( \b0\i a \b\i0 )\b0\i\tab\tab       \cf1 the cosinus of a; a is an angle in the radiant system (0...3.14)\par
+\cf0\b\i0 arctan( \b0\i var \b\i0 )\b0\i\tab       \cf1 the arcus tangens of var; (some maths: a = arctan( sin(a) / cos(a) ))\par
+\cf0\b\i0 int( \b0\i var \b\i0 )\tab\b0\i\tab       \cf1 the integer value of a variable (truncates the floating point part)\par
+\cf0\b\i0 abs( \b0\i var \b\i0 )\tab\b0\i       \cf1 the absolute value\par
+\cf0\b\i0 arraylen( \b0\i var \b\i0 )\b0\i\tab       \cf1 the size of an array\par
+\cf0\b\i0 strtofloat( \b0\i str \b\i0 )\b0\i\tab       \cf1 the value of \lquote str\rquote  as number\par
+\cf0\b\i0 testcompu( \b0\i x, y \b\i0 )\b0\i\tab       \cf1 the index of the baddy on position (x,y)\par
+\cf0\b\i0 testplayer( \b0\i x, y \b\i0 )\b0\i\tab       \cf1 the index of the player on position (x,y)\par
+\cf0\b\i0 testnpc( \b0\i x, y \b\i0 )\b0\i\tab       \cf1 the index of the npc on position (x,y)\par
+\cf0\b\i0 testitem( \b0\i x, y \b\i0 )\b0\i\tab       \cf1 the index of the item on position (x,y)\par
+\cf0\b\i0 testbomb( \b0\i x, y \b\i0 )\b0\i\tab       \cf1 the index of the bomb on position (x,y)\par
+\cf0\b\i0 testexplo( \b0\i x, y \b\i0 )\b0\i\tab       \cf1 the index of the explosion on position (x,y)\par
+\cf0\b\i0 testhorse( \b0\i x, y \b\i0 )\b0\i\tab       \cf1 the index of the horse on position (x,y)\par
+\cf0\b\i0 testsign( \b0\i x, y \b\i0 )\b0\i\tab       \cf1 the index of the sign on position (x,y)\par
+\cf0\b\i0 screenwidth\b0\i\tab       \cf1 screen width (for the current player)\par
+\cf0\b\i0 screenheight\b0\i\tab       \cf1 screen height\cf0\b\i0\par
+\par
+\cf1\fs20 Itemname / item index \par
+\pard\tx1134\cf0\fs18 greenrupee\tab\cf1\b0\i 0\cf0\b\i0\par
+bluerupee\tab\cf1\b0\i 1\cf0\b\i0\par
+redrupee\tab\cf1\b0\i 2\cf0\b\i0\par
+bombs\tab\cf1\b0\i 3\cf0\b\i0\par
+darts\tab\cf1\b0\i 4\cf0\b\i0\par
+heart\tab\cf1\b0\i 5\cf0\b\i0\par
+glove1\tab\cf1\b0\i 6\cf0\b\i0\par
+bow\tab\cf1\b0\i 7\cf0\b\i0\par
+bomb\tab\cf1\b0\i 8\cf0\b\i0\par
+shield\tab\cf1\b0\i 9\cf0\b\i0\par
+sword\tab\cf1\b0\i 10\cf0\b\i0\par
+fullheart\tab\cf1\b0\i 11\cf0\b\i0\par
+superbomb\tab\cf1\b0\i 12\cf0\b\i0\par
+battleaxe\tab\cf1\b0\i 13\cf0\b\i0\par
+goldensword\tab\cf1\b0\i 14\cf0\b\i0\par
+mirrorshield\tab\cf1\b0\i 15\cf0\b\i0\par
+glove2\tab\cf1\b0\i 16\cf0\b\i0\par
+lizardshield\tab\cf1\b0\i 17\cf0\b\i0\par
+lizardsword\tab\cf1\b0\i 18\cf0\b\i0\par
+goldrupee\tab\cf1\b0\i 19\cf0\b\i0\par
+fireball\tab\cf1\b0\i 20\cf0\b\i0\par
+fireblast\tab\cf1\b0\i 21\cf0\b\i0\par
+nukeshot\tab\cf1\b0\i 22\cf0\b\i0\par
+joltbomb\tab\cf1\b0\i 23\cf0\b\i0\par
+spinattack\tab\cf1\b0\i 24\cf0\b\i0\par
+\pard\par
+\cf1\fs20 Carry object names\par
+\cf0\fs18 bush\par
+sign\par
+vase\par
+stone\par
+blackstone\par
+bomb\par
+hotbomb\par
+superbomb\par
+joltbomb\par
+hotjoltbomb\par
+none\par
+\par
+\cf1\fs20 Colornames\par
+\cf0\fs18 white\par
+yellow\par
+orange\par
+pink\par
+red\par
+darkred\par
+lightgreen\par
+green\par
+darkgreen\par
+lightblue\par
+blue\par
+darkblue\par
+brown\par
+cynober\par
+purple\par
+darkpurple\par
+lightgray\par
+gray\par
+black\par
+transparent\par
+\par
+\cf1\fs20 Directions\par
+\cf0\fs18 up\par
+left\par
+down\par
+right\par
+\i (you can also use normal variables with values between 0 and 3)\i0\par
+\par
+\cf1\fs20 Baddy names\par
+\cf0\fs18 graysoldier\par
+bluesoldier\par
+redsoldier\par
+shootingsoldier\par
+swampsoldier\par
+frog\par
+octopus\tab\tab\cf1\b0\i <- spider, for compatibility\cf0\b\i0\par
+goldenwarrior\par
+lizardon\par
+dragon\par
+\par
+\cf1\fs20 Baddy modes\par
+\pard\tx1134\cf0\fs18 0\tab\cf1\b0\i walking\cf0\b\i0\par
+1\tab\cf1\b0\i looking\cf0\b\i0\par
+2\tab\cf1\b0\i hunting\cf0\b\i0\par
+3\tab\cf1\b0\i hurted\cf0\b\i0\par
+4\tab\cf1\b0\i bumped\cf0\b\i0\par
+5\tab\cf1\b0\i dying\cf0\b\i0\par
+6\tab\cf1\b0\i shooting (swampsoldier)\cf0\b\i0\par
+7\tab\cf1\b0\i jumping (frog)\cf0\b\i0\par
+8\tab\cf1\b0\i shooting (spider)\cf0\b\i0\par
+9\tab\cf1\b0\i dead\cf0\b\i0\par
+\par
+\cf1\fs20 Player sprites\par
+\cf0\fs18 0\tab\cf1\b0\i no movement\cf0\b\i0\par
+1-8\tab\cf1\b0\i walking\cf0\b\i0\par
+9-13\tab\cf1\b0\i sword slaying\cf0\b\i0\par
+14-18\tab\cf1\b0\i pushing\cf0\b\i0\par
+19-22\tab\cf1\b0\i pulling\cf0\b\i0\par
+23\tab\cf1\b0\i lifting\cf0\b\i0\par
+24\tab\cf1\b0\i no movement, carrying something\cf0\b\i0\par
+25-32\tab\cf1\b0\i walking, carrying something\cf0\b\i0\par
+33\tab\cf1\b0\i shooting\cf0\b\i0\par
+34-36\tab\cf1\b0\i riding\cf0\b\i0\par
+37\tab\cf1\b0\i sitting\cf0\b\i0\par
+38\tab\cf1\b0\i sleeping\cf0\b\i0\par
+39\tab\cf1\b0\i hurted (can only be set on \lquote showcharacter\rquote -npcs)\cf0\b\i0\par
+40\tab\cf1\b0\i dead (can only be set on \lquote showcharacter\rquote -npcs)\cf0\b\i0\par
+\pard\par
+\pard\tx1134\cf1\fs20 Message codes (for \lquote message\rquote , \lquote strequals\rquote , etc.)\par
+\cf0\fs18 #a\tab\tab\cf1\b0\i the account name of the player\cf0\b\i0\par
+#n, #n(\b0\i index\b\i0 )\tab\tab\cf1\b0\i the nick name of the player (index=-1 ->  npc character, 0 -> current player)\cf0\b\i0\par
+#g, #g(\b0\i index\b\i0 )\tab\tab\cf1\b0\i the guild name of the player\par
+\cf0\b\i0 #c, #c(\b0\i index\b\i0 )\tab\tab\cf1\b0\i the current chat text of the player\cf0\b\i0\par
+#v(\b0\i var\b\i0 )\tab\tab\cf1\b0\i the value of \lquote var\rquote  as string\cf0\b\i0\par
+#s(\b0\i var\b\i0 )\tab\tab\cf1\b0\i the value of the string variable \lquote var\rquote\cf0\b\i0\par
+#L\tab\tab\cf1\b0\i the current level filename\cf0\b\i0\par
+#f\tab\tab\cf1\b0\i the image filename of the npc\cf0\b\i0\par
+#w\tab\tab\cf1\b0\i the name of the current npc weapon of the player\par
+\cf0\b\i0 #1, #1(\b0\i index\b\i0 )\tab\tab\cf1\b0\i the sword image filename of the player\cf0\b\i0\par
+#2, #2(\b0\i index\b\i0 )\tab\tab\cf1\b0\i the shield image filename of the player\cf0\b\i0\par
+#3, #3(\b0\i index\b\i0 )\tab\tab\cf1\b0\i the head image filename of the player\cf0\b\i0\par
+#5, #5(\b0\i index\b\i0 )\tab\tab\cf1\b0\i the image filename of the player\rquote s horse\cf0\b\i0\par
+#6, #6(\b0\i index\b\i0 )\tab\tab\cf1\b0\i the image filename of the npc that is carried by the player\cf0\b\i0\par
+#7, #7(\b0\i index\b\i0 )\tab\tab\cf1\b0\i the bow image filename of the player\cf0\b\i0\par
+#8, #8(\b0\i index\b\i0 )\tab\tab\cf1\b0\i the body image filename of the player\cf0\b\i0\par
+#C0, #C0(\b0\i index\b\i0 )\tab\cf1\b0\i the skin color\cf0\b\i0\par
+#C1, #C1(\b0\i index\b\i0 )\tab\cf1\b0\i the coat color\cf0\b\i0\par
+#C2, #C2(\b0\i index\b\i0 )\tab\cf1\b0\i the sleeves color\cf0\b\i0\par
+#C3, #C3(\b0\i index\b\i0 )\tab\cf1\b0\i the shoes color\cf0\b\i0\par
+#C4, #C4(\b0\i index\b\i0 )\tab\cf1\b0\i the belt color\cf0\b\i0\par
+}
+ 

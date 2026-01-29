@@ -1,0 +1,88 @@
+GANI0001
+SPRITE    0         SPRITES    0    0   24   12 shadow
+SPRITE  104            HEAD    0   30   30   30 head pushing up
+SPRITE  105            HEAD   30   30   30   30 head pushing left
+SPRITE  106            HEAD   60   30   30   30 head pushing down
+SPRITE  107            HEAD   90   30   30   30 head pushing right
+SPRITE  150           ATTR1    0    0   40   40 hairs up
+SPRITE  151           ATTR1   40    0   40   40 hairs left
+SPRITE  152           ATTR1   80    0   40   40 hairs down
+SPRITE  153           ATTR1  120    0   40   40 hairs right
+SPRITE  240            BODY    0   25   40   25 body pushing 1 up
+SPRITE  241            BODY   40   25   40   25 body pushing 1 left
+SPRITE  242            BODY   80   25   40   25 body pushing 1 down
+SPRITE  243            BODY  120   25   40   25 body pushing 1 right
+SPRITE  244            BODY    0   50   40   25 body pushing 2 up
+SPRITE  245            BODY   40   25   40   25 body pushing 2 left
+SPRITE  246            BODY   80   25   40   25 body pushing 2 down
+SPRITE  247            BODY  120   25   40   25 body pushing 2 right
+SPRITE  450            BODY    0  125   40   15 shoulder up
+SPRITE  451            BODY   40  125   40   15 shoulder left
+SPRITE  452            BODY   80  125   40   15 shoulder down
+SPRITE  453            BODY  120  125   40   15 shoulder right
+SPRITE  540           ATTR5    0  200   30   20 legs (0, 10)
+SPRITE  541           ATTR5   30  200   30   20 legs (1, 10)
+SPRITE  542           ATTR5   60  200   30   20 legs (2, 10)
+SPRITE  543           ATTR5   90  200   30   20 legs (3, 10)
+SPRITE  544           ATTR5    0  220   30   20 legs (0, 11)
+SPRITE  545           ATTR5   30  220   30   20 legs (1, 11)
+SPRITE  546           ATTR5   60  220   30   20 legs (2, 11)
+SPRITE  547           ATTR5   90  220   30   20 legs (3, 11)
+SPRITE  640           ATTR6    0  250   40   25 arms (0, 10)
+SPRITE  641           ATTR6   40  250   40   25 arms (1, 10)
+SPRITE  642           ATTR6   80  250   40   25 arms (2, 10)
+SPRITE  643           ATTR6  120  250   40   25 arms (3, 10)
+SPRITE  644           ATTR6    0  275   40   25 arms (0, 11)
+SPRITE  645           ATTR6   40  275   40   25 arms (1, 11)
+SPRITE  646           ATTR6   80  275   40   25 arms (2, 11)
+SPRITE  647           ATTR6  120  275   40   25 arms (3, 11)
+ATTACHSPRITE  104  150   -4   -8
+ATTACHSPRITE  105  151   -6   -8
+ATTACHSPRITE  106  152   -5   -8
+ATTACHSPRITE  107  153   -4   -8
+ATTACHSPRITE  240  540    5   10
+ATTACHSPRITE  240  640    0    0
+ATTACHSPRITE  240  450    0    0
+ATTACHSPRITE  241  541    5   13
+ATTACHSPRITE  241  641   -9    2
+ATTACHSPRITE  241  451    0    0
+ATTACHSPRITE  242  542    6    8
+ATTACHSPRITE  242  642    1    0
+ATTACHSPRITE  242  452    0    0
+ATTACHSPRITE  243  543    6   13
+ATTACHSPRITE  243  643    9    2
+ATTACHSPRITE  243  453    0    0
+ATTACHSPRITE  244  544    5   11
+ATTACHSPRITE  244  644    0    0
+ATTACHSPRITE  244  450    0    0
+ATTACHSPRITE  245  545    4   13
+ATTACHSPRITE  245  645   -8    3
+ATTACHSPRITE  245  451    0    0
+ATTACHSPRITE  246  546    6    7
+ATTACHSPRITE  246  646    1    1
+ATTACHSPRITE  246  452    0    0
+ATTACHSPRITE  247  547    7   13
+ATTACHSPRITE  247  647    8    3
+ATTACHSPRITE  247  453    0    0
+
+LOOP
+CONTINUOUS
+DEFAULTATTR1 khairs0.png
+DEFAULTATTR5 klegs0.png
+DEFAULTATTR6 kmarms100.png
+DEFAULTHEAD khead0.png
+DEFAULTBODY kmbody100.png
+
+ANI
+   0  12  34,  240   4  17,  104   9  -2
+   0  12  34,  241   5  12,  105   2  -6
+   0  12  34,  242   3  21,  106   9   5
+   0  12  34,  243   2  12,  107  13  -6
+WAIT 4
+
+   0  12  34,  244   4  15,  104   9  -4
+   0  12  34,  245   4  12,  105   1  -5
+   0  12  34,  246   3  22,  106   9   6
+   0  12  34,  247   3  12,  107  14  -5
+WAIT 4
+ANIEND

@@ -1,0 +1,82 @@
+SPRITE    0         SPRITES    0    0   24   12 shadow
+SPRITE   20 hockeystick.png    0    0   10   35 hockey stick (0, 0)
+SPRITE   21 hockeystick.png   10    0   10   35 hockey stick (1, 0)
+SPRITE   22 hockeystick.png   20    0   10   35 hockey stick (2, 0)
+SPRITE   23 hockeystick.png   30    0   10   35 hockey stick (3, 0)
+SPRITE   40           ATTR1    0    0   48   48 hat up
+SPRITE   41           ATTR1   48    0   48   48 hat left
+SPRITE   42           ATTR1   96    0   48   48 hat down
+SPRITE   43           ATTR1  144    0   48   48 hat right
+SPRITE   44           ATTR1    0   48   48   48 hat pull up
+SPRITE   45           ATTR1   48   48   48   48 hat pull left
+SPRITE   46           ATTR1   96   48   48   48 hat pull down
+SPRITE   47           ATTR1  144   48   48   48 hat pull right
+SPRITE   48           ATTR1    0   96   48   48 hat dead
+SPRITE  100            HEAD    0    0   32   32 head up
+SPRITE  101            HEAD    0   32   32   32 head left
+SPRITE  102            HEAD    0   64   32   32 head down
+SPRITE  103            HEAD    0   96   32   32 head right
+SPRITE  204            BODY    0   32   32   32 body walking1 up
+SPRITE  206            BODY   64   32   32   32 body walking1 down
+SPRITE  208            BODY    0   64   32   32 body walking2 up
+SPRITE  210            BODY   64   64   32   32 body walking2 down
+SPRITE  212            BODY    0   96   32   32 body walking3 up
+SPRITE  216            BODY    0  128   32   32 body walking4 up
+SPRITE  218            BODY   64  128   32   32 body walking4 down
+SPRITE  220            BODY    0  160   32   32 body walking5 up
+SPRITE  222            BODY   64  160   32   32 body walking5 down
+SPRITE  241            BODY   32  320   32   32 body grabbing left
+SPRITE  247            BODY   96  352   32   32 body pushing2 right
+SPRITE  249            BODY   32  384   32   32 body pushing3 left
+SPRITE  251            BODY   96  384   32   32 body pushing3 right
+
+LOOP
+CONTINUOUS
+DEFAULTATTR1 hat0.png
+DEFAULTHEAD head19.png
+DEFAULTBODY body.png
+
+ANI
+   0  12  34,  212   8  16,   20  34  13,  100   7   4,   40  -1 -14
+   0  12  34,   21   2  14,  249   8  12,  101   9   1,   41  -3 -17
+   0  12  34,  206   8  17,  102   8   3,   42   0 -15,   22  32  14
+   0  12  34,   23  35  14,  251   8  12,  103   8   1,   43   4 -17
+PLAYSOUND steps2.wav 1.5 2
+
+   0  12  34,  204   8  19,   20  34  15,  100   7   5,   40  -1 -13
+   0  12  34,   21   2  14,  249   8  12,  101   9   1,   41  -3 -17
+   0  12  34,  206   8  17,  102   8   3,   42   0 -15,   22  32  14
+   0  12  34,   23  35  14,  251   8  12,  103   8   1,   43   4 -17
+
+   0  12  34,  204   8  19,   20  34  15,  100   7   5,   40  -1 -13
+   0  12  34,   21   2  14,  249   8  12,  101   9   1,   41  -3 -17
+   0  12  34,  210   9  17,  102   8   3,   42   0 -15,   22  34  13
+   0  12  34,   23  35  14,  251   8  12,  103   8   1,   43   4 -17
+
+   0  12  34,  208   8  18,   20  34  14,  100   7   4,   40  -1 -14
+   0  12  34,   21   2  14,  249   8  12,  101   9   1,   41  -3 -17
+   0  12  34,  210   9  17,  102   8   3,   42   0 -15,   22  34  13
+   0  12  34,   23  35  14,  251   8  12,  103   8   1,   43   4 -17
+
+   0  12  34,  212   8  17,   20  34  13,  100   7   5,   40  -1 -13
+   0  12  34,   21   2  12,  241   8  14,  101   9  -1,   41  -3 -19
+   0  12  34,  218   7  17,  102   7   3,   42  -1 -15,   22  25  16
+   0  12  34,   23  35  12,  247   8  12,  103   8  -1,   43   4 -19
+PLAYSOUND steps2.wav 1.5 2
+
+   0  12  34,  216   8  17,   20  34  12,  100   7   4,   40  -1 -14
+   0  12  34,   21   2  12,  241   8  14,  101   9  -1,   41  -3 -19
+   0  12  34,  218   7  17,  102   7   3,   42  -1 -15,   22  25  16
+   0  12  34,   23  35  12,  247   8  12,  103   8  -1,   43   4 -19
+
+   0  12  34,  216   8  17,   20  34  12,  100   7   4,   40  -1 -14
+   0  12  34,   21   2  12,  241   8  14,  101   9  -1,   41  -3 -19
+   0  12  34,  222   8  23,  102   7   3,   42  -1 -15,   22  24  17
+   0  12  34,   23  35  12,  247   8  12,  103   8  -1,   43   4 -19
+
+   0  12  34,  220   8  21,   20  34  11,  100   7   5,   40  -1 -13
+   0  12  34,   21   2  12,  241   8  14,  101   9  -1,   41  -3 -19
+   0  12  34,  222   8  23,  102   7   3,   42  -1 -15,   22  24  17
+   0  12  34,   23  35  12,  247   8  12,  103   8  -1,   43   4 -19
+
+ANIEND

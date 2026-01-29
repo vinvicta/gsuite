@@ -1,0 +1,393 @@
+GOBJSET01
+
+OBJECT 11 13 Snow
+VsVsVsVsVsVsVsVsVsVsVs
+VsVsVsVsVsVsVsVsVsVsVs
+VsVsVsVsVsVsVsVsVsVsVs
+VsVsVsVsVsVsVsVsVsVsVs
+VsVsVsVsVsVsVsVsVsVsVs
+VsVsVsVsVsVsVsVsVsVsVs
+VsVsVsVsVsVsVsVsVsVsVs
+VsVsVsVsVsVsVsVsVsVsVs
+VsVsVsVsVsVsVsVsVsVsVs
+VsVsVsVsVsVsVsVsVsVsVs
+VsVsVsVsVsVsVsVsVsVsVs
+VsVsVsVsVsVsVsVsVsVsVs
+VsVsVsVsVsVsVsVsVsVsVs
+OBJECTEND
+
+OBJECT 2 2 SnowRooshe
+/j/k
+/z/0
+OBJECTEND
+
+OBJECT 2 2 SnowSprout
+6e6f
+6u6v
+OBJECTEND
+
+OBJECT 2 2 SnowStone
+6I6J
+6Y6Z
+OBJECTEND
+
+OBJECT 3 3 SnowBomyStatue
+5e5f5O
+5u585v
+6L6M6N
+OBJECTEND
+
+OBJECT 4 4 SnowTreeSmall
+6E6F6G6H
+6U6V6W6X
+6k6l6m6n
+60616263
+OBJECTEND
+
+OBJECT 8 10 SnowTree
+Vsdzd0d1d2d3d4Vs
+eCeDeEeFeGeHeIeJ
+eSeTeUeVeWeXeYeZ
+eiejekelemeneoep
+eyeze0e1e2e3e4e5
+fCfDfEfFfGfHfIfJ
+fSfTfUfVfWfXfYfZ
+fifjfkflfmfnfofp
+Vsfzf0f1f2f3f4Vs
+VsVseqere6e7VsVs
+OBJECTEND
+
+OBJECT 2 2 SnowChair
+8385
+9H9J
+OBJECTEND
+
+OBJECT 3 2 SnowBench
+838485
+9H9I9J
+OBJECTEND
+
+OBJECT 4 4 SnowTrunk
+7E7F7G7H
+7U7V7W7X
+7k7l7m7n
+70717273
+OBJECTEND
+
+OBJECT 4 4 SnowTrunkHole
+Vs5F4XVs
+5G4k4H42
+4E4I4J41
+Vs4E41Vs
+OBJECTEND
+
+OBJECT 6 6 SnowSand
+VsVsV9V9VsVs
+VsVqdndpVrVs
+Vcdndydnd5VM
+VcdndndpdnVM
+VsV6dpdnV7Vs
+VsVsV8V8VsVs
+OBJECTEND
+
+OBJECT 2 2 SnowSign
+frfs
+f7f8
+OBJECTEND
+
+OBJECT 2 2 SnowSwamp
+g4g5
+hIhJ
+OBJECTEND
+
+OBJECT 12 6 SnowBridge
+eMeNVsVsVsVsVsVsVsVseMeN
+ecedd6d7eKeaebeKd7eLeced
+esetd6eKd7ebead7eKeLeset
+e8e9d6d7eKebeaeKd7eLe8e9
+fMfNd6eKd7eaebd7eKeLfMfN
+fcfdVsVsVsVsVsVsVsVsfcfd
+OBJECTEND
+
+OBJECT 8 7 SnowTownEntrance
+9490919291929394
++I+E+F+G+F+G+H+I
++I+U+V9Y9Z+W+X+I
++IVsVsVsVsVsVs+I
++IVsVsVsVsVsVs+I
++IVsVsVsVsVsVs+I
++YVsVsVsVsVsVs+Y
+OBJECTEND
+
+OBJECT 2 2 SnowStake
+fgfh
+fwfx
+OBJECTEND
+
+OBJECT 2 2 SnowGrass
+WoW4
+W4Wp
+OBJECTEND
+
+OBJECT 13 14 SnowHouse
+WKWLWMWNWNWNWNWNWNWPeAeBVs
+WaWbWcWdWeWeWeWeWdWfWbeRW8
+WaWbWcWeWeWeWeWeWeWfWbeRXM
+WaWbWcWeWeWeWeWeWeWfWbeRXM
+WaWbWcWeWeWeWeWeWeWfWbeRXM
+WaWbWcWdWeWeWeWeWdWfWbeRXM
+WaWrWsWtWtWtWtWtWteQXreRXM
+WaW7WbWbWbWbWbWbWbWbX7eRXM
+XKXLWbWbWuWvegehWbWbVaVbXM
+XaXbXbXbW+W/ewexXbXbXbW9XM
+XnXoXpXqXOXPfAfBXoXpXqXNXM
+X3X4X5X6XeXffQfRX4X5X6XdXc
+VsVsVsVsWOXXXYWOVsVsVsVsVs
+VsVsVsVsXXXYXXXYVsVsVsVsVs
+OBJECTEND
+
+OBJECT 14 15 SnowPlatformEdges
+CqEtCqEtCqF+C5C6F9CqCqEtCqEt
+EtCqEtCqF+C7DJDKC4F9EtCqEtCq
+CqEtCqF+C7DLDZDaFxC4F9CqCqEt
+EtCqF+C7DeDbDpDqGBDIC4F9EtCq
+CqF+C7DLDuDvfKfLGADYFxC4F9Cq
+F+C7DeDbD+XvVsVsX/GRGBDIC4F9
+ERE3DuDvXvVsVsVsVsX/GADYGNDU
+EhEiD+XvVsVsVsVsVsVsX/GRDjDk
+ERESftVsVsVsVsVsVsVsVsfuDTDU
+EhEif9VsVsVsVsVsVsVsVsf+DjDk
+EgECEDXuVsVsVsVsVsVsXtDyDzC1
+CqEgECEDXuVsVsVsVsXtDyDzC1Cq
+EtCqEgECEDXuVsVsXtDyDzC1CqEt
+CqEtCqEgECKdfafbHKDzC1CqEtCq
+EtCqEtCqEgC/C+C/C+C1CqEtCqEt
+OBJECTEND
+
+OBJECT 3 2 SnowFences
+W5WqW5
+XIW6XJ
+OBJECTEND
+
+OBJECT 4 4 SnowGrave
+nKnLnMnN
+nanbncnd
+nqnrnsnt
+n6n7n8n9
+OBJECTEND
+
+OBJECT 2 2 SnowGraveYard
+nenf
+nunv
+OBJECTEND
+
+OBJECT 6 5 SnowWaterHole
+fyhKhYhZhNfy
+hKhaGOGOhdhN
+hLGOH1H0GOhb
+g6g7GOGOhMhc
+fyg6g8g9hcfy
+OBJECTEND
+
+OBJECT 4 4 SnowWell
+meZ5Z6mf
+muJ4J4mv
+muJ4J4mv
+m+aZaam/
+OBJECTEND
+
+OBJECT 6 3 SnowGreenFences
+j+hvhvhvhvj/
+keh/h/h/h/kf
+kuiPiPiPiPkv
+OBJECTEND
+
+OBJECT 7 7 SnowCastleCorner NW
+zM7Q7Q7Q7Q7Q7Q
+7Azs7h7g7h7g7h
+7A7w0M8h8g8h8g
+7A8A8w0sxNxMxN
+7A7w9Axc1Mycyc
+7A8A8wxsyM1Myc
+7A7w9AxcyMyM8C
+OBJECTEND
+
+OBJECT 7 7 SnowCastleCorner NE
+7Q7Q7Q7Q7Q7QzN
+7h7g7h7g7hzt7B
+8g8h8g8h0N7x7B
+xNxMxN0t8x8B7B
+ycyc1Nxd9B7x7B
+yc1NyNxt8x8B7B
+8DyNyNxd9B7x7B
+OBJECTEND
+
+OBJECT 7 7 SnowCastleCorner SE
+8TyNyNxt8x8B7B
+yd1dyNxd9B7x7B
+ydyd1dxt8x8B7B
+x8x9x8099B7x7B
+9R9Q9R9Q0d8B7B
+8R8Q8R8Q8Rz97B
+7R7R7R7R7R7Rzd
+OBJECTEND
+
+OBJECT 7 7 SnowCastleCorner SW
+7A8A8wxsyMyM8S
+7A7w9AxcyM1cyd
+7A8A8wxs1cydyd
+7A7w9A08x8x9x8
+7A8A0c9Q9R9Q9R
+7Az88R8Q8R8Q8R
+zc7R7R7R7R7R7R
+OBJECTEND
+
+OBJECT 7 2 SnowCastleWall West
+7A8A8wxsyMyM7C
+7A7w9AxcyMyM7C
+OBJECTEND
+
+OBJECT 7 2 SnowCastleWall East
+7DyNyNxd9B7x7B
+7DyNyNxt8x8B7B
+OBJECTEND
+
+OBJECT 2 7 SnowCastleWall North
+7Q7Q
+7g7h
+8h8g
+xMxN
+ycyc
+ycyc
+7S7S
+OBJECTEND
+
+OBJECT 2 7 SnowCastleWall South
+7T7T
+ydyd
+ydyd
+x9x8
+9Q9R
+8Q8R
+7R7R
+OBJECTEND
+
+OBJECT 7 7 SnowCastleInsideCorner NW
+zO7w9AxsyMyM7C
+7gzu8wxcyMyM7C
+8g8h0OxsyMyM7C
+xNxMxN0uyMyM7C
+ycycycyc1OyM7C
+ycycycycyc1O7C
+7S7S7S7S7S7S7z
+OBJECTEND
+
+OBJECT 7 7 SnowCastleInsideCorner NE
+7DyNyNxd9B8BzP
+7DyNyNxt8xzv7h
+7DyNyNxd0P8h8g
+7DyNyN0vxNxMxN
+7DyN1Pycycycyc
+7D1Pycycycycyc
+7y7S7S7S7S7S7S
+OBJECTEND
+
+OBJECT 7 7 SnowCastleInsideCorner SE
+7i7T7T7T7T7T7T
+7D1fydydydydyd
+7DyN1fydydydyd
+7DyNyN0/x9x8x9
+7DyNyNxd0f9R9Q
+7DyNyNxt8xz/8R
+7DyNyNxd9B7xzf
+OBJECTEND
+
+OBJECT 7 7 SnowCastleInsideCorner SW
+7T7T7T7T7T7T7j
+ydydydydyd1e7C
+ydydydyd1eyM7C
+x9x8x90+yMyM7C
+9R9Q0excyMyM7C
+8Rz+8wxsyMyM7C
+ze7w9AxcyMyM7C
+OBJECTEND
+
+OBJECT 4 4 SnowCastleStairs
+3I3J3K3L
+3Y3Z3a3b
+3o3p3q3r
+34353637
+OBJECTEND
+
+OBJECT 4 3 SnowCastleDoor North
+4A4B4B4C
+07iLiL4D
+1L22224T
+OBJECTEND
+
+OBJECT 3 4 SnowCastleDoor East
+wOwPyb
+zKk5yr
+zKk5y7
+wewfy7
+OBJECTEND
+
+OBJECT 4 3 SnowCastleDoor South
+yszJzJyt
+y8k5k5y9
+4Q4R4R4S
+OBJECTEND
+
+OBJECT 3 4 SnowCastleDoor West
+yawMwN
+yqiLzL
+yqiLzL
+y6wcwd
+OBJECTEND
+
+OBJECT 4 2 SnowCastleCurtain West
+6g6h6i6j
+6w6x6y6z
+OBJECTEND
+
+OBJECT 4 2 SnowCastleCurtain East
+5A5B5C5D
+5Q5R5S5T
+OBJECTEND
+
+OBJECT 2 4 SnowCastlePillar
+yOyP
+yeyf
+yuyv
+y+y/
+OBJECTEND
+
+OBJECT 2 4 SnowCastlePillar North
+5i5j
+5y5z
+6C6D
+6S6T
+OBJECTEND
+
+OBJECT 4 2 SnowCastlePillar West
+wswtwuwv
+w8w9w+w/
+OBJECTEND
+
+OBJECT 2 4 SnowCastlePillar South
+5g5h
+5w5x
+6A6B
+6Q6R
+OBJECTEND
+
+OBJECT 4 2 SnowCastlePillar East
+4g4h4i4j
+4w4x4y4z
+OBJECTEND
+
+OBJECT 2 2 SnowCastleFloorSand
+y4y4
+y4y4
+OBJECTEND
+

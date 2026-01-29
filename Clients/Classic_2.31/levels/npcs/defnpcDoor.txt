@@ -1,0 +1,12 @@
+// NPC made by Stefan Knorr
+//#COMMENTS The standard door that hides 3 secs when touched
+//#EDIT hidetime 3
+if (created) {
+  setimg door.png;
+  setshape 1,32,32;
+}
+if (playertouchsme) {
+  hide;
+  sleep hidetime;
+  show;
+}

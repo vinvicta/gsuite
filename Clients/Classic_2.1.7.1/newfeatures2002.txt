@@ -1,0 +1,1067 @@
+------------------------------------
+New features/bug fixes in v2.17 rev1
+------------------------------------
+
+- corrected problems with adapting level
+  heights on 3d terrain
+- removed the default map-view animation on
+  Graal Kingdoms when watching the M map
+- script command putleaps works on gmaps
+- script command showani fixed when called
+  from a weapon script (parameters are
+  correctly used and the animation is animated)
+
+
+-------------------------------
+New features/bug fixes in v2.17
+-------------------------------
+
+This release doesn't contain very big
+new additions, but fixes a lot of little
+things and does little improvements. Most
+major improvements have to do with Graal Kingdoms:
+
+- major speed ups on Graal Kingdoms overworld
+  (drawing of objects, drawing of showimgs)
+- level heights are now loaded and stored in the
+  level files instead of the gmap, so making the
+  gmap files less big, allowing to change the
+  heights dynamically (will be enabled on
+  server-side soon), and making the hacking
+  of heights on client-side more harder
+
+Bug fixes:
+- showani2 finally works
+- when you die the screen is correctly
+  made black
+- fixed problems with automapping when
+  getting out of the map by wrong links
+  or scripts
+- when editing map levels offline then the
+  npcs of near levels are correctly displayed
+  when in game mode
+
+Ganis:
+- gani movies work better, PARAMs
+  and ATTRs are correctly loaded
+  (see starting movie of Graal Kingdoms)
+- in gani movies you can use message codes
+  in text messages and in the chat text of
+  actors
+- gani scripts can access the gani parameters:
+  when you do setani myani,1,2,3; then
+  the script in myani.gani can access the
+  parameters '1','2' and '3' via the
+  message codes #p(0), #p(1) etc.
+- when an animation is started again
+  (not continuous) then the gani script
+  gets a 'playerenters' event again
+
+Scripting:
+- hideimgs startindex,endindex;
+  hides all images/animations/texts/polygons
+  displayed with showimg/showani/showtext/showpoly
+  that have an index which is
+  startindex<=index<=endindex
+- when a projectile lands then the client-side
+  can do effects now too, all weapon scripts can
+  catch the event with if (actionprojectile);
+  the first two paramters (#p(0) and #p(1)) contain
+  the position of the impact, #p(2) etc. are the
+  normal parameters which you have specified with
+  setshootparams before shooting the projectile
+
+
+------------------------------------
+New features/bug fixes in v2.16 rev7
+------------------------------------
+
+- fixed body drawing on Atlantis (flat gmaps)
+- fixed leaks of disablepause
+- editor-map making (M) is working for gmaps
+- added the gmap-option NOAUTOMAPPING for disabling
+  auto mapping for certain maps
+
+------------------------------------
+New features/bug fixes in v2.16 rev6
+------------------------------------
+
+- speed ups on gmaps (Graal Kingdoms) because
+  the npc list is managed better
+- fixed problems with invisble ships on Graal Kingdoms
+- fixed showimgs on gmaps
+- the z value of showimgs is transferred correctly
+  to other players
+
+------------------------------------
+New features/bug fixes in v2.16 rev5
+------------------------------------
+
+- the Direct3D options for images drawn with
+  alpha blending or light effects have been fixed
+  so that all images should work correctly now
+- the initializing of DirectX has been fixed to
+  work more optimized when switching to fullscreen,
+  possibly be more compatible with some gfx cards
+- a 'memory leak' with npcs has been fixed, images
+  of npcs have often not been discarded when leaving a
+  level, possibly making the game slower after some
+  playing, and causing freezing of nvidia gfx cards
+  because of too much use of the gfx card memory
+- the script functions screenx/y have been fixed
+  for being used by weapon scripts
+- the layer of gani movie actors is set correctly
+- the assignment operator /= has been added,
+  so you can now use +=, -=, *=, /=, ++ and --
+- the order how operators are parsed has been fixed
+  to match normal mathematical conventions,
+  now 4/2/2 is seen as (4/2)/2, which makes 1,
+  instead of 4/(2/2) which gave the wrong result of 4
+- the favourite-quote-field in the profile window uses
+  the same font like the other fields
+- when you switch from the tutorial into editor mode
+  via F4 then the classic character and animations are
+  restored
+- new script variable isfocused which is set to true (1)
+  when you have currently set a focus via setfocus
+- the debugger hint for array members is fixed to only
+  show the value of the member, not the whole array
+- the script command setlevel has been fixed; this command
+  should not be used in online levels because there is the
+  better alternative setlevel2
+
+------------------------------------
+New features/bug fixes in v2.16 rev4
+------------------------------------
+
+- Fixed Direct3D options which messed up
+  light effects on some graphics cards
+
+------------------------------------
+New features/bug fixes in v2.16 rev3
+------------------------------------
+
+- DirectX Surfaces are initialized better, this
+  should fix problems with black screen and lights
+  problems in v2.16
+- when typing in the chat field the enter key is not 
+  unpausing you
+- the udp check has been improved so the error
+  message is not poping up so often anymore without
+  a reason
+- fixed putexplosion2
+
+------------------------------------
+New features/bug fixes in v2.16 rev2
+------------------------------------
+
+- Alt+5 doesn't crash Graal anymore
+- fixed the text on several labels and buttons
+- initializing of DirectX works better, and supports more
+  fullscreen modes
+- fixed timer errors
+- weapons are initialized correctly on classic servers
+
+------------------------------------
+New features/bug fixes in v2.16 rev1
+------------------------------------
+
+- fixed an endless drawing loop when a gani
+  is used as gani attribute and is using itself
+
+-------------------------------
+New features/bug fixes in v2.16
+-------------------------------
+
+This new release mainly brings more ways of using ganis
+(animations), it also brings several speed ups, and more things
+for the serverlist.
+
+Scripting:
+
+- there is now support for real transperency:
+  seteffectmode mode;
+  changeimgmode index,mode;
+  EFFECTMODE sprite mode (gani file command)
+
+  The command seteffectmode can be used to change
+  the way the npc image is drawn when using the
+  setcoloreffect red,green,blue,alpha; command (alpha<1):
+  by default the image colors are added to the graphics
+  below, with the intensity of 'alpha', which makes the
+  image appear like a light since it is making the
+  graphics below appear more bright; now there are different
+  modes:
+  0 - lights (colors are added, alpha specifies intensity)
+  1 - transparency (alpha specifies how much visible)
+  2 - holes (colors are subtracted)
+
+- more 'gani' attributes: #P(10-30)
+  In the so called gani attribues you can store additional
+  player attributes, which can also be used in the animation
+  editor (ATTR1 etc.). On Graal2001 we used them to store
+  the filename of the current hat and for the metris height,
+  on Graal2002 we also store filenames for arms, legs, hairs
+  and the value for the hp display of monsters in those attributes.
+  They can be accessed with 'setplayerprop #P1,value',
+  'setcharprop' and can be read by using #P1..#P9 in text.
+  Because they are quite useful for a lot of things, there
+  was the need for more such attribute fields, so 21 new gani
+  attributes have been added. They can be access with the message
+  code #P(index), index being a value between 1 and 30.
+
+- gani scripts can read all variables/flags now
+  (except this. vars of other npcs and weapons of couse)
+
+- gani scripts are shared between players/npcs having the
+  same gani, meaning less lag and memory taken for parsing scripts
+
+- ganis as gani attributes
+  As described above, you can store several informations in
+  the 'gani attributes' of the players and npcs. Once the
+  attribute is sent to the other players, their Graal will
+  check if the attribute is a special value, e.g. an image
+  filename, and will load it so that the animations of the
+  player can access it and display it.
+  But plain images are quite limited. To make it possible
+  to do more in the animations, they can do gani scripts
+  (put in SCRIPT ... SCRIPTEND commands). So they can
+  display special images or play randomly sound effects.
+  A problem with those scripts is that they get replaced
+  once the animation of the player changes, so if you want
+  e.g. always display special graphics over the head of the
+  player you would need to do it in some weapons script, but
+  those are only run locally.
+
+  So you can now use ganis as 'gani attributes'. You can try it
+  by doing the command
+
+  setplayerprop #P1,tutorial_touch.gani;
+
+  That will display the 'Touch to get information' animation from
+  the wizard of the new starting level on top of the player,
+  so your player now has two animations. Since there are 30
+  'gani attribures', you can display 30 more animations on
+  top of the player, and all other players will see those too.
+  Of course it will not make sense to display 30 tutorial_touch.ganis,
+  but you can probably imagine what possibilities open with that:
+  you can display a bird pet flying around the players head
+  with just one command, and making the gani for the bird of course.
+  As long as the attribute is not changed, the bird will continue
+  to fly. In the script of the bird gani you can also put
+  some sounds.
+  Since gani scripts can read all variables now,
+  you can even put scripts for displaying stats in the gani,
+  and the script doesn't need to be put in a wepaon and sent to
+  the player with each login.
+
+- new script commands showani and showani2 for
+  displaying animations without adding new npcs
+
+  showani index,x,y,direction,animation,params;
+  showani2 index,x,y,z,direction,animation,params;
+
+  Displays an animation at the specified position. It
+  will use the attributes of the npc for the head/body etc.
+
+  For showani there exist following modifier commands:
+  - changeimgvis index,layer;
+    - tells graal where to display the animation: 0 - under players,
+      1 - same layer liker players (default), 2 - over players,
+      4 - on the status bar, specified coordinates will work
+        as screen coordinates instead of world coordinates
+
+- new script commands showpoly and showpoly2 for
+  displaying polygons:
+
+  showpoly index,{x1,y1,x2,y2,x3,y3,..};
+  showpoly2 index,{x1,y1,z1,x2,y2,z2,x3,y3,z3,..};
+
+  This commands displays a polygon on the specified
+  position. It will close the polygon (last coordinate to
+  first coordinate) and will fill the polygon.
+  If you only provide 4 numbers (e.g. showpoly 1,{10,10,20,20};)
+  then it will draw a line (in this case from (10,10) to (20,20)).
+
+  For showpoly there exist following modifier commands:
+  - changeimgcolors index,red,green,blue,1;
+    - changes the colors, red/green/blue must be values between 0 and 1
+  - changeimgvis index,layer;
+    - tells graal where to display the polygon: 0 - under players,
+      1 - same layer liker players, 2 - over players (default),
+      4 - on the status bar, specified coordinates will work
+        as screen coordinates instead of world coordinates
+
+- new script commands showtext and showtext2 for
+  displaying text (instead of doing showimg 1,@@@ things):
+
+  showtext index,x,y,font,style,text;
+  showtext2 index,x,y,z,font,style,text;
+
+  It works like showimg, but you are displaying a text
+  on the specified position. The style is a string with
+  the letters b (bold),i (italic),r (right-aligned),
+  u (underscore), s (strikeout), c (centered).
+
+  For showtext there exist following modifier commands:
+  changeimgcolors index,red,green,blue,1;
+    - changes the colors, red/green/blue must be values between 0 and 1
+  changeimgzoom index,zoomfactor;
+    - makes the text bigger/smaller, by default a text is 24 pixels high
+  changeimgvis index,layer;
+    - tells graal where to display the text: 0 - under players,
+      1 - same layer liker players, 2 - over players (default),
+      4 - on the status bar, specified coordinates will work
+        as screen coordinates instead of world coordinates
+
+- scriptfunction for disabling features
+  enablefeatures flags;
+  A description of all flags:
+       1 - M key (map)
+       2 - P key (pause)
+       4 - Q key (weapon select)
+       8 - R key (show ratings)
+    0x10 - S+A key combination for dropping items
+    0x20 - S+D key combination for switching weapons
+    0x40 - TAB key (if disabled then you cannot switch to the chat field with TAB)
+    0x80 - display of chat text
+   0x100 - display of the hearts over player heads
+   0x200 - display of nicknames
+   0x400 - toall/PM-icons on the minimap
+   0x800 - right-click on players opens their profile
+  0x1000 - emoticons (disable it if you want to do other stuff with control+keys)
+  0x2000 - Alt+5 for making snapshots
+  0x4000 - Alt+8/9 for zooming
+  0x8000 - the logframe where savelog stuff is added
+  allfeatures:
+  So to disable the profile click you can do:
+
+  enablefeatures allfeatures-0x800;
+
+  If you want to disable everything except the
+  tabulator key, then do:
+
+  enablefeatures 0x40;
+
+- new script variable 'allstats' which is the addition
+  of all stats flags, so 'showstats allstats;' will
+  enable all default status bar stuff again
+
+- new script function getdir(dx,dy): gives the
+  direction a player/npc must look when watching
+  an object at (dx,dy) relative to the player/npc
+
+- new script function log(base,x)
+  the inverse of the power function (^):
+  base^log(base,val) = val; e.g. log(3,9)=2;
+  it tells you with what exponent the base
+  must be powered to reach val
+
+- new script function aindexof(value,array)
+  calculates the positon of the first occurance
+  of value in the given array
+
+- new script functions min(a,b) and max(a,b)
+  calculate the minimum/maximum of a and b
+
+- new script functions screenx(x,y), screeny(x,y)
+  convert level coordinates (world coordinates) to
+  positions on the screen; you must specifiy both
+  x and y so that the functions works correctly
+  on Graak2002 terrain
+
+- worldx(x,y), worldy(x,y)
+  convert screen positions (e.g. mousescreenx) to
+  level coordinates; you must specifiy both
+  x and y so that the functions works correctly
+  on Graak2002 terrain
+
+- the script variables mousex/y are fixed on zoomed screen
+  (when the player pressed Alt+8/9)
+
+- the access if string lists has been optmized
+
+- the showimg height (z) is fixed when displaying
+  showimgs of other players
+
+- in string operations the #b message code is passed instead of
+  removed, so you can add lines to text that you want display with
+  say2, like
+
+  setstring msg,Hello!#bHow are you?;
+  say2 #s(msg);
+
+  will display:
+
+  Hello
+  How are you?
+
+- fixed a bug with the else command that was sometimes merged
+  with a following if that wasnt supposed to be merged
+
+- the onwall(x,y) function is working better when used 'in the sea'
+  (Graal2002 terrain that is under zero), it checks for
+  npcs at the height 0 instead of the ground of the sea,
+  since the player and npcs are normally at height 0
+
+- the variables focusx/y have been fixed when assigning negative
+  values to them; the limits are -64..128
+
+- keydown2 is fixed, when you dont add 256,512 or 1024
+  (shift, control, alt) to the key number then it doesn't
+  return 'true' when those special keys are not pressed;
+  a few keycodes that can be used in keydown2 to check for
+  normally unaccessible keys (have not test all of them though):
+    8 - back
+    9 - tab
+   13 - return
+   16 - shift
+   17 - control
+   18 - alt
+   33 - page up
+   34 - page down
+   35 - end
+   36 - home
+   42 - print key
+   45 - insert
+   46 - delete
+   91 - left windows key
+   92 - right windows key
+   93 - mouse popup key
+  112-123 - F1-F12
+  144 - numlock
+  160 - left shift
+  161 - right shift
+  162 - left control
+  163 - right control
+  164 - left alt/menu
+  165 - right alt/menu
+
+- in gani scripts you can use changeimgcolors, changeimgzoom and
+  changeimgmode to change the attributes of sprites; the
+  sprite must already be in texture mode (e.g. by doing
+  a line 'COLOREFFECT spriteindex red green blue alpha' in the
+  gani)
+
+- npc actions/events are no longer mixed with the 'sleep' timeout
+  event which caused those events to get vanished
+
+- script variables musicpos and musiclen to get the posiiton/length
+  of the currently played music track; this doesn't work for
+  midis
+
+Sound:
+- when graal is starting it doesn set the volume to maximum
+  anymore
+
+- there is now a special tab for the microphone settings in the
+  options window; there is a new choice box for selecting the
+  microphone codec used to encode the speech, you can select
+  if it automatically selects the best codec depending on the
+  listener count (players near you), or you directly select a
+  codec if you e.g. want to speak with good quality when all
+  listeners have good bandwidth;
+  there is also a choice box for selecting the input device
+  (sound driver)
+
+- in the options window on the 'Audio' tab you can see the
+  filename of the currently displayed music track, and
+  you can stop/play it again
+
+- walking sounds are only played for the default ganis
+
+
+General:
+- in the serverlist window when clicking on the class/playerworlds
+  tab you see a new box for typing in the name of the playerworld
+  you want to go in case it is not listed
+
+- you can go out of the pause mode by pressing the enter key
+  or space (instead of pressing P)
+
+- on Graal2002 maps the mini-heads are displayed on the
+  correct height
+
+- it now displays toalls and message icons for players on the
+  big map (M), and it's possible to click on those to open the
+  message (previously they only worked on minimaps)
+
+- when the animation of a projectile is looped then the animation
+  will be played looped instead of displaying the animation steps 1-7
+  depending on the flying angle of the projectile
+
+- when the game is running too slow and you have light effects
+  enabled (direct3d) then you get a warning and the tip
+  that it might be better to disable it
+
+- when you have udp enabled but the client doesn't receive
+  data from other players in the current level then it warns
+  you and tells you to possibly disable UDP to fix the problem
+  (since graal automaticaly sends verification data all 5
+  seconds it can assume that you must receive data from other
+  players if the udp connection is working correctly and is
+  not blocked by proxies or firewalls)
+
+- when opening the profile of a player by right-clicking on
+  him/her the window doesn't pop up two times anymore (before it
+  first showed the data from the cached profile from hard disk
+  and a few seconds later the updated profile sent by the
+  server)
+
+- updating of downloaded gani movies work correctly
+
+- the graal2002 rpg window has been changed to have not
+  input field and to be always on top
+
+Editor:
+- the scrollbar position / player position in the
+  edited level is remembered correctly when switching
+  between levels or going into game mode
+
+- when deleting npcs in near map levels it marks the level as
+  modified so when you click on the 'save' button they are
+  saved
+
+- flood fill doesn't crash Graal anymore when done
+  on near level (when editing levels on a map)
+
+- fixed undo when editing map levels and going to another level
+
+- M much faster, the scrolling cross doesn't appear on the
+  generate map image anymore
+
+- the debugger uses 4 tabs for the vars/this.vars/npc attributes/strings
+  instead of separate lists, so making things more organized and easier
+  to access
+
+- only needed attributes of npcs are displayed, and it displays the
+  gani attributes now (#P(1-30))
+
+- debugger: when moving the mouse over variables in the script then it
+  displays a short description depending on what is under the mouse:
+  for variables the current value will be shown, for script commands
+  the parameters, for images the size of the image
+
+- there is a new button right of the 'signs' button in the toolbar of
+  the editor: when clicking on it you see the currently selected
+  tiles rectangle as text, so you can copy it for using it in scripts;
+  that is very useful for editor npcs (the editnpc*.txt thing)
+
+- the script commands showimg and putnpc are enabled for editor npcs
+
+- with and other serverside script functions doesn't cause errors
+  anymore when editing the script
+
+- in the script editor you see errors on the correct positions
+
+- new command line options:
+  -play: directly puts the player in playing mode
+  -x value: puts the player/scrollbars on the specified x position
+  -y value: specifies the y position
+
+
+------------------------------------
+New features/bug fixes in v2.15 rev2
+------------------------------------
+
+- fixed a bug which sometimes crashed Graal on Graal2002
+  (and in seldom cases on other servers too)
+- baddies don't walk out the level when its a part of
+  a (txt-) map
+- the <graalmsg>#n or other message codes</graalmsg> tag
+  in PMs works correctly again
+
+
+-------------------------------
+New features/bug fixes in v2.15
+-------------------------------
+
+- this version is mainly for fixing bugs and enabling
+  Graal2002
+- fixed a translation error in the starting window
+- scripts don't get keyboard events when the player is typing
+  chat in the chat box
+- when using the script command setmusicvolume for setting the
+  volume of the left and right speaker then it is setting
+  the volume relative to the selected music volume in the
+  option window (1=selected volume,0=silent)
+- looping of mp3 and mods work
+- correct coloring and shading of text in gani movies
+- new script command showimg2 for displaying an image in
+  '3d-space' (inlcuding z):
+  showimg2 index,image,x,y,z;
+- the letters image set with setletters is automatically
+  downloaded
+- checking for updates of audio files on the server
+- in the editor you can scroll up/down with the mouse wheel;
+  scrolling with arrow keys works in single levels too
+- optimized handling of showimgs
+
+
+------------------------------------
+New features/bug fixes in v2.14 rev7
+------------------------------------
+
+- major speedup on graal2001 (or other servers using many
+  variables on client-side) when walking between levels
+- added script commands enablepause,disablepause,enablemap,
+  disablemap to enable the normal pausing (P) or mapping (M), 
+  and script flags playerpaused, playermap to check if the player is
+  in pause mode or is seeing the map;
+  if you already want to use use these things before the next Graal
+  version is released (and so all players have it) you can also
+  check for the variable graalversion to see if the disabling of pausing
+  works (if (graalversion<2.147) message please download the latest exe
+  if you want to play this minigame;)
+- keydown2 now always returns false when the main graal window is not
+  active (so the scripts don't think you are doing something when you
+  are actually typing a PM)
+
+
+------------------------------------
+New features/bug fixes in v2.14 rev6
+------------------------------------
+
+- again changes in the floating point operations to fix
+  some problems that appeared in rev5 (script operation %)
+- voice is not activated when pressing the voice
+  activation key while typing in the chat edit field
+- when opening the options window then you don't get
+  an error message 'cannot focus' anymore 
+
+
+------------------------------------
+New features/bug fixes in v2.14 rev5
+------------------------------------
+
+- fixed the problem with randomly dieing when using
+  the voice chat (problems with fpu mode incompatibility
+  between the voice chat dlls and Graal)
+- the script variable 'graalversion' is updated to 2.145
+  instead of still being 2.134
+- when the z variable of the player is different than 0
+  then it is transfered to the other players (formerly
+  it was only sent when being on a 3d terrain map)
+- Graal takes less windows ressources (window handles etc.)
+  by not initializing stuff at startup that is only needed
+  in the editor mode
+
+  
+------------------------------------
+New features/bug fixes in v2.14 rev4
+------------------------------------
+
+- the voice activation key and selection of voice
+  activation by volume or key is saved so you don't
+  need to configure it again when restarting Graal
+- the voice playback and recording is fixed to not
+  crash the game anymore when there are a lot of people
+  speaking
+- corrected some voice package length errors
+- the soundfx volume is correctly handled (instead of
+  soundfx volume=midi volume)
+- when you use the command playlooped then only one
+  looping sound is played (fixes draisine sound on
+  Graal2001)
+- players on trial accounts can send PMs (Personal Messages)
+  to staff (double-click on players in the staff section of
+  the player list)
+
+
+-------------------------------
+New features/bug fixes in v2.14
+-------------------------------
+
+- the server list has now two tabs, in one tab the servers
+  managed by the company are displayed (Graal2001, Graal2002),
+  in the other list you see all classic servers (classic and
+  playerworlds);
+  the servers are sorted by player count
+
+- to enable the new voice chatting feature open the Graal options
+  and enable the microphone ('Audio' options)
+  to test the output speak into the microphone and
+  see the output level on the bar on the right side of the option
+  window;
+
+  there is also a rectangle which is red or green depending on
+  the voice level, that rectangle shows if the game has interpreted
+  the voice level as high enough to be sent to the other players;
+  it should only be green when you speak so its not sending data
+  all the time; by moving the slider you can change the voice
+  activation level, move it up when it's too often green, move it
+  down when you can't hear yourself anymore;
+
+  you can also activate the mircophone by hand if you don't want to
+  have it automatically send the voice when you speak; for that select
+  'Key' as the activation method and click on the rectangle right to
+  it if you want to change the key that activates the voice
+
+  in the game you automatically hear other people speaking when they are
+  close to you (16 tiles=256 pixels), set the voice volume to 0 in the
+  option window if you don't want to hear other people; you can mute
+  single players by right-clicking on a player in the player list and
+  selecting 'Mute', or in the game by right-clicking on the players
+  and enable the 'Mute check box in their profile
+
+  Graal automatically chooses the best voice encoding codec depending
+  on how many people are hearing you; if there are 1 or 2 people then
+  it uses GSM (mobile phone quality, 13 kbit), when there are 3-5 people
+  then LPC (4.8 kbit), when there are more than 5 people then it uses
+  LPC-10 (2.4 kbit). The quality of the voice depends on your microphone,
+  it should have something to filter wind, otherwise the lower quality
+  codecs have problems and make you sound like you are singing; in the
+  options window you can choose a different testing codecs to hear if your
+  microphone still works good with lower quality codecs
+
+- Graal now supports more music formats: ogg, mp3, mod (and other
+  tracker formats), radio streaming, wma;
+  you can use the normal play command to play such files;
+  to play an url you must add the http:// otherwise it will not
+  see that you want to access an internet stream instead of a local
+  file;
+  wma is only supported on machines where the microsoft wma libraries
+  are installed (or recent media player versions)
+
+- in the Graal options you can set the volume levels
+  for midi, mp3/ogg/mod music, radio streams, voice and sound fxs
+
+- new script functions to access the keyboard
+  - events:
+    keypressed - occurs when a standard key has been pressed; because
+      several keys can be pressed at the same time you get the
+      pressed key directly as a parameter to the script (like in
+      actionxxx event): #p(0) is the keycode, #p(1) the character
+      (when its standard key);
+  - functions:
+    keycode(character) - gets the key code for the character
+      (identical to the windows virtual key code)
+    keydown2(keycode,ignorecase) - checks if a key has been pressed,
+      ignorecase must be true if you want to turn off the check
+      for shift/alt/control key, so keydown2(keycode(A),true) will be
+      true whenever you press A or Shift+A or Alt+A
+  - a script to display 'on' when pressing '1' and displaying
+    'off' when pressing '2':
+
+      if (keypressed) {
+        code = strtofloat(#p(0));
+        if (code==keycode(1,false)) message on;
+        else if (code==keycode(2,false)) message off;
+      }
+
+    The same without converting it to the key code:
+
+      if (keypressed) {
+        if (strequals(#p(1),1)) message on;
+        else if (strequals(#p(1),2)) message off;
+      }
+
+- the script functions for accessing the mouse are now
+  available in the game, some new functions have been added:
+  - mouse variables:
+    mousex, mousey - position of the mouse in the level
+    mousebuttons - tells you which mouse buttons are pressed,
+      it's a sum of the values 1 for left mouse button, 2 for middle
+      mouse button and 4 for the right mouse button, so it's 1+2+4=7
+      when all buttons are pressed; you can also use the flags described
+      later to easier check for the mouse buttons
+    mousescreenx, mousescreeny - position of the mouse in the game screen
+    mousewheeldelta - the movement of the mouse wheel in the last 0.05 seconds
+  - flags for checking if a mouse button is pressed:
+    leftmousebutton - is set when the left mouse button is down
+    middlemousebutton - is set when the middle mouse button is down
+    rightmousebutton - is set when the right mouse button is down
+  - events:
+    mousedown - occurs when a mouse button has been pressed, so
+      you can do things like if (mousedown && leftmousebutton) message hi;
+    mouseup - occurs when a mouse button has been released
+    mousewheel - occurs when the mouse wheel has been used
+  - triggered actions (only on npcs where the player has clicked on,
+      is also sent to the npcserver):
+    actionleftmouse - the player has clicked on the npc
+    actionmiddlemouse - the player has clicked with the middle mouse button on the npc
+    actionrightmouse - the player has right-clicked on the npc
+    actiondoublemouse - the player has double-clicked on the npc
+
+- new GraalShop version which introduces the
+  'gani movie mode', where you can add and move
+  actors instead of sprites; it allows easy editing
+  of the attributes of the different actor types
+  (character, sprite, text, sound), movement is
+  automatically done when you change the position
+  of an actor in two different frames, so
+  you can make little movies or cut-scenes;
+  by setting the flag 'playerlook' of an actor you
+  can specify which actor should copy the look of
+  the actor;
+  when you use the gani for a player then
+  the first playerlook actor will also be focused
+  and possibly move the player when the movie
+  is finished and the first actor is on a different
+  position;
+  'movie mode' ganis have the same ending, to
+  switch between (the old) sprite mode and movie mode
+  just click on the upper right button in GraalShop;
+  the movie mode is not meant to be a replacement for
+  the sprite mode: for simple animations you must
+  use the sprite mode, while the movie mode is for
+  more complex cut scenes
+
+- the PM (personal message) window has been changed: when
+  replying to someone you still see the original message
+  so its easier to keep track of what the other one asked
+  you;
+  people that play with trial accounts can only reply to
+  messages, they cannot start a PM conversation  
+
+- the attributes displayed in the right side of the
+  profiles window can now be customized by the server admins:
+  in the server options this line must appear to set the
+  default profile attributes:
+
+  profilevars=playerkills,playerdeaths,playerfullhearts,playerrating,playerap,playerrupees,playerswordpower,canspin
+
+  Variables can be playerkills,playerdeaths,playerfullhearts,playerrating,
+  playerap,playerrupees,playerswordpower,canspin,playerhearts,playerdarts,
+  playerbombs,playermp,playershieldpower and playerglovepower.
+  You can also give the name of a string variable, if you write
+  clientr.maxhp instead of playerfullhearts then it will display the value
+  of clientr.maxhp (when its clientr.maxh=50 then it will display 50).
+  You can also change the name that is shown on the left side (name
+  of the attribute), for that write 'Max HP:=clientr.maxhp', which would
+  display 'Max HP:' on the left side. You can do that do add new fields
+  you want to show when people right-click on someone else.
+
+- in the playerlist you can set your own status, then an
+  icon will be displayed on the playerlist and on the map instead of
+  your head; the default status types are for 'online' (player available',
+  'away' and 'dnd' (do not disturb); server admins can add new status icons,
+  for that change the 'playerlisticons=' line in the serveroptions. For
+  adding a 'survivor' status/icon change it to
+
+  playerlisticons=Online,Away,DND,Survivor
+
+  Then in the playerlist there will be a new status 'Survivor', for
+  the icon the game will try to load 'plisticonsurvivor.png', so you
+  should upload an icon under that name before adding the status to the
+  server options
+
+- with the script command 'serverwarp <world>;'
+  you can warp the player to another server; the
+  'world' parameter must be the internal name of the
+  server (for classic it is main, for Graal2001 newmain,
+  Andor bravo, N-Pulse npulse, ...)
+
+- files bigger than 64k can be downloaded, which
+  means that big tilesets and maps can be updated
+  without releasing a new Graal version;
+  to display the status of a download you can use
+  the script variable downloadpos and the message
+  code #D (filename)
+
+- gani scripts work for projectiles (shoot command, see more
+  explaination of that command below)
+
+- gmaps (maps for the Graal2002 terrain and dungeons)
+  are automatically downloaded
+
+- the automapping function now works better on the
+  Graal2002 terrain and saves the map parts in good
+  quality (using octree color quantitization) 
+
+- the script commands callnpc and callweapon can have parameters
+  that are forwarded to the called npc which can access them
+  via #p(0), #p(1), ..., like when doing triggeraction on an npc
+
+- setmusicvolume should work better now
+
+- addtiledef2 works together with setbackpal (again)
+  and is fixed (tiledefs don't stay when going into other
+  levels)
+
+- in the npc scripting window you have a button that lets you
+  type in text to search for in the script; by typing 'F3' you
+  can continue a search without opening the 'Find' window again
+
+- in the npc scripting window it now jumps to the error position
+  and highlights the correct script position where the error
+  appeared
+
+- some stuff that has been added in earlier version but
+  were not documented:
+  - script variables anistep, playeranistep, players[index].anistep
+    which give you the animation frame in the gani of the
+    npc / player
+  - new script command 'shoot' for shooting projectiles:
+    shoot x,y,z,angle,zangle,power,gani,ganiparams;
+      x,y and z - specify the starting position
+      angle - shoot angle (when looking from the top): east is 0,
+        north 3.14/2, west is 3.14, south 3.14*3/2)
+      zangle - the angle in vertical direction, 0 means the
+        projectile is shoot horizontal, 3.14/2 means straight to the
+        sun
+      power - the shoot power which is used to shoot the projectile;
+        if it's 0 then the projectile is shoot like an old arrow
+        (doesn't fall down, moves 20 tiles each second)
+      gani - the animation that is used for the projectile; the
+        animation can be multidirectional, the engine automatically
+        selects the best direction for the flying direction; the
+        animation can have 1 step (not animated) or 7 steps, then the
+        engine is automatically choosing the good animation step for
+        the projectile flying angle - when its raising then step 1 is
+        taken, when flying horizontal it is step 4, when it is short before
+        the impact then the engine displays step 7
+    When the projectile is landing or hitting an object then some actions
+    are triggered. With the command 'setshootparams <params>;' you can set
+    the parameters that the called scripts get, call 'setshootparams' before
+    shooting the projectile.
+    Client-side events:
+      - actionprojectile:
+        is triggered when a projectile lands on the player/npc,
+        in #p(0), #p(1) etc. you have the parameters set with the
+        command setshootparams
+    Server-side events:
+      - actionprojectile:
+        is triggered when a client has used the 'shoot' command to shoot a
+        projectile and the projectile is landed; in #p(0) and #p(1) you have
+        the x and y position of the impact in case you want to place an explosion
+        or similar things on the ground (the control-npc is automatically warped
+        to the level where the impact happened); #p(2),#p(3) etc. contain the
+        params set with 'setshootparams' (before shooting the projectile)
+      - actionsprojectile:
+        is triggered when a server-side script has shot a projectile and the projectile
+        is landed; in #p(0) and #p(1) you have the x and y position of the impact
+        (the control-npc is automatically warped to the level where the impact
+        happened); #p(2),#p(3) etc. contain the params set with 'setshootparams'
+        (before shooting the projectile)
+    Projectiles are easy to use and don't take a lot of bandwidth because only
+    the shooting of the projectile needs to be sent, the movement is calculated on
+    the different computers. The projectile is flying like a heavy object thrown
+    through the air: the horizontal movement speed keeps the same (moves
+    horzspeed=cos(zangle)*speed tiles all 0.05 seconds), the vertical speed is
+    initialized as vertspeed=sin(zangle)*speed and is decreased by 0.1 all 0.05 seconds;
+    then the new position (calculated all 0.05 seconds) is
+    newx = x + cos(angle)*horzspeed, newy = y - sin(angle)*horzspeed,
+    newz = z + vertspeed
+
+
+
+-----------------------------------------
+New features/bug fixes in v2.13 revision4
+-----------------------------------------
+
+- fixed making/saving of new levels in the editor when
+  using desktop links to start Graal
+- fixed putting tiles and predefined objects on levels
+
+
+-----------------------------------------
+New features/bug fixes in v2.13 revision3
+-----------------------------------------
+
+- the script command destroy works again
+- fixed compatibility with Win95/98
+- the setstring command sends the new string variable
+  correctly to the server
+- the script variable graalversion is now 2.13
+  (instead of 2.1)
+- in the offline mode the player is on the normal
+  layer like it is supposed to, so he is not drawn
+  on top of objects anymore and arrow and projectiles
+  work again
+- the not recommended script command playersays() works
+  again (the script is called when the player says something);
+  but better use if (playerchats && strequals(#c,...))
+- several fixes of the editor mode: caching of levels in
+  the memory, position of the player when clicking on 'play',
+  dragging baddies,npcs and chests onto a level works like in
+  old days (you can release the mouse button and then move the
+  object if you don't want to keep it pressed)
+- fixed memory leaks
+- npc actions are deleted when leaving a level (so
+  when using setlevel/setlevel2 then it is not producing
+  an endless loop)
+- emoticons are not hiding weapon showimgs anymore,
+  emoticons have the index 0 (so don't use index 0 for
+  showimg if you don't want it to be hidden when an emoticon
+  is displayed)
+- npcservers can now attach players to local npcs (was producing
+  warping errors before)
+- detection for players that are in 'hidden under carried object' mode
+  but don't carry anything
+- optimized loading and 'playerenters' for npcs on graal2002 maps
+
+
+-------------------------------
+New features/bug fixes in v2.13
+-------------------------------
+
+- in the editor single levels have scrollbars again,
+  and on maps you see a big cursor instead of a player
+  and the cursor is always on top so it's easier to scroll
+  by moving the cursor
+- when clicking on 'play' in the editor then all modified
+  levels are saved
+- in the editor it's now possible to script 'editor control-npcs';
+  for that you need to create a file editnpcNAME.txt and script
+  editor actions in it, see levels/npcs/editnpcSandPath.txt for
+  an example; you have new script variables mousex,mousey,mousescreenx,
+  mousescreeny,mousebuttons (sum of left=1, middle=2, right=4) which
+  only work in the editor mode; currently only changing tiles is
+  supported, in the future there could also be things like placing
+  random npcs or so
+- the map making button M is fixed (in the editor)
+- there is 'Translate' button in the PM window; depending on
+  what language you and the other player have it opens a
+  translation website
+- new script functions imgwidth(filename) and imgheight(filename)
+  for getting the size of an image which is already loaded in
+  the memory
+- optimized parts of the scripting engine (accessing flags and
+  string variables, calculating values)
+- fixed bug with the auto-mapping which caused linking errors
+  (player disappearing)
+- dont-connnect-levels option works again on normal maps
+- better guild tag protection at login
+- images are not immediatelly discarded anymore; the game will
+  wait 5 seconds (will speed up things where you often changed the
+  gani and the reloading of images slowed down the game)
+- testplayer() fixed
+- variable actionplayer should work better now (giving the index
+  of the player who has triggered the 'triggeraction' event)
+- when the window for updating the Graal version opens then
+  Graal will be closed so that the update works correctly
+
+- new graalshop version: undo/redo, scrolling of background when
+  clicking outside of a sprite and moving the mouse, selecting more
+  than one sprite when pressing Shift while clicking on a sprite
+  (click Ctrl+mouse button to remove it from the selection), the
+  layer of a sprite can be changed with the + and - buttons,
+  scrolling and changing layer works also by pressing keys
+  (up,left,down,right,+,-), right click on a sprite in the sprite panel
+  on the left side opens the 'Add Sprite' dialog for that sprite so
+  you can easily change it, you can drag&drop images into the gani
+  editor, it will automatically add a sprite definition and a sprite,
+  there are new buttons for reversing the animation and removing
+  unused sprite definitions which makes the gani file smaller, you
+  can also import sprite definitions from other ganis, SCRIPT
+  and COLOREFFECT and ZOOMEFFECT commands in the gani are still
+  not displayed but not deleted anymore
+- ATTACHSPRITE command in ganis:
+  ATTACHSPRITE 100 40 -8 -18
+  will automatically draw sprite 40 on top of sprite 100 whenever
+  sprite 100 is drawn; in this example it will be shifted 8 pixels
+  west and 18 pixels north; the advantage of this is that you
+  can just attach things like hats or armor and don't need to care
+  about it when you edit the animations (before this command you
+  always needed to add manually all the additional sprites and
+  move it each time you move the main sprite)
+- new gani attributes 6-9 (in the game #P6-#P9, in graalshop ATTR6-ATTR9)
+
+- new RC version with file browser, server list and RC+NC in one
+  program
+
+Features & bug fixes of versions <2.13 can
+be found in the file newfeatures2001.txt.
+
+

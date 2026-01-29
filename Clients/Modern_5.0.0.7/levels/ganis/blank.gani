@@ -1,0 +1,14 @@
+GANI0001
+SPRITE    0          SHADOW    0    0    1    1 Shadow
+SPRITE    1           ATTR4    0    0   32   32 Head
+
+DEFAULTATTR1 hat0.png
+DEFAULTHEAD head19.gif
+DEFAULTBODY body.png
+
+ANI
+   0  12  34,    1 9000 9000
+   0  12  36,    1 9000 9000
+   0  12  34,    1 9000 9000
+   0  12  36,    1 9000 9000
+ANIEND

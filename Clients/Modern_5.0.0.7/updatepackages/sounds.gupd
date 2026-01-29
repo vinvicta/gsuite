@@ -1,0 +1,61 @@
+GRPKG001
+NAME Sound Effects
+VERSION 1.01
+PLATFORM any
+DESCRIPTION
+This contains the basic sound effects which are often used on servers.
+DESCRIPTIONEND
+MODE required
+USECHECKSUM true
+PROTECTOVERWRITE
+
+FILE sounds/arrowon.wav
+FILE sounds/arrow.wav
+FILE sounds/axe.wav
+FILE sounds/bee.wav
+FILE sounds/bird1.wav
+FILE sounds/bird2.wav
+FILE sounds/bomb.wav
+FILE sounds/bomyload0.wav
+FILE sounds/bomyload1.wav
+FILE sounds/bomyload2.wav
+FILE sounds/bomyload3.wav
+FILE sounds/bomyload4.wav
+FILE sounds/bomyload.wav
+FILE sounds/bomywalk0.wav
+FILE sounds/bomywalk1.wav
+FILE sounds/bomywalk2.wav
+FILE sounds/cauldron_bubbles.wav
+FILE sounds/chest.wav
+FILE sounds/compudead.wav
+FILE sounds/crush.wav
+FILE sounds/dead.wav
+FILE sounds/extra.wav
+FILE sounds/fire.wav
+FILE sounds/frog2.wav
+FILE sounds/frog.wav
+FILE sounds/goal.wav
+FILE sounds/horse2.wav
+FILE sounds/horse.wav
+FILE sounds/item2.wav
+FILE sounds/item.wav
+FILE sounds/jump.wav
+FILE sounds/junebugs.wav
+FILE sounds/lift2.wav
+FILE sounds/lift.wav
+FILE sounds/nextpage.wav
+FILE sounds/ocean.wav
+FILE sounds/put.wav
+FILE sounds/rain.wav
+FILE sounds/river.wav
+FILE sounds/sign.wav
+FILE sounds/steps2.wav
+FILE sounds/steps.wav
+FILE sounds/stonemove.wav
+FILE sounds/swordon.wav
+FILE sounds/sword.wav
+FILE sounds/thunder.wav
+FILE sounds/train.wav
+FILE sounds/walk_grass2.wav
+FILE sounds/walk_grass4.wav
+FILE sounds/water.wav
