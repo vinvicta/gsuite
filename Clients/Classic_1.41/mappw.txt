@@ -1,7 +1,0 @@
-"olorin§pwa1.graal","olorin§pwa2.graal","olorin§pwa3.graal","-----------------","-----------------","-----------------","-----------------","-----------------","-----------------","------------------"
-"olorin§pwb1.graal","olorin§pwb2.graal","olorin§pwb3.graal","olorin§pwb4.graal","olorin§pwb5.graal","olorin§pwb6.graal","olorin§pwb7.graal","olorin§pwb8.graal","-----------------","------------------"
-"olorin§pwc1.graal","olorin§pwc2.graal","olorin§pwc3.graal","olorin§pwc4.graal","olorin§pwc5.graal","olorin§pwc6.graal","olorin§pwc7.graal","olorin§pwc8.graal","olorin§pwc9.graal","olorin§pwc10.graal"
-"olorin§pwd1.graal","olorin§pwd2.graal","olorin§pwd3.graal","olorin§pwd4.graal","olorin§pwd5.graal","olorin§pwd6.graal","olorin§pwd7.graal","olorin§pwd8.graal","olorin§pwd9.graal","olorin§pwd10.graal"
-"olorin§pwe1.graal","olorin§pwe2.graal","olorin§pwe3.graal","olorin§pwe4.graal","olorin§pwe5.graal","olorin§pwe6.graal","olorin§pwe7.graal","olorin§pwe8.graal","olorin§pwe9.graal","olorin§pwe10.graal"
-"-----------------","olorin§pwf2.graal","olorin§pwf3.graal","olorin§pwf4.graal","olorin§pwf5.graal","olorin§pwf6.graal","olorin§pwf7.graal","olorin§pwf8.graal","olorin§pwf9.graal","------------------"
-"-----------------","olorin§pwg2.graal","olorin§pwg3.graal","olorin§pwg4.graal","olorin§pwg5.graal","olorin§pwg6.graal","olorin§pwg7.graal","olorin§pwg8.graal","olorin§pwg9.graal","------------------"

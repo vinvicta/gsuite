@@ -1,1 +1,0 @@
-The emotion icons were made by Ibonic, MrHack and Linkson.

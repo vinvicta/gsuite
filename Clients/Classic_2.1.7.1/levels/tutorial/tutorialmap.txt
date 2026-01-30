@@ -1,4 +1,0 @@
-"tutorial_a-1.graal","tutorial_b-1.graal","tutorial_c-1.graal"
-"tutorial_a-2.graal","tutorial_b-2.graal","tutorial_c-2.graal"
-"tutorial_a-3.graal","tutorial_b-3.graal","tutorial_c-3.graal"
-"tutorial_a-4.graal","tutorial_b-4.graal","tutorial_c-4.graal"

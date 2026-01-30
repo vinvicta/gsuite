@@ -1,8 +1,0 @@
-GRPKG001
-NAME Login Packages
-VERSION 3.00
-PLATFORM any
-SUBPACKAGE login.gupd
-USECHECKSUM false
-PROTECTOVERWRITE true
-FLAG popupforoptionalpackages=true

@@ -1,3 +1,0 @@
-There are some compability problems between DirectX5 and
-DirectX7 joystick drivers. If you get DINPUT.DLL errors then 
-disable the use if DirectInput in the option window. 

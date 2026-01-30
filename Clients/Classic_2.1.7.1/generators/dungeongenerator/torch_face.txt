@@ -1,6 +1,0 @@
-if (created) {
-  showcharacter;
-  dir = 2;
-  setcharani walltorch,;
-}
-join walltorches_up;

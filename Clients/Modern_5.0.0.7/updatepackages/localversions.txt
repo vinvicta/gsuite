@@ -1,4 +1,0 @@
-levels.gupd=1.16
-sounds.gupd=1.01
-fonts.gupd=4.19
-images.gupd=1.99
